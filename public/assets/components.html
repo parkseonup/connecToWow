@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Components</title>
+  </head>
+  <body>
+    <!-- button -->
+    <button class="button">
+      <span class="icon"></span>
+      알림받기
+    </button>
+
+    <!-- section 영역 -->
+    <section class="section">
+      <!-- section__header -->
+      <header class="section__header">
+        <h2 class="section__title">최근 본 영상</h2>
+        <button class="button button--ghost">더보기</button>
+      </header>
+
+      <!-- section__content 영역 -->
+      <div class="section__content">
+        <article class="card card--common">
+          <small class="badge badge--live"></small>
+
+          <figure class="card__figure">
+            <img src="" alt="" class="card__img" />
+
+            <!-- oneline -->
+            <figcaption class="card__caption">
+              <h3 class="card__title">치명 섹시미 원어스</h3>
+
+              <div class="description">
+                <div class="description__profile" aria-hidden="true"></div>
+
+                <dl class="description__list">
+                  <div class="description__item">
+                    <dt>채널명</dt>
+                    <dd>응수C네</dd>
+                  </div>
+                </dl>
+              </div>
+            </figcaption>
+
+            <!-- multiline -->
+            <figcaption class="card__caption">
+              <h3 class="card__title">치명 섹시미 원어스</h3>
+
+              <div class="description__profile" aria-hidden="true"></div>
+
+              <dl class="description__list">
+                <div class="description__item">
+                  <dt>채널명</dt>
+                  <dd>응수C네</dd>
+                </div>
+              </dl>
+            </figcaption>
+
+            <!-- time -->
+            <figcaption class="card__caption">
+              <h3 class="card__title">
+                우주 대스타들의 향연! 응수씨네 엔터테이먼트
+              </h3>
+
+              <time datetime="">오후 3시</time>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>
