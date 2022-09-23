@@ -7,13 +7,59 @@
     <title>Components</title>
   </head>
   <body>
-    <!-- button -->
-    <button class="button">
+    <!-- -------------- button -------------- -->
+    <!-- button--ghost -->
+    <button class="button button--ghost">더보기</button>
+
+    <!-- button--opacity -->
+    <button class="button button--opacity">자세히보기</button>
+
+    <!-- button--fill / icon -->
+    <button class="button button--fill">
+      <span class="icon"></span>
+      재생하기
+    </button>
+
+    <!-- button--opacity / icon -->
+    <button class="button button--opacity">
       <span class="icon"></span>
       알림받기
     </button>
 
-    <!-- section 영역 -->
+    <!-- -------------- badge -------------- -->
+    <!-- badge--live -->
+    <small class="badge badge--live"></small>
+
+    <!-- badge--support -->
+    <small class="badge badge--support"></small>
+
+    <!-- badge--dDay -->
+    <small class="badge badge--dDay"></small>
+
+    <!-- -------------- description__list -------------- -->
+    <!-- description__item 있을 때 -->
+    <dl class="description__list">
+      <div class="description__item">
+        <dt>채널명</dt>
+        <dd>응수C네</dd>
+      </div>
+      <div class="description__item">
+        <dt>채널명</dt>
+        <dd>응수C네</dd>
+      </div>
+      <div class="description__item">
+        <dt>채널명</dt>
+        <dd>응수C네</dd>
+      </div>
+    </dl>
+
+    <!-- description__item 없을 때 -->
+    <dl class="description__list">
+      <dt>출연</dt>
+      <dd>BTS</dd>
+    </dl>
+
+    <!-- -------------- section 영역 -------------- -->
     <section class="section">
       <!-- section__header -->
       <header class="section__header">
@@ -21,7 +67,7 @@
         <button class="button button--ghost">더보기</button>
       </header>
 
-      <!-- section__content 영역 -->
+      <!-- -------------- section__content 영역 -------------- -->
       <div class="section__content">
         <article class="card card--common">
           <small class="badge badge--live"></small>
@@ -29,6 +75,7 @@
           <figure class="card__figure">
             <img src="" alt="" class="card__img" />
 
+            <!-- -------------- card__caption -------------- -->
             <!-- oneline -->
             <figcaption class="card__caption">
               <h3 class="card__title">치명 섹시미 원어스</h3>
