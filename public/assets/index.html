@@ -8,17 +8,21 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
   </head>
   <body>
-    <!-- header 영역 시작 -->
     <header class="globalHeader">
       <h1 class="globalHeader__title">
-        <a href="/">Now</a>
+        <a href="/">
+          <!--로고이미지 추가-->
+        </a>
       </h1>
 
-      <button class="user">
+      <button class="user" aria-label="마이페이지로 이동">
         <img src="" alt="" />
+        <!-- 성능개선하면서 Sprite이미지 제공 -->
       </button>
 
       <nav class="snb">
+        <h2 class="a11yHidden">영상 카테고리</h2>
+
         <ul class="snb__list">
           <li class="snb__item"><a href="/">홈</a></li>
           <li class="snb__item"><a href="/">생중계</a></li>
@@ -32,39 +36,164 @@
         </ul>
       </nav>
     </header>
-    <!-- header 영역 끝 -->
 
-    <!-- gnb 영역 시작 -->
     <nav class="gnb">
       <ul class="gnb__list">
         <li class="gnb__item">
-          <a href="/"
-            ><img src="" alt="" />
+          <a href="/">
+            <img src="" alt="" />
             <span class="gnb__text">홈</span>
           </a>
         </li>
-
         <li class="gnb__item">
-          <a href="/"
-            ><img src="" alt="" />
+          <a href="/">
+            <img src="" alt="" />
             <span class="gnb__text">오리지널</span>
           </a>
         </li>
-
         <li class="gnb__item">
-          <a href="/"
-            ><img src="" alt="" />
+          <a href="/">
+            <img src="" alt="" />
             <span class="gnb__text">팔로잉</span>
           </a>
         </li>
-
         <li class="gnb__item">
-          <a href="/"
-            ><img src="" alt="" />
+          <a href="/">
+            <img src="" alt="" />
             <span class="gnb__text">검색</span>
           </a>
         </li>
       </ul>
     </nav>
+
+    <section class="section onAir">
+      <header class="section__header">
+        <h2 class="section__title">지금 방송 중</h2>
+      </header>
+
+      <div class="section__content">
+        <article class="card card--common">
+          <small class="badge badge--live">Live</small>
+
+          <figure class="card__figure">
+            <div class="card__img">
+              <img src="" alt="" />
+            </div>
+
+            <figcaption class="card__caption">
+              <h3 class="card__title">치명 섹시미 원어스</h3>
+
+              <div class="description">
+                <div class="description__profile" aria-hidden="true"></div>
+
+                <dl class="description__list">
+                  <div class="description__item">
+                    <dt class="a11yHidden">채널명</dt>
+                    <dd>응수C네</dd>
+                  </div>
+                </dl>
+              </div>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section history">
+      <header class="section__header">
+        <h2 class="section__title">최근 본 영상</h2>
+        <button class="button button--ghost">더보기</button>
+      </header>
+
+      <div class="section__content">
+        <article class="card card--common">
+          <figure class="card__figure">
+            <div class="card__img">
+              <img src="" alt="" />
+            </div>
+
+            <figcaption class="card__caption">
+              <h3 class="card__title">치명 섹시미 원어스</h3>
+
+              <div class="description">
+                <div class="description__profile" aria-hidden="true"></div>
+
+                <dl class="description__list">
+                  <div class="description__item">
+                    <dt class="a11yHidden">채널명</dt>
+                    <dd>응수C네</dd>
+                  </div>
+
+                  <div class="description__item">
+                    <dt class="a11yHidden">날짜</dt>
+                    <dd>3일전</dd>
+                  </div>
+                </dl>
+              </div>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section highlight">
+      <header class="section__header">
+        <h2 class="section__title">오리지널 하이라이트</h2>
+        <button class="button button--ghost">더보기</button>
+      </header>
+
+      <div class="section__content">
+        <article class="card card--common">
+          <figure class="card__figure">
+            <div class="card__img">
+              <img src="" alt="" />
+            </div>
+
+            <figcaption class="card__caption">
+              <h3 class="card__title">DKZ 재찬, 삼성라이온즈</h3>
+
+              <div class="description">
+                <div class="description__profile" aria-hidden="true"></div>
+
+                <dl class="description__list">
+                  <div class="description__item">
+                    <dt class="a11yHidden">채널명</dt>
+                    <dd>꿈이야</dd>
+                  </div>
+
+                  <div class="description__item">
+                    <dt class="a11yHidden">날짜</dt>
+                    <dd>3일전</dd>
+                  </div>
+                </dl>
+              </div>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section upcoming">
+      <article class="card">
+        <figure class="card__figure">
+          <img class="card__img" src="" alt="" />
+
+          <figcaption class="card__caption">
+            <time class="card__time">오늘 밤 9시</time>
+            <h3 class="card__title">텐션특집</h3>
+
+            <dl class="description__list">
+              <dt>출연</dt>
+              <dd>곽범,이창호,랄랄,김진주</dd>
+            </dl>
+
+            <button class="button button--opacity">
+              <span class="icon"></span>
+              알림받기
+            </button>
+          </figcaption>
+        </figure>
+      </article>
+    </section>
   </body>
 </html>
