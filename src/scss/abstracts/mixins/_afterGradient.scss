@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "gradientColor" as *;
 
 @mixin afterGradient($position: relative) {
   position: $position;
@@ -13,6 +14,6 @@
     display: block;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, transparent, $black);
+    @include getGradientBg(bottom, (transparent, $black));
   }
 }

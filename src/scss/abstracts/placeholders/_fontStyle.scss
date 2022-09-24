@@ -3,67 +3,67 @@
 @use "sass:math";
 
 %titleMobile {
-  font-size: getFont(base);
+  font-size: getFontSize(base);
   font-weight: 600;
   line-height: math.div(24, 16);
 }
 
 %titleDesktop {
-  font-size: getFont(2xl);
+  font-size: getFontSize(2xl);
   font-weight: 700;
   line-height: math.div(42, 28);
 }
 
 %descriptionMobile {
-  font-size: getFont(sm);
+  font-size: getFontSize(sm);
   font-weight: 400;
   line-height: math.div(16, 13);
 }
 
 %descriptionDesktop {
-  font-size: getFont(base);
+  font-size: getFontSize(base);
   font-weight: 500;
   line-height: math.div(26, 16);
 }
 
 %smallMobile {
-  font-size: getFont(xs);
+  font-size: getFontSize(xs);
   font-weight: 400;
   line-height: math.div(18, 12);
 }
 
 %smallDesktop {
-  font-size: getFont(base);
+  font-size: getFontSize(base);
   font-weight: 400;
   line-height: math.div(21, 16);
 }
 
 %upcomingMobile {
-  font-size: getFont(lg);
+  font-size: getFontSize(lg);
   font-weight: 700;
   line-height: math.div(20, 18);
 }
 
 %upcomingDesktop {
-  font-size: getFont(xl);
+  font-size: getFontSize(xl);
   font-weight: 700;
   line-height: math.div(24, 24);
 }
 
 %gnbMobile {
-  font-size: getFont(2xs);
+  font-size: getFontSize(2xs);
   font-weight: 400;
   line-height: math.div(8, 8);
 }
 
 %gnbTablet {
-  font-size: getFont(xs);
+  font-size: getFontSize(xs);
   font-weight: 400;
   line-height: math.div(12, 12);
 }
 
 %gnbDesktop {
-  font-size: getFont(xl);
+  font-size: getFontSize(xl);
   font-weight: 300;
   line-height: math.div(36, 24);
 }
