@@ -4,3 +4,7 @@
 @function rem($unit, $base: $baseFontSize) {
   @return math.div($unit, $base) * 1rem;
 }
+
+@function em($unit, $base: $baseFontSize) {
+  @return math.div($unit, $base) * 1em;
+}
