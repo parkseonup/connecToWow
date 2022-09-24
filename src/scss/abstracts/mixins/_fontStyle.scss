@@ -2,67 +2,67 @@
 @use "../variables" as *;
 @use "sass:math";
 
-%titleMobile {
+@mixin titleMobile {
   font-size: getFontSize(base);
   font-weight: 600;
   line-height: math.div(24, 16);
 }
 
-%titleDesktop {
+@mixin titleDesktop {
   font-size: getFontSize(2xl);
   font-weight: 700;
   line-height: math.div(42, 28);
 }
 
-%descriptionMobile {
+@mixin descriptionMobile {
   font-size: getFontSize(sm);
   font-weight: 400;
   line-height: math.div(16, 13);
 }
 
-%descriptionDesktop {
+@mixin descriptionDesktop {
   font-size: getFontSize(base);
   font-weight: 500;
   line-height: math.div(26, 16);
 }
 
-%smallMobile {
+@mixin smallMobile {
   font-size: getFontSize(xs);
   font-weight: 400;
   line-height: math.div(18, 12);
 }
 
-%smallDesktop {
+@mixin smallDesktop {
   font-size: getFontSize(base);
   font-weight: 400;
   line-height: math.div(21, 16);
 }
 
-%upcomingMobile {
+@mixin upcomingMobile {
   font-size: getFontSize(lg);
   font-weight: 700;
   line-height: math.div(20, 18);
 }
 
-%upcomingDesktop {
+@mixin upcomingDesktop {
   font-size: getFontSize(xl);
   font-weight: 700;
   line-height: math.div(24, 24);
 }
 
-%gnbMobile {
+@mixin gnbMobile {
   font-size: getFontSize(2xs);
   font-weight: 400;
   line-height: math.div(8, 8);
 }
 
-%gnbTablet {
+@mixin gnbTablet {
   font-size: getFontSize(xs);
   font-weight: 400;
   line-height: math.div(12, 12);
 }
 
-%gnbDesktop {
+@mixin gnbDesktop {
   font-size: getFontSize(xl);
   font-weight: 300;
   line-height: math.div(36, 24);
