@@ -5,56 +5,65 @@
 %titleMobile {
   font-size: getFont(base);
   font-weight: 600;
-  line-height: rem(math.div(24, 16));
+  line-height: math.div(24, 16);
 }
+
 %titleDesktop {
   font-size: getFont(2xl);
   font-weight: 700;
-  line-height: rem(math.div(42, 28));
+  line-height: math.div(42, 28);
 }
+
 %descriptionMobile {
   font-size: getFont(sm);
   font-weight: 400;
-  line-height: rem(math.div(16, 13));
+  line-height: math.div(16, 13);
 }
+
 %descriptionDesktop {
   font-size: getFont(base);
   font-weight: 500;
-  line-height: rem(math.div(26, 16));
+  line-height: math.div(26, 16);
 }
+
 %smallMobile {
   font-size: getFont(xs);
   font-weight: 400;
-  line-height: rem(math.div(18, 12));
+  line-height: math.div(18, 12);
 }
+
 %smallDesktop {
   font-size: getFont(base);
   font-weight: 400;
-  line-height: rem(math.div(21, 16));
+  line-height: math.div(21, 16);
 }
+
 %upcomingMobile {
   font-size: getFont(lg);
   font-weight: 700;
-  line-height: rem(math.div(20, 18));
+  line-height: math.div(20, 18);
 }
+
 %upcomingDesktop {
   font-size: getFont(xl);
   font-weight: 700;
-  line-height: rem(math.div(24, 24));
+  line-height: math.div(24, 24);
 }
+
 %gnbMobile {
   font-size: getFont(2xs);
   font-weight: 400;
-  line-height: rem(math.div(8, 8));
+  line-height: math.div(8, 8);
 }
+
 %gnbTablet {
   font-size: getFont(xs);
   font-weight: 400;
-  line-height: rem(math.div(12, 12));
+  line-height: math.div(12, 12);
 }
 
 %gnbDesktop {
   font-size: getFont(xl);
   font-weight: 300;
-  line-height: rem(math.div(36, 24));
+  line-height: math.div(36, 24);
 }
