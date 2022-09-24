@@ -1,0 +1,10 @@
+@use "../functions" as *;
+
+@mixin cardRatio($width, $direction) {
+  width: rem($width);
+  @if ($direction == v) {
+    height: getHeightVertical($width);
+  } @else if($direction == h) {
+    height: getHeightHorizontal($width);
+  }
+}
