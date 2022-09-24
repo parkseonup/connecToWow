@@ -3,13 +3,13 @@
 $baseFontSize: 16 !default;
 
 @function rem($unit, $base: $baseFontSize) {
-  @return math.div(remove-unit($unit), remove-unit($base)) * 1rem;
+  @return math.div(removeUnit($unit), removeUnit($base)) * 1rem;
 }
 
 @function em($unit, $base: $baseFontSize) {
-  @return math.div(remove-unit($unit), remove-unit($base)) * 1em;
+  @return math.div(removeUnit($unit), removeUnit($base)) * 1em;
 }
 
-@function remove-unit($unit) {
+@function removeUnit($unit) {
   @return math.div($unit, $unit * 0 + 1);
 }
