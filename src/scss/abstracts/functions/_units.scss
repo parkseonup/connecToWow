@@ -1,5 +1,6 @@
 @use "sass:math";
-@use "../../base" as *;
+
+$baseFontSize: 16 !default;
 
 @function rem($unit, $base: $baseFontSize) {
   @return math.div($unit, $base) * 1rem;
@@ -7,4 +8,8 @@
 
 @function em($unit, $base: $baseFontSize) {
   @return math.div($unit, $base) * 1em;
+}
+
+@function remove-unit($unit) {
+  @return math.div($unit, $unit * 0 + 1);
 }
