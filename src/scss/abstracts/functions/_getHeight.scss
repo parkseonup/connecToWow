@@ -1,0 +1,10 @@
+@use "sass:math";
+@use "./units" as *;
+
+@function getHeightHorizontal($width) {
+  @return rem(math.div(remove-unit($width) * 56.25, 100));
+}
+
+@function getHeightVertical($width) {
+  @return rem(remove-unit($width) * 1.4);
+}

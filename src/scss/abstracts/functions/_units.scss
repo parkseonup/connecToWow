@@ -13,11 +13,3 @@ $baseFontSize: 16 !default;
 @function remove-unit($unit) {
   @return math.div($unit, $unit * 0 + 1);
 }
-
-@function getHeightHorizontal($width) {
-  @return rem(math.div(remove-unit($width) * 56.25, 100));
-}
-
-@function getHeightVertical($width) {
-  @return rem(remove-unit($width) * 1.4);
-}
