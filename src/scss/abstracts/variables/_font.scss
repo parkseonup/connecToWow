@@ -1,13 +1,13 @@
 @use "sass:map";
-@use "../functions" as *;
+@use "../functions/units" as *;
 
 // font
-$fontFamily: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+$font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
   "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
   "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
   sans-serif;
 
-$fontSize: (
+$font-size: (
   2xs: rem(8px),
   xs: rem(12px),
   sm: rem(13px),
@@ -16,8 +16,3 @@ $fontSize: (
   xl: rem(24px),
   2xl: rem(28px),
 );
-
-@function getFont($size) {
-  $font: map.get($fontSize, $size);
-  @return $font;
-}

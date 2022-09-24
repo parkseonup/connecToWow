@@ -1,0 +1,7 @@
+@use "../variables" as *;
+
+@mixin getGradientBg($direction: right, $colors...) { // $colors: ( , ) 괄호 리스트 사용
+  @each $color in $colors {
+    background-image: linear-gradient(to #{$direction}, $color);
+  }
+}

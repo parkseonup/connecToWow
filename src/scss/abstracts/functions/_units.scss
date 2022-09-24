@@ -1,12 +1,12 @@
 @use "sass:math";
 
-$baseFontSize: 16 !default;
+$base-font-size: 16px !default;
 
-@function rem($unit, $base: $baseFontSize) {
+@function rem($unit, $base: $base-font-size) {
   @return math.div(removeUnit($unit), removeUnit($base)) * 1rem;
 }
 
-@function em($unit, $base: $baseFontSize) {
+@function em($unit, $base: $base-font-size) {
   @return math.div(removeUnit($unit), removeUnit($base)) * 1em;
 }
 

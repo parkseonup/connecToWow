@@ -1,0 +1,7 @@
+@use "sass:map";
+@use "../variables/font" as *;
+
+@function getFontSize($size) {
+  $font: map.get($font-size, $size);
+  @return $font;
+}
