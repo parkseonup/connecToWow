@@ -1,14 +1,16 @@
-// color
-$colors: (
-  lightblue: #6072f6,
-  white: #ffffff,
-  black: #0e0e10,
-  lightgray: #9c9c9d,
-  darkgray: #6e6e6f,
-  blue: #3c29df,
-  red: #f4361d,
-  white-opacity: #ffffff,
-  black-opacity-light: #0e0e10,
-  purple: #8b57f7,
-  black-opacity-dark: #0e0e10,
-);
+// default variables
+
+$lightblue: #6072f6;
+$blue: #3c29df;
+$red: #f4361d;
+$purple: #8b57f7;
+
+$white: #ffffff;
+$black: #000000;
+
+$gray-300: rgba($white, 0.5);
+$gray-500: rgba($white, 0.3);
+$gray-600: rgba($white, 0.15);
+$gray-700: rgba($white, 0.08);
+$gray-800: rgba($black, 0.95);
+$gray-900: rgba($black, 0.2);
