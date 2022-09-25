@@ -1,0 +1,80 @@
+@use "../abstracts" as *;
+
+.button {
+  @include flex;
+  @include descriptionMobile;
+  height: rem(32);
+  padding: 0 rem(14);
+  border: 1px solid transparent;
+  border-radius: rem(4);
+  transition: 0.2s ease-in-out;
+
+  &--ghost,
+  &--fat {
+    color: $black;
+  }
+
+  &--opacity,
+  &--fill {
+    color: $white;
+  }
+
+  &--ghost {
+    background-color: transparent;
+
+    &:hover,
+    &:active {
+      color: $red;
+    }
+  }
+
+  &--opacity {
+    background-color: $gray-700;
+
+    &:hover,
+    &:active {
+      color: $red;
+      border-color: $red;
+    }
+  }
+
+  &--fill {
+    background-color: $red;
+  }
+
+  &--fat {
+    height: rem(36);
+    background-color: $white;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $gray-700;
+    }
+  }
+
+  &--wide {
+    padding: 0 rem(48);
+  }
+
+  .icon {
+    margin-left: rem(-2);
+    margin-right: rem(2);
+    font-size: rem(20);
+  }
+
+  @include mq(lg) {
+    @include descriptionDesktop;
+    height: rem(36);
+
+    &--wide {
+      height: rem(46);
+    }
+
+    .icon {
+      margin-left: rem(-4);
+      margin-right: rem(4);
+      font-size: rem(24);
+    }
+  }
+}

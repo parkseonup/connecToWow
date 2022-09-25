@@ -1,0 +1,26 @@
+@use "sass:map";
+
+$flex-map: (
+  start: flex-start,
+  end: flex-end,
+  between: space-between,
+  around: space-around,
+  stretch: stretch,
+  center: center,
+);
+
+@function getFlexVariables($key) {
+  @return map.get($flex-map, $key);
+}
+
+@mixin flex($jc: center, $ai: center) {
+  display: flex;
+  align-items: getFlexVariables($ai);
+  justify-content: getFlexVariables($jc);
+}
+
+@mixin inlineFlex($jc: center, $ai: center) {
+  display: inline-flex;
+  align-items: getFlexVariables($ai);
+  justify-content: getFlexVariables($jc);
+}
