@@ -24,6 +24,7 @@
 // 유저프로필이미지
 
 @mixin profileCircle($width: rem(18px)) {
+  flex-shrink: 0;
   width: rem($width);
   height: rem($width);
   border-radius: 50%;
