@@ -1,0 +1,33 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables/colors" as *;
+@use "../abstracts/functions/units" as *;
+
+.description {
+  &__list {
+    @include flex(start);
+    @include smallMobile;
+    gap: rem(4);
+    color: $gray-300;
+
+    > div,
+    > dd {
+      @include flex(start);
+      gap: rem(4);
+
+      &:nth-child(n + 2)::before {
+        content: "";
+        display: inline-block;
+        width: rem(3);
+        height: rem(3);
+        background-color: $gray-500;
+      }
+    }
+  }
+
+  @include mq(lg) {
+    &__list {
+      @include smallDesktop;
+      gap: rem(6);
+    }
+  }
+}
