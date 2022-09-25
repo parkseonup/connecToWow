@@ -1,1 +1,12 @@
+@use "../abstracts/mixins/breakpoints" as *;
+@use "../abstracts/mixins/fontStyle" as *;
+@use "../abstracts/variables/colors" as *;
 
+.section__title {
+  @include titleMobile;
+  color: $white;
+
+  @include mq(lg) {
+    @include titleDesktop;
+  }
+}
