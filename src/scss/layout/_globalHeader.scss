@@ -1,0 +1,48 @@
+@use "../abstracts/functions/units" as *;
+@use "../abstracts/mixins/flexBox" as *;
+@use "../abstracts/mixins/gradientColor" as *;
+@use "../abstracts/variables/colors" as *;
+@use "../abstracts/variables/zIndexs" as *;
+
+.globalHeader {
+  @include getGradientBg(top, (transparent, $black));
+  position: relative;
+  z-index: $globalHeader-index;
+  height: rem(76);
+  padding: rem(16);
+
+  &__title {
+    @include inlineFlex;
+    margin-bottom: rem(8);
+
+    .icon {
+      height: rem(24);
+      font-size: rem(72);
+      color: $red;
+      vertical-align: bottom;
+      overflow: hidden;
+    }
+  }
+  .snb {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(28);
+
+    &__list {
+      height: 100%;
+    }
+
+    a {
+      color: $gray-300;
+    }
+  }
+
+  &.is--scrolled {
+    .snb {
+      position: fixed;
+      background-color: $black;
+    }
+  }
+}

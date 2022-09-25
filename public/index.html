@@ -17,10 +17,10 @@
     <header class="globalHeader">
       <h1 class="globalHeader__title">
         <a href="/">
-          <!--로고이미지 추가-->
+          <span class="icon icon--logo" aria-label="Wow."></span>
         </a>
       </h1>
-      <button class="user" aria-label="마이페이지로 이동">
+      <button type="button" class="user" aria-label="마이페이지로 이동">
         <img src="" alt="" />
         <!-- 성능개선하면서 Sprite이미지 제공 -->
       </button>
@@ -38,6 +38,11 @@
           <li class="snb__item"><a href="/">이건 어때요</a></li>
         </ul>
       </nav>
+      <button type="button" aria-label="마이 메뉴 열기">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
     </header>
 
     <nav class="gnb">
@@ -407,7 +412,7 @@
         </article>
       </div>
       <footer class="section__footer">
-        <button class="button button--ghost">더보기</button>
+        <button type="button" class="button button--ghost">더보기</button>
       </footer>
     </section>
 
@@ -441,7 +446,7 @@
         </article>
       </div>
       <footer class="section__footer">
-        <button class="button button--ghost">더보기</button>
+        <button type="button" class="button button--ghost">더보기</button>
       </footer>
     </section>
 
@@ -464,7 +469,7 @@
                 <dt>출연</dt>
                 <dd>BTS</dd>
               </dl>
-              <button class="button button--opacity button--wide">
+              <button type="button" class="button button--opacity button--wide">
                 <span class="icon icon--bell--empty" aria-hidden="true"></span>
                 알림받기
               </button>
@@ -485,7 +490,7 @@
                 <dt>출연</dt>
                 <dd>프로미스나인</dd>
               </dl>
-              <button class="button button--opacity button--wide">
+              <button type="button" class="button button--opacity button--wide">
                 <span class="icon icon--bell--empty" aria-hidden="true"></span>
                 알림받기
               </button>
@@ -506,7 +511,7 @@
                 <dt>출연</dt>
                 <dd>최강창민,시우민</dd>
               </dl>
-              <button class="button button--opacity button--wide">
+              <button type="button" class="button button--opacity button--wide">
                 <span class="icon icon--bell--empty" aria-hidden="true"></span>
                 알림받기
               </button>
@@ -527,7 +532,7 @@
                 <dt>출연</dt>
                 <dd>윤상,쏠</dd>
               </dl>
-              <button class="button button--opacity button--wide">
+              <button type="button" class="button button--opacity button--wide">
                 <span class="icon icon--bell--empty" aria-hidden="true"></span>
                 알림받기
               </button>
@@ -548,7 +553,7 @@
                 <dt>출연</dt>
                 <dd>재찬,제이비</dd>
               </dl>
-              <button class="button button--opacity button--wide">
+              <button type="button" class="button button--opacity button--wide">
                 <span class="icon icon--bell--empty" aria-hidden="true"></span>
                 알림받기
               </button>
@@ -569,7 +574,7 @@
                 <dt>출연</dt>
                 <dd>라포엠</dd>
               </dl>
-              <button class="button button--opacity button--wide">
+              <button type="button" class="button button--opacity button--wide">
                 <span class="icon icon--bell--empty" aria-hidden="true"></span>
                 알림받기
               </button>
@@ -586,27 +591,31 @@
       <div class="section__nav">
         <ul class="day__list">
           <li class="day__item">
-            <button aria-label="월요일 쇼라인업 보기" class="is--active">
+            <button
+              type="button"
+              aria-label="월요일 쇼라인업 보기"
+              class="is--active"
+            >
               월
             </button>
           </li>
           <li class="day__item">
-            <button aria-label="화요일 쇼라인업 보기">화</button>
+            <button type="button" aria-label="화요일 쇼라인업 보기">화</button>
           </li>
           <li class="day__item">
-            <button aria-label="수요일 쇼라인업 보기">수</button>
+            <button type="button" aria-label="수요일 쇼라인업 보기">수</button>
           </li>
           <li class="day__item">
-            <button aria-label="목요일 쇼라인업 보기">목</button>
+            <button type="button" aria-label="목요일 쇼라인업 보기">목</button>
           </li>
           <li class="day__item">
-            <button aria-label="금요일 쇼라인업 보기">금</button>
+            <button type="button" aria-label="금요일 쇼라인업 보기">금</button>
           </li>
           <li class="day__item">
-            <button aria-label="토요일 쇼라인업 보기">토</button>
+            <button type="button" aria-label="토요일 쇼라인업 보기">토</button>
           </li>
           <li class="day__item">
-            <button aria-label="일요일 쇼라인업 보기">일</button>
+            <button type="button" aria-label="일요일 쇼라인업 보기">일</button>
           </li>
         </ul>
       </div>
@@ -687,7 +696,7 @@
         </article>
       </div>
       <footer class="section__footer">
-        <button class="button button--ghost">더보기</button>
+        <button type="button" class="button button--ghost">더보기</button>
       </footer>
     </section>
 
