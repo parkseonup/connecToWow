@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body>
+  <body class="dark">
     <header class="globalHeader">
       <h1 class="globalHeader__title">
         <a href="/">
@@ -583,38 +583,103 @@
       <header class="section__header">
         <h2 class="section__title">요일별 쇼라인업</h2>
       </header>
-      <div class="section__content">
+      <div class="section__nav">
         <ul class="day__list">
           <li class="day__item">
-            <button>월</button>
+            <button aria-label="월요일 쇼라인업 보기">월</button>
           </li>
           <li class="day__item">
-            <button>화</button>
+            <button aria-label="화요일 쇼라인업 보기">화</button>
           </li>
           <li class="day__item">
-            <button>수</button>
+            <button aria-label="수요일 쇼라인업 보기">수</button>
           </li>
           <li class="day__item">
-            <button>목</button>
+            <button aria-label="목요일 쇼라인업 보기">목</button>
           </li>
           <li class="day__item">
-            <button>금</button>
+            <button aria-label="금요일 쇼라인업 보기">금</button>
           </li>
           <li class="day__item">
-            <button>토</button>
+            <button aria-label="토요일 쇼라인업 보기">토</button>
           </li>
           <li class="day__item">
-            <button>일</button>
+            <button aria-label="일요일 쇼라인업 보기">일</button>
           </li>
         </ul>
+      </div>
+      <div class="section__content">
         <article class="card">
           <figure class="card__figure">
             <div class="card__img">
-              <img src="./assets/images/testImg.jpg" alt="" />
+              <img src="./assets/images/lineups/3pro.png" alt="" />
             </div>
             <figcaption class="caption caption--timeline">
-              <time class="time" datetime="">오후 3시</time>
-              <h3 class="title">우주 대스타들의 향연! 응수씨네 엔터테이먼트</h3>
+              <time class="time" datetime="06:30">오전 6시 30분</time>
+              <h3 class="title">
+                <abbr title="Number One">No.1</abbr> 경제방송 삼프로TV
+              </h3>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="card">
+          <figure class="card__figure">
+            <div class="card__img">
+              <img src="./assets/images/lineups/baseAll.png" alt="" />
+            </div>
+            <figcaption class="caption caption--timeline">
+              <time class="time" datetime="07:00">오전 7시</time>
+              <h3 class="title">KBO 하이라이트를 최고의 해설진들과 만난다</h3>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="card">
+          <figure class="card__figure">
+            <div class="card__img">
+              <img src="./assets/images/lineups/jojo.png" alt="" />
+            </div>
+            <figcaption class="caption caption--timeline">
+              <time class="time" datetime="09:00">오전 8시</time>
+              <h3 class="title">
+                김해나가 책임지는 아침! 조조클럽, 시작합니다.
+              </h3>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="card">
+          <figure class="card__figure">
+            <div class="card__img">
+              <img src="./assets/images/lineups/theMoney.png" alt="" />
+            </div>
+            <figcaption class="caption caption--timeline">
+              <time class="time" datetime="09:00">오전 9시</time>
+              <h3 class="title">
+                돈 벌어 본 자들이 말하는, 돈에 대한 모든 것. 주언규의 머니쇼
+              </h3>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="card">
+          <figure class="card__figure">
+            <div class="card__img">
+              <img src="./assets/images/lineups/street.png" alt="" />
+            </div>
+            <figcaption class="caption caption--timeline">
+              <time class="time" datetime="09:00">오전 9시</time>
+              <h3 class="title">매일 9시 종합 경제 정보 토크쇼</h3>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="card">
+          <figure class="card__figure">
+            <div class="card__img">
+              <img src="./assets/images/lineups/youMusic.png" alt="" />
+            </div>
+            <figcaption class="caption caption--timeline">
+              <time class="time" datetime="11:00">오전 11시</time>
+              <h3 class="title">
+                뮤지션들의 뮤지션, 윤상이 전하는 음악과 일상
+              </h3>
             </figcaption>
           </figure>
         </article>
