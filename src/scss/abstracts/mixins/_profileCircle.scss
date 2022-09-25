@@ -22,14 +22,9 @@
 //   border-radius: 50%;
 // }
 
-@mixin descriptionCircle($width: rem(18px), $desktopWidth: rem(20px)) {
+@mixin profileCircle($width: rem(18px)) {
   background-color: red;
   width: $width;
   height: $width;
   border-radius: 50%;
-
-  @include mq(lg) {
-    width: $desktopWidth;
-    height: $desktopWidth;
-  }
 }
