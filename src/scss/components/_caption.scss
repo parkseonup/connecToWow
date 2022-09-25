@@ -1,0 +1,90 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/placeholders/a11yHidden" as *;
+@use "../abstracts/variables" as *;
+
+.caption {
+  .title {
+    @include descriptionMobile;
+    color: $white;
+    // 말줄임표 2줄
+
+    @include mq(lg) {
+      @include descriptionDesktop;
+    }
+  }
+
+  &--online {
+    .description {
+      @include smallMobile;
+      @include flex(start);
+      margin-top: rem(2);
+      gap: rem(4);
+      color: $gray-300;
+    }
+
+    .profile {
+      @include profileCircle(rem(18));
+    }
+
+    @include mq(lg) {
+      gap: rem(4);
+
+      .description {
+        @include smallDesktop;
+      }
+
+      .profile {
+        @include profileCircle(rem(20));
+      }
+    }
+  }
+
+  &--timeline {
+    .time {
+      @include smallMobile;
+      color: $lightblue;
+    }
+
+    .title {
+      margin-top: rem(2);
+    }
+
+    @include mq(md) {
+      .time {
+        @include smallDesktop;
+      }
+    }
+  }
+
+  &--multiline {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "profile title "
+      "profile list";
+    column-gap: rem(8);
+
+    .title {
+      grid-area: title;
+    }
+
+    .profile {
+      @include profileCircle(32);
+      grid-area: profile;
+    }
+
+    .description__list {
+      grid-area: list;
+    }
+
+    @include mq(lg) {
+      column-gap: rem(10);
+
+      .profile {
+        @include profileCircle(42);
+      }
+    }
+  }
+}
