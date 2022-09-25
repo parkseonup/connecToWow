@@ -10,6 +10,7 @@
   }
 
   .card {
+    width: rem(88);
     position: relative;
 
     &__img {
@@ -30,9 +31,16 @@
   }
 
   @include mq(md) {
+    .section__content {
+      gap: rem(16);
+    }
+
+    .card {
+      width: rem(160);
+    }
+
     .card__img {
       @include cardRatio(160);
-      gap: rem(16);
     }
 
     .caption {
@@ -41,9 +49,16 @@
   }
 
   @include mq(lg) {
+    .section__content {
+      gap: rem(16);
+    }
+
+    .card {
+      width: rem(224);
+    }
+
     .card__img {
       @include cardRatio(224);
-      gap: rem(16);
     }
 
     .caption {
