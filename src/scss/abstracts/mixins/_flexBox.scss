@@ -13,14 +13,16 @@ $flex-map: (
   @return map.get($flex-map, $key);
 }
 
-@mixin flex($jc: center, $ai: center) {
+@mixin flex($jc: center, $ai: center, $dr: row) {
   display: flex;
+  flex-direction: $dr;
   align-items: getFlexVariables($ai);
   justify-content: getFlexVariables($jc);
 }
 
-@mixin inlineFlex($jc: center, $ai: center) {
+@mixin inlineFlex($jc: center, $ai: center, $dr: row) {
   display: inline-flex;
+  flex-direction: $dr;
   align-items: getFlexVariables($ai);
   justify-content: getFlexVariables($jc);
 }
