@@ -2,10 +2,6 @@
 @use "../abstracts/variables/colors" as *;
 @use "../abstracts/functions/units" as *;
 
-body {
-  background-color: $black;
-}
-
 .description {
   &__list {
     @include flex(start);
