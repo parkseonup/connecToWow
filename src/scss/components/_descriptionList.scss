@@ -6,12 +6,18 @@
   @include flex(start);
   @include smallMobile;
   gap: rem(4);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   color: $gray-300;
+  min-width: 0;
 
   > div,
   dt,
   dd {
-    flex-shrink: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   > div,
