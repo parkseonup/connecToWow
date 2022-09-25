@@ -1,6 +1,6 @@
 @use "../functions" as *;
 
-@mixin cardRatio($width, $direction: h) {
+@mixin cardRatio($width, $direction: v) {
   width: rem($width);
   @if ($direction == v) {
     height: getHeightVertical($width);
