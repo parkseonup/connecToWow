@@ -1,0 +1,61 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables/colors" as *;
+
+.section {
+  position: relative;
+
+  &__header {
+    @include flex(start);
+    gap: rem(8);
+    height: rem(32);
+
+    .amount {
+      @include titleMobile;
+      color: $lightblue;
+    }
+  }
+
+  &__title {
+    @include titleMobile;
+    color: $white;
+  }
+
+  &__content {
+    margin-top: rem(10);
+  }
+
+  &__footer {
+    position: absolute;
+    top: 0;
+    right: rem(-14);
+  }
+
+  @include mq(md) {
+    &__content {
+      margin-top: rem(16);
+    }
+  }
+
+  @include mq(lg) {
+    &__header {
+      height: rem(42);
+
+      .amount {
+        @include titleDesktop;
+      }
+    }
+
+    &__title {
+      @include titleDesktop;
+    }
+
+    &__content {
+      margin-top: rem(32);
+    }
+
+    &__footer {
+      top: rem(2);
+    }
+  }
+}
