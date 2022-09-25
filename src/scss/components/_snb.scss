@@ -3,9 +3,7 @@
 
 .snb {
   &__list {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    @include inlineFlex(start, center);
     gap: rem(16px);
     @include titleMobile;
     @include mq(lg) {
