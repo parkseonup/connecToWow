@@ -1,0 +1,36 @@
+@use "../abstracts/mixins" as *;
+
+.onAir {
+  .section__content {
+    @include flex(start, center);
+  }
+
+  .card {
+    &--common {
+      position: relative;
+    }
+
+    &__img {
+      @include cardRatio(88, v);
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: fill;
+      }
+    }
+  }
+
+  @include mq(md) {
+    .card__img {
+      @include cardRatio(160, v);
+    }
+  }
+
+  @include mq(lg) {
+    .card__img {
+      @include cardRatio(224, v);
+    }
+  }
+}
