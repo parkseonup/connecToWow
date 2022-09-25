@@ -1,28 +1,33 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
 
 .badge {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $white;
-  height: 18px;
-  padding: 0 8px;
-  border-radius: 50%;
+  @include flex;
   @include smallMobile;
+  position: absolute;
+  top: rem(8px);
+  left: rem(8px);
+  color: $white;
+  height: rem(18px);
+  padding: 0 rem(8px);
+  border-radius: rem(100px);
+
   &--live {
     background-color: $red;
   }
+
   &--day {
     background-color: $blue;
   }
+
   &--support {
     @include getGradientBg(right, ($purple, $lightblue));
   }
+
   @include mq(lg) {
     @include smallDesktop;
-    height: 25px;
-    padding: 4px 12px;
+    height: rem(25px);
+    padding: 0 rem(12px);
   }
 }

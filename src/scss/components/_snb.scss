@@ -1,13 +1,16 @@
 @use "../abstracts" as *;
-// use mp
 
 .snb {
   &__list {
     @include inlineFlex(start, center);
-    gap: rem(16px);
     @include titleMobile;
+    white-space: nowrap;
+    gap: rem(16px);
+
     @include mq(lg) {
       gap: rem(20px);
     }
   }
 }
+
+// overflow-x:auto

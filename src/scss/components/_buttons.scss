@@ -7,7 +7,7 @@
   padding: 0 rem(14);
   border: 1px solid transparent;
   border-radius: rem(4);
-  transition: 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &--ghost,
   &--fat {
@@ -69,6 +69,12 @@
 
     &--wide {
       height: rem(46);
+      padding: 0 rem(72);
+    }
+
+    &--fat {
+      height: rem(48);
+      padding: 0 rem(36);
     }
 
     .icon {
