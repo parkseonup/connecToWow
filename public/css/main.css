@@ -316,10 +316,27 @@ table {
   border-spacing: 0;
 }
 
+.a11yHidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
 html,
 body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: 16px;
+}
+
+body {
+  background-color: #000000;
 }
 
 button {
@@ -331,14 +348,86 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "wow";
+  src: url("../assets/icons/wow.eot?az257p");
+  src: url("../assets/icons/wow.eot?az257p#iefix") format("embedded-opentype"), url("../assets/icons/wow.ttf?az257p") format("truetype"), url("../assets/icons/wow.woff?az257p") format("woff"), url("../assets/icons/wow.svg?az257p#wow") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+.icon {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "wow" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon--arrow:before {
+  content: "\e900";
+}
+.icon--more:before {
+  content: "\e901";
+}
+.icon--help:before {
+  content: "\e902";
+}
+.icon--home:before {
+  content: "\e903";
+}
+.icon--logo:before {
+  content: "\e904";
+}
+.icon--play:before {
+  content: "\e905";
+}
+.icon--plus:before {
+  content: "\e906";
+}
+.icon--search:before {
+  content: "\e907";
+}
+.icon--share:before {
+  content: "\e908";
+}
+.icon--star--fill:before {
+  content: "\e909";
+}
+.icon--bell--fill:before {
+  content: "\e90a";
+}
+.icon--star--empty:before {
+  content: "\e90b";
+}
+.icon--bell--empty:before {
+  content: "\e90c";
+}
+.icon--original:before {
+  content: "\e90d";
+}
+.icon--youtube:before {
+  content: "\e90e";
+}
+
 .snb__list {
   display: inline-flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
+  white-space: nowrap;
+  gap: 1rem;
 }
 @media (min-width: 1280px) {
   .snb__list {
@@ -348,6 +437,7 @@ a {
 
 .button {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: 0.8125rem;
@@ -357,7 +447,7 @@ a {
   padding: 0 0.875rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  transition: 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .button--ghost, .button--fat {
   color: #000000;
@@ -368,13 +458,15 @@ a {
 .button--ghost {
   background-color: transparent;
 }
-.button--ghost:hover, .button--ghost:active {
+.button--ghost:hover, .button--ghost:active,
+.button--ghost .is--active {
   color: #f4361d;
 }
 .button--opacity {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.button--opacity:hover, .button--opacity:active {
+.button--opacity:hover, .button--opacity:active,
+.button--opacity .is--active {
   color: #f4361d;
   border-color: #f4361d;
 }
@@ -385,7 +477,8 @@ a {
   height: 2.25rem;
   background-color: #ffffff;
 }
-.button--fat:hover, .button--fat:active {
+.button--fat:hover, .button--fat:active,
+.button--fat .is--active {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.08);
 }
@@ -406,12 +499,116 @@ a {
   }
   .button--wide {
     height: 2.875rem;
+    padding: 0 4.5rem;
+  }
+  .button--fat {
+    height: 3rem;
+    padding: 0 2.25rem;
   }
   .button .icon {
     margin-left: -0.25rem;
     margin-right: 0.25rem;
     font-size: 1.5rem;
   }
+}
+
+.description__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  gap: 0.25rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.description__list > div,
+.description__list > dd {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.25rem;
+}
+.description__list > div:nth-child(n+2)::before,
+.description__list > dd:nth-child(n+2)::before {
+  content: "";
+  display: inline-block;
+  width: 0.1875rem;
+  height: 0.1875rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+@media (min-width: 1280px) {
+  .description__list {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3125;
+    gap: 0.375rem;
+  }
+}
+
+.multiline {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "profile title " "profile list";
+  column-gap: 10px;
+}
+.multiline .card__title {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.2307692308;
+  grid-area: title;
+  color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (min-width: 1280px) {
+  .multiline .card__title {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.625;
+  }
+}
+.multiline .card__profile {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  grid-area: profile;
+}
+.multiline .card__profile img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 1280px) {
+  .multiline .card__profile {
+    width: 2.625rem;
+    height: 2.625rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .multiline .card__profile img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.multiline .card .description__list {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+  grid-area: list;
 }
 
 /*# sourceMappingURL=main.css.map */
