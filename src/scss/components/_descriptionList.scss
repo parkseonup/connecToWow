@@ -9,11 +9,17 @@
   color: $gray-300;
 
   > div,
+  dt,
+  dd {
+    flex-shrink: 0;
+  }
+
+  > div,
   > dd {
     @include flex(start);
     gap: rem(4);
 
-    &:nth-of-type(n + 2)::before {
+    &:nth-child(n + 2)::before {
       content: "";
       display: inline-block;
       width: rem(3);
