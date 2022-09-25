@@ -1,0 +1,30 @@
+@use "../variables" as *;
+@use "../functions" as *;
+
+// history일 때 프로필 이미지 크기
+// 모바일, 태블릿 18 * 18
+// 데스크탑 20 * 20
+// onAir일 때 프로필 이미지 크기
+// 모바일, 태블릿 18 * 18
+// 데스크탑 20 * 20
+// highlight일 때 프로필 이미지 크기
+// 모바일, 태블릿 18 * 18
+// 데스크탑 20 * 20
+// following일 때 프로필 이미지 크기
+// 모바일, 태블릿 32 * 32
+// 데스크탑 40 * 40
+// 기본 크기 18 * 18
+// 데스크탑 미디어쿼리부터 20 * 20
+// 공통된 코드
+// $width ->  width: $width; height: $height;
+// .description__profile {
+//   background: red;
+//   border-radius: 50%;
+// }
+
+@mixin profileCircle($width: rem(18px)) {
+  background-color: red;
+  width: $width;
+  height: $width;
+  border-radius: 50%;
+}
