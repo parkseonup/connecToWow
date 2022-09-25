@@ -11,6 +11,20 @@ body {
 
 body {
   background-color: $black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  box-sizing: border-box;
+
+  *,
+  &::before,
+  &::after,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 }
 
 button {

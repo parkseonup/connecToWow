@@ -1,0 +1,89 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions/units" as *;
+@use "../abstracts/variables/colors" as *;
+
+.upcoming {
+  text-align: center;
+
+  .section__content {
+    @include flex(start);
+    gap: rem(8);
+    overflow-x: auto;
+  }
+
+  .card {
+    position: relative;
+    flex-shrink: 0;
+    border-radius: rem(8);
+    overflow: hidden;
+
+    &__img {
+      @include cardRatio(256);
+      @include afterGradient;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .caption {
+    @include flex($dr: column);
+    gap: rem(6);
+    position: absolute;
+    bottom: rem(24);
+    left: 50%;
+    width: 100%;
+    padding: 0 rem(8);
+    transform: translateX(-50%);
+  }
+
+  .time {
+    @include descriptionMobile;
+    color: $lightblue;
+  }
+
+  .title {
+    @include upcomingMobile;
+  }
+
+  .button {
+    margin-top: rem(18);
+  }
+
+  @include mq(md) {
+    .section__content {
+      gap: rem(16);
+    }
+
+    .card {
+      &__img {
+        @include cardRatio(280);
+      }
+    }
+  }
+
+  @include mq(lg) {
+    .card {
+      &__img {
+        @include cardRatio(374);
+      }
+    }
+
+    .caption {
+      gap: rem(8);
+      bottom: rem(32);
+    }
+
+    .time {
+      @include descriptionDesktop;
+      color: $lightblue;
+    }
+
+    .title {
+      @include upcomingDesktop;
+    }
+  }
+}
