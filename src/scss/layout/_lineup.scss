@@ -1,0 +1,116 @@
+@use "sass:math";
+@use "../abstracts/functions/units" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables/colors" as *;
+
+.lineup {
+  .section__nav {
+    margin-top: rem(8);
+  }
+
+  .day {
+    &__list {
+      @include flex(between);
+      gap: rem(16);
+    }
+
+    &__item {
+      button {
+        @include descriptionMobile;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: all 0.2s ease-in-out;
+
+        &:hover,
+        &:active,
+        &.is--active {
+          background-color: $red;
+        }
+      }
+    }
+  }
+
+  .section__content {
+    @include flex(between, start);
+    flex-wrap: wrap;
+    gap: rem(8);
+  }
+
+  .card {
+    $lineup-width-sm: calc((100% - (rem(8) * 2)) / 3);
+    width: $lineup-width-sm;
+    flex-shrink: 0;
+
+    &__img {
+      height: calc(#{$lineup-width-sm} * 1.4);
+      overflow: hidden;
+      border-radius: rem(8);
+
+      img {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .caption {
+    margin-top: rem(6);
+  }
+
+  @include mq(md) {
+    .section__content {
+      gap: rem(16);
+    }
+
+    .card {
+      $lineup-width-md: calc((100% - (rem(16) * 4)) / 5);
+      width: $lineup-width-md;
+
+      &__img {
+        height: calc(#{$lineup-width-md} * 1.4);
+      }
+    }
+
+    .caption {
+      margin-top: rem(10);
+    }
+  }
+
+  @include mq(lg) {
+    .section__nav {
+      margin-top: rem(24);
+    }
+
+    .day {
+      &__list {
+        @include flex(start);
+        gap: rem(48);
+      }
+
+      &__item {
+        button {
+          @include descriptionDesktop;
+          width: 38px;
+          height: 38px;
+        }
+      }
+    }
+
+    .card {
+      $lineup-width-lg: calc((100% - (rem(16) * 5)) / 6);
+      width: $lineup-width-lg;
+
+      &__img {
+        height: calc(#{$lineup-width-lg} * 1.4);
+      }
+    }
+
+    .caption {
+      margin-top: rem(20);
+    }
+  }
+}

@@ -32,6 +32,7 @@ body {
 }
 
 button {
+  padding: 0;
   color: inherit;
   background-color: transparent;
   border: 0;
@@ -44,7 +45,7 @@ a {
 }
 
 abbr {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .a11yHidden {
