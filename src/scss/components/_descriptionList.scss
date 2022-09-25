@@ -6,11 +6,8 @@
   @include flex(start);
   @include smallMobile;
   gap: rem(4);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  color: $gray-300;
   min-width: 0;
+  color: $gray-300;
 
   > div,
   dt,
