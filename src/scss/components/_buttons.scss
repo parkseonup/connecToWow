@@ -9,11 +9,11 @@
   border-radius: rem(4);
   transition: all 0.2s ease-in-out;
 
-  &--ghost,
   &--fat {
     color: $black;
   }
 
+  &--ghost,
   &--opacity,
   &--fill {
     color: $white;
