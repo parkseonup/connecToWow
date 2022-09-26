@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WWOW</title>
+    <title>WOW</title>
     <meta name="description" content="네이버 TV의 새로운 이름 WOW" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
     <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" />
@@ -29,7 +29,11 @@
           alt="나의 프로필"
         />
       </a>
-      <button type="button" class="myMenu__btn" aria-label="마이 메뉴 열기">
+      <button
+        type="button"
+        class="myMenu__btn is--closed"
+        aria-label="마이 메뉴 열기"
+      >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -77,9 +81,18 @@
           </a>
         </li>
       </ul>
+      <button
+        type="button"
+        class="myMenu__btn is--opened"
+        aria-label="마이 메뉴 닫기"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
     </nav>
 
-    <main class="mainPage">
+    <main class="main">
       <section class="section onAir">
         <header class="section__header">
           <h2 class="section__title">지금 방송 중</h2>
