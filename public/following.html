@@ -56,32 +56,29 @@
       <ul class="myMenu__list">
         <li class="myMenu__item">
           <a href="/">
-            <img src="" alt="" />
-            <span class="myMenu__text">홈</span>
+            <span class="icon icon--search" aria-hidden="true"></span>
+            검색
           </a>
         </li>
         <li class="myMenu__item">
-          <a href="/">
-            <img src="" alt="" />
-            <span class="myMenu__text">오리지널</span>
+          <a href="./following.html">
+            <span class="icon icon--youtube" aria-hidden="true"></span>
+            팔로잉
           </a>
         </li>
         <li class="myMenu__item">
-          <a href="/">
-            <img src="" alt="" />
-            <span class="myMenu__text">팔로잉</span>
-          </a>
+          <a href="/">서비스 소개</a>
         </li>
         <li class="myMenu__item">
-          <a href="/">
-            <img src="" alt="" />
-            <span class="myMenu__text">검색</span>
-          </a>
+          <a href="/">공지사항</a>
+        </li>
+        <li class="myMenu__item">
+          <a href="/">로그아웃</a>
         </li>
       </ul>
       <button
         type="button"
-        class="myMenu__btn is--opened"
+        class="myMenu__button button--close"
         aria-label="마이 메뉴 닫기"
       >
         <span aria-hidden="true"></span>
@@ -90,7 +87,36 @@
       </button>
     </nav>
 
-    <section class="setion following">
+    <nav class="gnb">
+      <ul class="gnb__list">
+        <li class="gnb__item">
+          <a href="/" class="gnb__link is--opened">
+            <span class="icon icon--home" aria-hidden="true"></span>
+            홈
+          </a>
+        </li>
+        <li class="gnb__item">
+          <a href="/" class="gnb__link">
+            <span class="icon icon--original" aria-hidden="true"></span>
+            오리지널
+          </a>
+        </li>
+        <li class="gnb__item">
+          <a href="./following.html" class="gnb__link">
+            <span class="icon icon--youtube" aria-hidden="true"></span>
+            팔로잉
+          </a>
+        </li>
+        <li class="gnb__item">
+          <a href="/" class="gnb__link">
+            <span class="icon icon--search" aria-hidden="true"></span>
+            검색
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="section following">
       <header class="section__header">
         <h2 class="section__title">팔로잉</h2>
       </header>
