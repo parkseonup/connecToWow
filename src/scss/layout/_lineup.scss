@@ -43,8 +43,19 @@
     width: $lineup-width-sm;
     flex-shrink: 0;
 
+    .rwdWrapper {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 140%;
+    }
+
     &__img {
-      height: calc(#{$lineup-width-sm} * 1.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       overflow: hidden;
       border-radius: rem(8);
 
@@ -69,10 +80,6 @@
     .card {
       $lineup-width-md: calc((100% - (rem(16) * 4)) / 5);
       width: $lineup-width-md;
-
-      &__img {
-        height: calc(#{$lineup-width-md} * 1.4);
-      }
     }
 
     .caption {
@@ -103,10 +110,6 @@
     .card {
       $lineup-width-lg: calc((100% - (rem(16) * 5)) / 6);
       width: $lineup-width-lg;
-
-      &__img {
-        height: calc(#{$lineup-width-lg} * 1.4);
-      }
     }
 
     .caption {
