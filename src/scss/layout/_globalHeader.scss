@@ -1,7 +1,7 @@
 @use "../abstracts/functions/units" as *;
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables/colors" as *;
-@use "../abstracts/variables/zIndexs" as *;
+@use "../abstracts/variables/zIndexes" as *;
 
 .globalHeader {
   @include flex($ai: start);
