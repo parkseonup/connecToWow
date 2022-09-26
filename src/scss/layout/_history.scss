@@ -15,7 +15,6 @@
     &__img {
       @include cardRatio(192, h);
       overflow: hidden;
-      background: red;
 
       img {
         width: 100%;
