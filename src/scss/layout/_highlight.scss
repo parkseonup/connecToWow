@@ -6,6 +6,9 @@
   margin-bottom: 100px;
   .section__content {
     @include flex(start);
+    position: relative;
+
+    overflow-x: scroll;
     gap: rem(8);
   }
 
