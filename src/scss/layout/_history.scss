@@ -1,21 +1,21 @@
-@use "../abstracts/mixins/" as *;
+@use "../abstracts/mixins" as *;
 @use "../abstracts/functions" as *;
 
-.onAir {
+.history {
+  margin-top: rem(56);
+
   .section__content {
     @include flex(start, start);
     gap: rem(8);
     overflow-x: scroll;
-    position: relative;
   }
 
   .card {
-    width: rem(88);
-    position: relative;
-
+    width: rem(192);
     &__img {
-      @include cardRatio(88);
+      @include cardRatio(192, h);
       overflow: hidden;
+      background: red;
 
       img {
         width: 100%;
@@ -27,19 +27,18 @@
   }
 
   .caption {
-    margin-top: rem(8);
+    margin-top: rem(6);
   }
 
   @include mq(md) {
     .section__content {
       gap: rem(16);
     }
-
     .card {
-      width: rem(160);
+      width: rem(280);
 
       &__img {
-        @include cardRatio(160);
+        @include cardRatio(280, h);
       }
     }
 
@@ -49,12 +48,18 @@
   }
 
   @include mq(lg) {
+    margin-top: rem(160);
+
     .card {
-      width: rem(224);
+      width: rem(520);
 
       &__img {
-        @include cardRatio(224);
+        @include cardRatio(520, h);
       }
+    }
+
+    .caption {
+      margin-top: rem(20);
     }
   }
 }
