@@ -2,6 +2,7 @@
 
 @mixin cardRatio($width, $direction: v) {
   width: rem($width);
+  border-radius: 8px;
   @if ($direction == v) {
     height: getHeightVertical($width);
   } @else if($direction == h) {
