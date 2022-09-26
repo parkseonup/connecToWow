@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마이 페이지 - WOW</title>
+  <meta
+    name="description"
+    content="네이버 TV의 새로운 이름 Wow의 마이 페이지입니다."
+  />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" />
+  <link
+    rel="stylesheet"
+    as="style"
+    crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css"
+  />
+  <link rel="stylesheet" href="./css/main.css" />
+  <body class="dark">
+    <header class="globalHeader only--desktop">
+      <h1 class="globalHeader__title">
+        <a href="/">
+          <span class="icon icon--logo" aria-label="Wow."></span>
+        </a>
+      </h1>
+      <a href="/" class="myPage__link" aria-label="마이페이지로 이동">
+        <img
+          src="./assets/images/lineups/profiles/jojo.png"
+          alt="나의 프로필"
+        />
+      </a>
+      <button
+        type="button"
+        class="myMenu__button button--open"
+        aria-label="마이 메뉴 열기"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <nav class="snb scroll">
+        <h2 class="a11yHidden">영상 카테고리</h2>
+        <ul class="snb__list">
+          <li class="snb__item"><a href="/">홈</a></li>
+          <li class="snb__item"><a href="/">생중계</a></li>
+          <li class="snb__item"><a href="/">급상승</a></li>
+          <li class="snb__item"><a href="/">드라마</a></li>
+          <li class="snb__item"><a href="/">예능</a></li>
+          <li class="snb__item"><a href="/">뮤직</a></li>
+          <li class="snb__item"><a href="/">스포츠</a></li>
+          <li class="snb__item"><a href="/">게임</a></li>
+          <li class="snb__item"><a href="/">이건 어때요</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <nav class="myMenu">
+      <h2 class="a11yHidden">마이 메뉴 목록</h2>
+      <ul class="myMenu__list">
+        <li class="myMenu__item">
+          <a href="/">
+            <span class="icon icon--search" aria-hidden="true"></span>
+            검색
+          </a>
+        </li>
+        <li class="myMenu__item">
+          <a href="./following.html">
+            <span class="icon icon--youtube" aria-hidden="true"></span>
+            팔로잉
+          </a>
+        </li>
+        <li class="myMenu__item">
+          <a href="/">서비스 소개</a>
+        </li>
+        <li class="myMenu__item">
+          <a href="/">공지사항</a>
+        </li>
+        <li class="myMenu__item">
+          <a href="/">로그아웃</a>
+        </li>
+      </ul>
+      <button
+        type="button"
+        class="myMenu__button button--close"
+        aria-label="마이 메뉴 닫기"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <nav class="gnb">
+      <h2 class="a11yHidden">마이 메뉴 목록</h2>
+      <ul class="gnb__list">
+        <li class="gnb__item">
+          <a href="/" class="gnb__link is--opened">
+            <span class="icon icon--home" aria-hidden="true"></span>
+            홈
+          </a>
+        </li>
+        <li class="gnb__item">
+          <a href="/" class="gnb__link">
+            <span class="icon icon--original" aria-hidden="true"></span>
+            오리지널
+          </a>
+        </li>
+        <li class="gnb__item">
+          <a href="./following.html" class="gnb__link">
+            <span class="icon icon--youtube" aria-hidden="true"></span>
+            팔로잉
+          </a>
+        </li>
+        <li class="gnb__item">
+          <a href="/" class="gnb__link">
+            <span class="icon icon--search" aria-hidden="true"></span>
+            검색
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      aria-label="이전 페이지로 이동"
+      class="icon icon--arrow before__button"
+    ></button>
+
+    <!-- section 태그 시작 -->
+    <section class="section mypage">
+      <!-- heading을 뭘로 줘야할까? -->
+      <figure>
+        <div>
+          <img src="./assets/images/onairs/profiles/1.png" alt="" />
+        </div>
+        <figcaption class="caption userInfo">
+          <h2 class="a11yHidden">사용자 정보</h2>
+          <dl class="userInfo__list">
+            <div class="userInfo__item">
+              <dt class="a11yHidden">사용자 이름</dt>
+              <dd>박선우</dd>
+            </div>
+            <div class="userInfo__item">
+              <dt class="a11yHidden">사용자 이메일</dt>
+              <dd>asdfqw@mail.com</dd>
+            </div>
+          </dl>
+        </figcaption>
+      </figure>
+
+      <!-- 카테고리태그시작 -->
+      <nav class="category">
+        <h3 class="a11yHidden">마이 페이지 카테고리</h3>
+        <ul class="category__list">
+          <li class="category__item">
+            <button type="button" class="category__btn is--active">최근</button>
+          </li>
+          <li class="category__item">
+            <button type="button" class="category__btn">좋아요</button>
+          </li>
+          <li class="category__item">
+            <button type="button" class="category__btn">나중에 볼 영상</button>
+          </li>
+        </ul>
+      </nav>
+      <!-- 카테고리 끝 -->
+
+      <!-- 지금 방송중 영상리스트 시작 -->
+      <section class="section live">
+        <header class="section__header">
+          <!-- 영상이 많을 떄 다 보여주고 전체 삭제를 할지 알려주는 것보다 영상 갯수를 알려주고 삭제할건지 먼저 물어보는게 낫다고 생각해서 최근본 영상과 전체삭제를 같은 곳에 묶어두었습니다.  -->
+          <h2 class="section__title">최근 본 영상</h2>
+          <small class="section__small">300</small>
+          <button type="button" class="button button--ghost">전체 삭제</button>
+        </header>
+        <div class="section__content">
+          <article class="card">
+            <figure class="card__figure">
+              <div class="card__img">
+                <img src="" alt="" />
+              </div>
+              <figcaption class="caption">
+                <h3 class="title">김바울 황건하 이건 사랑이야</h3>
+                <dl class="description__list">
+                  <div class="description__item">
+                    <dt class="a11yHidden">채널명</dt>
+                    <dd>점심어택</dd>
+                  </div>
+                </dl>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>
