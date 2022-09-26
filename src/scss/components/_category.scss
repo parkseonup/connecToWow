@@ -3,39 +3,42 @@
 @use "../abstracts/mixins" as *;
 
 .category {
+  padding: 0 rem(16);
+  border-bottom: 1px solid $gray-600;
+
   &__list {
     @include flex(start);
     gap: rem(18);
-    border-bottom: 1px solid $gray-600;
+    overflow-x: scroll;
   }
 
   &__item {
     @include titleMobile;
     color: $gray-300;
+  }
 
-    button {
-      padding: rem(4);
+  button {
+    padding: rem(4);
+    white-space: nowrap;
 
-      &.is--active {
-        color: $white;
-        border-bottom: 2px solid currentColor;
-      }
+    &.is--active {
+      color: $white;
+      border-bottom: 2px solid currentColor;
     }
   }
 
   @include mq(md) {
-    .category {
-      &__list {
-        gap: rem(24);
-      }
+    padding: 0 rem(40);
 
-      &__item {
-        @include upcomingDesktop;
+    &__list {
+      gap: rem(24);
+    }
 
-        button {
-          padding: rem(16) rem(4);
-        }
-      }
+    &__item {
+      @include upcomingDesktop;
+    }
+    button {
+      padding: rem(16) rem(4);
     }
   }
 }

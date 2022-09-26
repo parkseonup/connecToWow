@@ -8,6 +8,7 @@
   border: 1px solid transparent;
   border-radius: rem(4);
   transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
 
   &--fat {
     color: $black;
@@ -85,5 +86,21 @@
       margin-right: rem(4);
       font-size: rem(24);
     }
+  }
+}
+
+.before__button {
+  position: absolute;
+  transform: rotate(180deg);
+  font-size: rem(24);
+  top: rem(24);
+  left: rem(9);
+
+  @include mq(md) {
+    font-size: rem(40);
+  }
+
+  @include mq(lg) {
+    display: none;
   }
 }
