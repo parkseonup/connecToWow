@@ -1,0 +1,41 @@
+@use "../abstracts/functions/units" as *;
+@use "../abstracts/variables/colors" as *;
+@use "../abstracts/mixins" as *;
+
+.category {
+  &__list {
+    @include flex(start);
+    gap: rem(18);
+    border-bottom: 1px solid $gray-600;
+  }
+
+  &__item {
+    @include titleMobile;
+    color: $gray-300;
+
+    button {
+      padding: rem(4);
+
+      &.is--active {
+        color: $white;
+        border-bottom: 2px solid currentColor;
+      }
+    }
+  }
+
+  @include mq(md) {
+    .category {
+      &__list {
+        gap: rem(24);
+      }
+
+      &__item {
+        @include upcomingDesktop;
+
+        button {
+          padding: rem(16) rem(4);
+        }
+      }
+    }
+  }
+}
