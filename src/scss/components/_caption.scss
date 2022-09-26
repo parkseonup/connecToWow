@@ -28,7 +28,7 @@
     }
 
     .profile {
-      @include profileCircle(rem(18));
+      @include profileCircle(18);
     }
 
     @include mq(lg) {
@@ -39,7 +39,7 @@
       }
 
       .profile {
-        @include profileCircle(rem(20));
+        @include profileCircle(20);
       }
     }
   }
