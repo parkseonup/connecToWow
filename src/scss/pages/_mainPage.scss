@@ -1,0 +1,12 @@
+@use "../abstracts/functions/units" as *;
+@use "../abstracts/mixins/breakpoints" as *;
+
+.mainPage {
+  .section {
+    margin-top: rem(56);
+
+    @include mq(lg) {
+      margin-top: rem(160);
+    }
+  }
+}

@@ -2,8 +2,6 @@
 @use "../abstracts/functions" as *;
 
 .history {
-  margin-top: rem(56);
-
   .section__content {
     @include flex(start, start);
     gap: rem(8);
@@ -47,8 +45,6 @@
   }
 
   @include mq(lg) {
-    margin-top: rem(160);
-
     .card {
       width: rem(520);
 
