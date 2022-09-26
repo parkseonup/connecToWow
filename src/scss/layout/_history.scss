@@ -2,6 +2,8 @@
 @use "../abstracts/functions" as *;
 
 .history {
+  overflow: hidden;
+
   .section__content {
     @include flex(start, start);
     gap: rem(8);
@@ -9,18 +11,10 @@
   }
 
   .card {
+    flex-shrink: 0;
     width: rem(192);
-    &__img {
-      @include cardRatio(192, h);
-      overflow: hidden;
 
-      img {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-      }
-    }
+    @include rwdWrapper;
   }
 
   .caption {
@@ -31,12 +25,9 @@
     .section__content {
       gap: rem(16);
     }
+
     .card {
       width: rem(280);
-
-      &__img {
-        @include cardRatio(280, h);
-      }
     }
 
     .caption {
@@ -47,10 +38,6 @@
   @include mq(lg) {
     .card {
       width: rem(520);
-
-      &__img {
-        @include cardRatio(520, h);
-      }
     }
 
     .caption {
