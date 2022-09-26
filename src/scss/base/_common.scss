@@ -2,6 +2,7 @@
 @use "../abstracts/variables/colors" as *;
 @use "../abstracts/functions/units" as *;
 @use "../abstracts/placeholders/a11yHidden" as *;
+@use "../abstracts/placeholders/scroll" as *;
 
 html,
 body {
@@ -50,4 +51,8 @@ abbr {
 
 .a11yHidden {
   @extend %a11yHidden;
+}
+
+.scroll {
+  @extend %scroll;
 }

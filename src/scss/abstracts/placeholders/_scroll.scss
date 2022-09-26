@@ -1,0 +1,21 @@
+@use "../mixins/breakpoints" as *;
+
+%scroll {
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+
+  @include mq(lg) {
+    overflow-x: auto;
+    -ms-overflow-style: inherit; /* IE and Edge */
+    scrollbar-width: inherit; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: inherit; /* Chrome, Safari, Opera*/
+    }
+  }
+}
