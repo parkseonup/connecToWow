@@ -33,7 +33,7 @@
   }
 
   .section__content {
-    @include flex(between, start);
+    @include flex(start, start);
     flex-wrap: wrap;
     gap: rem(8);
   }
