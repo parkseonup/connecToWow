@@ -1,5 +1,5 @@
 @use "../abstracts/functions/units" as *;
-@use "../abstracts/mixins/breakpoints" as *;
+@use "../abstracts/mixins" as *;
 
 .main {
   margin-bottom: rem(92);
@@ -7,8 +7,18 @@
   .section {
     margin-top: rem(56);
 
-    @include mq(lg) {
+    &__content {
+      margin-top: rem(10);
+    }
+  }
+
+  @include mq(lg) {
+    .section {
       margin-top: rem(160);
+
+      &__content {
+        margin-top: rem(32);
+      }
     }
   }
 }
