@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색 - WOW</title>
+    <meta
+      name="description"
+      content="네이버 TV의 새로운 이름 WOW의 검색 페이지입니다."
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body class="dark">
+    <header class="globalHeader only--desktop">
+      <h1 class="globalHeader__title">
+        <a href="/">
+          <span class="icon icon--logo" aria-label="Wow."></span>
+        </a>
+      </h1>
+      <a href="/" class="myPage__link" aria-label="마이페이지로 이동">
+        <img
+          src="./assets/images/lineups/profiles/jojo.png"
+          alt="나의 프로필"
+        />
+      </a>
+      <button
+        type="button"
+        class="myMenu__button button--open"
+        aria-label="마이 메뉴 열기"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <nav class="snb scroll">
+        <h2 class="a11yHidden">영상 카테고리</h2>
+        <ul class="snb__list">
+          <li class="snb__item"><a href="/">홈</a></li>
+          <li class="snb__item"><a href="/">생중계</a></li>
+          <li class="snb__item"><a href="/">급상승</a></li>
+          <li class="snb__item"><a href="/">드라마</a></li>
+          <li class="snb__item"><a href="/">예능</a></li>
+          <li class="snb__item"><a href="/">뮤직</a></li>
+          <li class="snb__item"><a href="/">스포츠</a></li>
+          <li class="snb__item"><a href="/">게임</a></li>
+          <li class="snb__item"><a href="/">이건 어때요</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <nav class="myMenu">
+      <ul class="myMenu__list">
+        <li class="myMenu__item">
+          <a href="/">
+            <span class="icon icon--search" aria-hidden="true"></span>
+            검색
+          </a>
+        </li>
+        <li class="myMenu__item">
+          <a href="./following.html">
+            <span class="icon icon--youtube" aria-hidden="true"></span>
+            팔로잉
+          </a>
+        </li>
+        <li class="myMenu__item">
+          <a href="/">서비스 소개</a>
+        </li>
+        <li class="myMenu__item">
+          <a href="/">공지사항</a>
+        </li>
+        <li class="myMenu__item">
+          <a href="/">로그아웃</a>
+        </li>
+      </ul>
+      <button
+        type="button"
+        class="myMenu__button button--close"
+        aria-label="마이 메뉴 닫기"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <nav class="gnb">
+      <ul class="gnb__list">
+        <li class="gnb__item">
+          <a href="/" class="gnb__link is--opened">
+            <span class="icon icon--home" aria-hidden="true"></span>
+            홈
+          </a>
+        </li>
+        <li class="gnb__item">
+          <a href="/" class="gnb__link">
+            <span class="icon icon--original" aria-hidden="true"></span>
+            오리지널
+          </a>
+        </li>
+        <li class="gnb__item">
+          <a href="./following.html" class="gnb__link">
+            <span class="icon icon--youtube" aria-hidden="true"></span>
+            팔로잉
+          </a>
+        </li>
+        <li class="gnb__item">
+          <a href="/" class="gnb__link">
+            <span class="icon icon--search" aria-hidden="true"></span>
+            검색
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="search">
+      <form action="/search.html" method="get" class="search__form">
+        <fieldset>
+          <legend class="a11yHidden">검색 폼</legend>
+          <div class="input__wrapper">
+            <label for="search">
+              <span class="icon icon--search" aria-label="검색"></span>
+            </label>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="동영상, 채널, 라이브 검색"
+              required
+            />
+            <button
+              type="reset"
+              class="button button--ghost input__reset"
+              aria-label="검색어 초기화"
+            >
+              취소
+            </button>
+            <button type="submit" class="a11yHidden">검색어 제출</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <aside class="recommend">
+        <header class="recommend__header">
+          <h2 class="recommend__title">추천 키워드</h2>
+          <button class="icon icon--help" aria-label="검색 도움말"></button>
+        </header>
+        <ul class="recommend__list">
+          <li class="recommend__item">
+            <a class="recommend__link" href="/">동상이몽2</a>
+          </li>
+          <li class="recommend__item">
+            <a class="recommend__link" href="/">신상출시 편스토랑</a>
+          </li>
+          <li class="recommend__item">
+            <a class="recommend__link" href="/">작은 아씨들</a>
+          </li>
+          <li class="recommend__item">
+            <a class="recommend__link" href="/">우리들의 차차차</a>
+          </li>
+          <li class="recommend__item">
+            <a class="recommend__link" href="/">법대로 사랑하라</a>
+          </li>
+          <li class="recommend__item">
+            <a class="recommend__link" href="/">SSG</a>
+          </li>
+          <li class="recommend__item">
+            <a class="recommend__link" href="/">이원석</a>
+          </li>
+          <li class="recommend__item">
+            <a class="recommend__link" href="/">KBO리그</a>
+          </li>
+          <li class="recommend__item">
+            <a class="recommend__link" href="/">톡파원 25시</a>
+          </li>
+          <li class="recommend__item">
+            <a class="recommend__link" href="/">열린 음악회</a>
+          </li>
+          <li class="recommend__item">
+            <a class="recommend__link" href="/">천원짜리 변호사</a>
+          </li>
+          <li class="recommend__item">
+            <a class="recommend__link" href="/">엄지원</a>
+          </li>
+        </ul>
+      </aside>
+    </main>
+  </body>
+</html>
