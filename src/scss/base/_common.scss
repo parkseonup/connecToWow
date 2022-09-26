@@ -2,6 +2,7 @@
 @use "../abstracts/variables/colors" as *;
 @use "../abstracts/functions/units" as *;
 @use "../abstracts/placeholders/a11yHidden" as *;
+@use "../abstracts/mixins/breakpoints" as *;
 @use "../abstracts/placeholders/scroll" as *;
 
 html,
@@ -32,6 +33,11 @@ body {
   }
 }
 
+input {
+  color: inherit;
+  appearance: none;
+}
+
 button {
   padding: 0;
   color: inherit;
@@ -55,4 +61,14 @@ abbr {
 
 .scroll {
   @extend %scroll;
+}
+
+.only--desktop {
+  display: none !important;
+}
+
+@include mq(lg) {
+  .only--desktop {
+    display: block !important;
+  }
 }

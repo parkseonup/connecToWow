@@ -81,6 +81,7 @@
   }
 
   @include mq(lg) {
+    display: flex !important;
     padding: rem(32) rem(40) 0 rem(40);
 
     .myMenu__btn {
