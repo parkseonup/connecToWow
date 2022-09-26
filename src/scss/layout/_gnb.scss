@@ -1,0 +1,45 @@
+@use "../abstracts/functions/units" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables/colors" as *;
+@use "../abstracts/variables/zIndexes" as *;
+
+.gnb {
+  @include gnbMobile;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: $gnb-index;
+  width: 100%;
+  padding: rem(24) 0;
+  color: $gray-500;
+  background-color: $gray-800;
+
+  &__list {
+    @include flex(around);
+  }
+
+  &__link {
+    @include flex($dr: column);
+
+    &.is--opened {
+      color: $white;
+    }
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  @include mq(md) {
+    @include gnbTablet;
+
+    &__link {
+      flex-direction: row;
+      gap: rem(4);
+    }
+  }
+
+  @include mq(lg) {
+    display: none;
+  }
+}
