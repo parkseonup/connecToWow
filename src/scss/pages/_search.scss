@@ -1,0 +1,146 @@
+@use "../abstracts/functions/units" as *;
+@use "../abstracts/variables/colors" as *;
+@use "../abstracts/mixins" as *;
+
+.search {
+  margin: rem(24) rem(16) 0;
+
+  &__form {
+    width: 100%;
+  }
+
+  .input {
+    &__wrapper {
+      position: relative;
+      height: rem(36);
+    }
+
+    &__reset {
+      position: absolute;
+      top: 50%;
+      right: rem(8);
+      display: none;
+      transform: translateY(-50%);
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: rem(16);
+    transform: translateY(-50%);
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding-left: rem(48);
+    background-color: transparent;
+    border: 1px solid $gray-600;
+    border-radius: rem(100);
+    outline: 0;
+
+    &:active,
+    &:focus {
+      border-color: $white;
+
+      + .input__reset {
+        display: block;
+      }
+    }
+  }
+
+  .recommend {
+    margin-top: rem(24);
+    @include descriptionMobile;
+    color: $gray-300;
+
+    &__header {
+      @include flex(start);
+      gap: 4px;
+    }
+
+    .icon {
+      font-size: 11px;
+      color: $gray-500;
+
+      &:hover,
+      &:active,
+      &.is--active {
+        color: $white;
+      }
+    }
+
+    &__list {
+      @include flex(start);
+      flex-wrap: wrap;
+      gap: rem(8) rem(4);
+      margin-top: rem(16);
+    }
+
+    &__item {
+      flex-shrink: 0;
+    }
+
+    &__link {
+      @include flex;
+      height: rem(28);
+      padding: 0 rem(12);
+      background-color: $gray-600;
+      border-radius: 100px;
+    }
+  }
+
+  @include mq(md) {
+    @include flex($dr: column);
+    width: 80%;
+    height: calc(100vh - 72px);
+    margin: 0 auto;
+  }
+
+  @include mq(lg) {
+    width: 1024px;
+    height: calc(100vh - 108px);
+    margin: rem(-56) auto;
+
+    .input {
+      &__wrapper {
+        height: rem(54);
+      }
+
+      &__reset {
+        right: rem(16);
+      }
+    }
+
+    label {
+      left: rem(24);
+    }
+
+    .icon {
+      font-size: 32px;
+    }
+
+    input {
+      padding-left: rem(72);
+    }
+
+    .recommend {
+      margin-top: rem(42);
+      @include descriptionDesktop;
+
+      &__list {
+        gap: rem(12) rem(8);
+      }
+
+      &__link {
+        height: rem(38);
+        padding: 0 rem(24);
+      }
+    }
+  }
+}
