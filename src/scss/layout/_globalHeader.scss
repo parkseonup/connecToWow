@@ -1,15 +1,15 @@
 @use "../abstracts/functions/units" as *;
-@use "../abstracts/mixins/flexBox" as *;
-@use "../abstracts/mixins/gradientColor" as *;
+@use "../abstracts/mixins" as *;
 @use "../abstracts/variables/colors" as *;
 @use "../abstracts/variables/zIndexs" as *;
 
 .globalHeader {
+  @include flex($ai: start);
   @include getGradientBg(top, (transparent, $black));
+  flex-wrap: wrap;
   position: relative;
   z-index: $globalHeader-index;
-  height: rem(76);
-  padding: rem(16);
+  padding: rem(16) rem(16) 0 rem(16);
 
   &__title {
     @include inlineFlex;
@@ -23,6 +23,24 @@
       overflow: hidden;
     }
   }
+
+  .myPage__link {
+    display: inline-block;
+    flex-shrink: 0;
+    width: rem(24);
+    height: rem(24);
+
+    margin-left: auto;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   .snb {
     position: sticky;
     top: 0;
@@ -43,6 +61,42 @@
     .snb {
       position: fixed;
       background-color: $black;
+    }
+  }
+
+  @include mq(md) {
+    padding: rem(24) rem(40) 0 rem(40);
+
+    &__title {
+      .icon {
+        height: rem(40);
+        font-size: rem(120);
+      }
+    }
+
+    .myPage__link {
+      width: rem(40);
+      height: rem(40);
+    }
+  }
+
+  @include mq(lg) {
+    padding: rem(32) rem(40) 0 rem(40);
+
+    .myMenu__btn {
+      @include flex($dr: column);
+      flex-shrink: 0;
+      gap: rem(6);
+      width: rem(40);
+      height: rem(40);
+      margin-left: rem(16);
+
+      span {
+        display: inline-block;
+        width: rem(24);
+        height: rem(2);
+        background-color: $white;
+      }
     }
   }
 }
