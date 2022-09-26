@@ -1,4 +1,4 @@
-@use "../abstracts/mixins" as *;
+@use "../abstracts/mixins/" as *;
 @use "../abstracts/functions" as *;
 
 .onAir {
@@ -37,10 +37,10 @@
 
     .card {
       width: rem(160);
-    }
 
-    .card__img {
-      @include cardRatio(160);
+      &__img {
+        @include cardRatio(160);
+      }
     }
 
     .caption {
@@ -49,20 +49,12 @@
   }
 
   @include mq(lg) {
-    .section__content {
-      gap: rem(16);
-    }
-
     .card {
       width: rem(224);
-    }
 
-    .card__img {
-      @include cardRatio(224);
-    }
-
-    .caption {
-      margin-top: rem(10);
+      &__img {
+        @include cardRatio(224);
+      }
     }
   }
 }
