@@ -63,16 +63,6 @@ abbr {
   @extend %scroll;
 }
 
-.only--desktop {
-  display: none !important;
-}
-
-@include mq(lg) {
-  .only--desktop {
-    display: block !important;
-  }
-}
-
 .uppercase {
   text-transform: uppercase;
 }
