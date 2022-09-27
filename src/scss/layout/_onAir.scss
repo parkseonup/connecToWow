@@ -5,7 +5,7 @@
   .section__content {
     @include flex(start, start);
     gap: rem(8);
-    overflow-x: scroll;
+    overflow-x: auto;
     position: relative;
   }
 

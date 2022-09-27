@@ -6,11 +6,10 @@
     @include titleMobile;
     white-space: nowrap;
     gap: rem(16px);
+    overflow-x: auto;
 
     @include mq(lg) {
       gap: rem(20px);
     }
   }
 }
-
-// overflow-x:auto
