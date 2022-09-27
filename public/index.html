@@ -15,9 +15,8 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
-    <script src="./js/selector.js" defer></script>
     <script src="./js/carousel.js" defer></script>
-    <script src="./js/button.js" defer></script>
+    <script src="./js/lineup.js" defer></script>
   </head>
   <body class="dark">
     <div class="globalHeader">
@@ -106,7 +105,7 @@
         </nav>
       </header>
 
-      <nav class="snb">
+      <nav class="snb scroll">
         <h2 class="a11yHidden">영상 카테고리</h2>
         <ul class="snb__list">
           <li class="snb__item"><a href="/">홈</a></li>
@@ -122,7 +121,7 @@
       </nav>
     </div>
 
-    <main class="main container">
+    <main class="main">
       <section class="wrap">
         <h2 class="a11yHidden">Carousel</h2>
         <div class="carousel__button">
@@ -1288,50 +1287,86 @@
                 type="button"
                 aria-label="월요일 쇼라인업 보기"
                 class="is--active"
+                data-filter="monday"
               >
                 월
               </button>
             </li>
             <li class="day__item">
-              <button type="button" aria-label="화요일 쇼라인업 보기">
+              <button
+                type="button"
+                aria-label="화요일 쇼라인업 보기"
+                data-filter="tusday"
+              >
                 화
               </button>
             </li>
             <li class="day__item">
-              <button type="button" aria-label="수요일 쇼라인업 보기">
+              <button
+                type="button"
+                aria-label="수요일 쇼라인업 보기"
+                data-filter="wednesday"
+              >
                 수
               </button>
             </li>
             <li class="day__item">
-              <button type="button" aria-label="목요일 쇼라인업 보기">
+              <button
+                type="button"
+                aria-label="목요일 쇼라인업 보기"
+                data-filter="thursday"
+              >
                 목
               </button>
             </li>
             <li class="day__item">
-              <button type="button" aria-label="금요일 쇼라인업 보기">
+              <button
+                type="button"
+                aria-label="금요일 쇼라인업 보기"
+                data-filter="friday"
+              >
                 금
               </button>
             </li>
             <li class="day__item">
-              <button type="button" aria-label="토요일 쇼라인업 보기">
+              <button
+                type="button"
+                aria-label="토요일 쇼라인업 보기"
+                data-filter="saturday"
+              >
                 토
               </button>
             </li>
             <li class="day__item">
-              <button type="button" aria-label="일요일 쇼라인업 보기">
+              <button
+                type="button"
+                aria-label="일요일 쇼라인업 보기"
+                data-filter="sunday"
+              >
                 일
               </button>
             </li>
           </ul>
         </div>
         <ul class="section__content card__list">
-          <li class="card__item">
+          <li
+            class="card__item daySelect"
+            data-monday="true"
+            data-tusday="true"
+            data-wednesday="true"
+            data-thursday="true"
+            data-friday="true"
+            data-sunday="true"
+          >
             <article class="card">
               <a href="./channel.html">
                 <figure class="card__figure">
                   <div class="rwdWrapper">
                     <div class="card__img">
-                      <img src="./assets/images/lineups/3pro.png" alt="" />
+                      <picture>
+                        <source srcset="./assets/images/lineups/3pro.webp" />
+                        <img src="./assets/images/lineups/3pro.jpg" alt="" />
+                      </picture>
                     </div>
                   </div>
                   <figcaption class="caption caption--timeline">
@@ -1344,13 +1379,24 @@
               </a>
             </article>
           </li>
-          <li class="card__item">
+          <li
+            class="card__item daySelect"
+            data-monday="true"
+            data-wednesday="true"
+            data-thursday="true"
+            data-friday="true"
+            data-saturday="true"
+            data-sunday="true"
+          >
             <article class="card">
               <a href="./channel.html">
                 <figure class="card__figure">
                   <div class="rwdWrapper">
                     <div class="card__img">
-                      <img src="./assets/images/lineups/baseAll.png" alt="" />
+                      <picture>
+                        <source srcset="./assets/images/lineups/baseAll.webp" />
+                        <img src="./assets/images/lineups/baseAll.jpg" alt="" />
+                      </picture>
                     </div>
                   </div>
                   <figcaption class="caption caption--timeline">
@@ -1363,13 +1409,22 @@
               </a>
             </article>
           </li>
-          <li class="card__item">
+          <li
+            class="card__item daySelect"
+            data-monday="true"
+            data-tusday="true"
+            data-wednesday="true"
+            data-friday="true"
+          >
             <article class="card">
               <a href="./channel.html">
                 <figure class="card__figure">
                   <div class="rwdWrapper">
                     <div class="card__img">
-                      <img src="./assets/images/lineups/jojo.png" alt="" />
+                      <picture>
+                        <source srcset="./assets/images/lineups/jojo.webp" />
+                        <img src="./assets/images/lineups/jojo.jpg" alt="" />
+                      </picture>
                     </div>
                   </div>
                   <figcaption class="caption caption--timeline">
@@ -1382,13 +1437,25 @@
               </a>
             </article>
           </li>
-          <li class="card__item">
+          <li
+            class="card__item daySelect"
+            data-monday="true"
+            data-wednesday="true"
+          >
             <article class="card">
               <a href="./channel.html">
                 <figure class="card__figure">
                   <div class="rwdWrapper">
                     <div class="card__img">
-                      <img src="./assets/images/lineups/theMoney.png" alt="" />
+                      <picture>
+                        <source
+                          srcset="./assets/images/lineups/theMoney.webp"
+                        />
+                        <img
+                          src="./assets/images/lineups/theMoney.jpg"
+                          alt=""
+                        />
+                      </picture>
                     </div>
                   </div>
                   <figcaption class="caption caption--timeline">
@@ -1402,13 +1469,21 @@
               </a>
             </article>
           </li>
-          <li class="card__item">
+          <li
+            class="card__item daySelect"
+            data-monday="true"
+            data-wednesday="true"
+            data-thursday="true"
+          >
             <article class="card">
               <a href="./channel.html">
                 <figure class="card__figure">
                   <div class="rwdWrapper">
                     <div class="card__img">
-                      <img src="./assets/images/lineups/street.png" alt="" />
+                      <picture>
+                        <source srcset="./assets/images/lineups/street.webp" />
+                        <img src="./assets/images/lineups/street.jpg" alt="" />
+                      </picture>
                     </div>
                   </div>
                   <figcaption class="caption caption--timeline">
@@ -1419,19 +1494,247 @@
               </a>
             </article>
           </li>
-          <li class="card__item">
+          <li
+            class="card__item daySelect"
+            data-monday="true"
+            data-tusday="true"
+            data-wednesday="true"
+          >
             <article class="card">
               <a href="./channel.html">
                 <figure class="card__figure">
                   <div class="rwdWrapper">
                     <div class="card__img">
-                      <img src="./assets/images/lineups/youMusic.png" alt="" />
+                      <picture>
+                        <source
+                          srcset="./assets/images/lineups/youMusic.webp"
+                        />
+                        <img
+                          src="./assets/images/lineups/youMusic.jpg"
+                          alt=""
+                        />
+                      </picture>
                     </div>
                   </div>
                   <figcaption class="caption caption--timeline">
                     <time class="time" datetime="11:00">오전 11시</time>
                     <h3 class="title">
                       뮤지션들의 뮤지션, 윤상이 전하는 음악과 일상
+                    </h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li
+            class="card__item daySelect is--hidden"
+            data-tusday="true"
+            data-thursday="true"
+            data-friday="true"
+          >
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <picture>
+                        <source
+                          srcset="./assets/images/lineups/lunchAttack.webp"
+                        />
+                        <img
+                          src="./assets/images/lineups/lunchAttack.jpg"
+                          alt=""
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="11:00">오전 12시 30분</time>
+                    <h3 class="title">
+                      점심시간을 습격합니다. "god의 점심어택!"
+                    </h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li
+            class="card__item daySelect is--hidden"
+            data-tusday="true"
+            data-thursday="true"
+          >
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <picture>
+                        <source srcset="./assets/images/lineups/yesC.webp" />
+                        <img src="./assets/images/lineups/yesC.jpg" alt="" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="11:00">오후 3시</time>
+                    <h3 class="title">
+                      우주대스타들의 향연! 응수씨네 엔터테인먼트
+                    </h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item daySelect is--hidden" data-tusday="true">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <picture>
+                        <source
+                          srcset="./assets/images/lineups/curtainCall.webp"
+                        />
+                        <img
+                          src="./assets/images/lineups/curtainCall.jpg"
+                          alt=""
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="11:00">오후 6시</time>
+                    <h3 class="title">
+                      방구석 1열의 연극판! 손바닥 대학로 커튼콜 연구소
+                    </h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li
+            class="card__item daySelect is--hidden"
+            data-saturday="true"
+            data-sunday="true"
+          >
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <picture>
+                        <source
+                          srcset="./assets/images/lineups/highlight.webp"
+                        />
+                        <img
+                          src="./assets/images/lineups/highlight.jpg"
+                          alt=""
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="11:00">오전 10시</time>
+                    <h3 class="title">
+                      하루종일 한 주간의 NOW, 쇼 하이라이트 같이보기!
+                    </h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item daySelect is--hidden" data-saturday="true">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <picture>
+                        <source srcset="./assets/images/lineups/bts.webp" />
+                        <img src="./assets/images/lineups/bts.jpg" alt="" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="11:00">오후 6시</time>
+                    <h3 class="title">
+                      2030 부산세계박람회의 성공적 유치를 기원하는 방탄소년단의
+                      특별한 무대
+                    </h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li
+            class="card__item daySelect is--hidden"
+            data-saturday="true"
+            data-sunday="true"
+          >
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <picture>
+                        <source srcset="./assets/images/lineups/night.webp" />
+                        <img src="./assets/images/lineups/night.jpg" alt="" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="11:00">24시간</time>
+                    <h3 class="title">
+                      말 없이 이어지는 뮤지션의 1시간 라이브 연주
+                    </h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li
+            class="card__item daySelect is--hidden"
+            data-saturday="true"
+            data-sunday="true"
+          >
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <picture>
+                        <source srcset="./assets/images/lineups/bbcNews.webp" />
+                        <img src="./assets/images/lineups/bbcNews.jpg" alt="" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="11:00">24시간</time>
+                    <h3 class="title">실시간으로 듣는 BBC 글로벌 뉴스</h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li
+            class="card__item daySelect is--hidden"
+            data-saturday="true"
+            data-sunday="true"
+          >
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <picture>
+                        <source srcset="./assets/images/lineups/ingo.webp" />
+                        <img src="./assets/images/lineups/ingo.jpg" alt="" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="11:00">24시간</time>
+                    <h3 class="title">
+                      추억을 만나요 - 레트로 감성 음악 라디오
                     </h3>
                   </figcaption>
                 </figure>
