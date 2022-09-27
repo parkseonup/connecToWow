@@ -4,18 +4,20 @@
 
 .section {
   position: relative;
-  margin-left: rem(16);
-  margin-right: rem(16);
 
   &__header {
     @include flex(start);
     gap: rem(8);
     height: rem(32);
 
-    .amount {
-      @include titleMobile;
-      color: $lightblue;
+    .button {
+      margin-left: auto;
     }
+  }
+
+  &__amount {
+    @include titleMobile;
+    color: $lightblue;
   }
 
   &__title {
@@ -31,9 +33,6 @@
   }
 
   @include mq(md) {
-    margin-left: rem(40);
-    margin-right: rem(40);
-
     &__content {
       margin-top: rem(16);
     }
@@ -42,10 +41,10 @@
   @include mq(lg) {
     &__header {
       height: rem(42);
+    }
 
-      .amount {
-        @include titleDesktop;
-      }
+    &__amount {
+      @include titleDesktop;
     }
 
     &__title {

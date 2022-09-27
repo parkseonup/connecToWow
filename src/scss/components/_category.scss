@@ -3,6 +3,8 @@
 @use "../abstracts/mixins" as *;
 
 .category {
+  max-width: 1024px;
+  margin: auto;
   padding: 0 rem(16);
   border-bottom: 1px solid $gray-600;
 

@@ -2,18 +2,21 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
-.channel {
+.mypage {
+  @include getGradientBg(right, ($purple, $lightblue));
+  @include afterGradient($location: before);
+  padding-top: rem(64);
+
   &__figure {
-    display: inline-block;
-    width: 100%;
+    position: relative;
+    max-width: rem(1024);
+    padding: 0 rem(16);
+    margin: auto;
   }
 
   &__img {
-    @include afterGradient;
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: rem(422);
+    @include profileCircle(60);
+    border-radius: 50%;
 
     img {
       width: 100%;
@@ -24,9 +27,7 @@
   }
 
   &__caption {
-    max-width: rem(1024);
-    margin: rem(268) auto rem(16);
-    padding: 0 rem(16);
+    margin-top: rem(16);
 
     .time {
       @include descriptionMobile;
@@ -39,25 +40,30 @@
     }
   }
 
-  .follow {
-    @include flex(start);
-    margin-top: rem(16);
-    gap: rem(16);
+  .userInfo__list {
+    .name {
+      @include upcomingMobile;
+    }
+
+    .email {
+      @include smallMobile;
+      color: $gray-300;
+    }
   }
 
-  .star {
-    dd {
-      @include flex(start);
-    }
+  &__section {
+    margin-top: rem(16);
+  }
 
-    .icon {
-      font-size: rem(16);
-      color: $gray-500;
-    }
+  .section__header {
+    max-width: rem(1024);
+    margin: rem(32) auto 0;
+    padding: 0 rem(16);
   }
 
   .caption {
     @include descriptionMobile;
+    margin-top: rem(16);
 
     span {
       color: $lightblue;
@@ -75,13 +81,15 @@
 
   .section__content {
     @include flex(between, start, column);
-    gap: rem(16);
-    margin: rem(24) auto rem(96);
     max-width: rem(1024);
     padding: 0 rem(16);
+    margin: rem(24) auto rem(96);
+    gap: rem(16);
   }
 
   .card {
+    @include flex(between, start);
+    gap: rem(12);
     width: 100%;
 
     &__figure {
@@ -99,20 +107,58 @@
         border-radius: rem(8);
       }
     }
+
+    .icon {
+      font-size: rem(24);
+      color: $gray-500;
+    }
   }
 
   @include mq(md) {
-    &__img {
-      height: rem(922);
-    }
+    padding-top: rem(144);
 
-    &__caption {
-      margin: rem(744) auto rem(40);
+    &__figure {
       padding: 0 rem(40);
     }
 
-    .card__img {
-      @include cardRatio(280, h);
+    &__img {
+      @include profileCircle(88);
+    }
+
+    &__caption {
+      margin-top: rem(24);
+    }
+
+    .userInfo__list {
+      .name {
+        @include upcomingDesktop;
+      }
+
+      .email {
+        @include smallDesktop;
+        margin-top: rem(8);
+        color: $gray-300;
+      }
+    }
+
+    &__section {
+      margin-top: rem(40);
+    }
+
+    .section__header {
+      padding: 0 rem(40);
+    }
+
+    .card {
+      gap: rem(12);
+
+      &__img {
+        @include cardRatio(280, h);
+      }
+
+      .icon {
+        font-size: rem(40);
+      }
     }
 
     .caption {
@@ -137,20 +183,10 @@
   }
 
   @include mq(lg) {
-    .star {
-      .icon {
-        font-size: rem(32);
-      }
-    }
+    padding-top: rem(184);
 
     &__caption {
       @include flex(between, start);
-    }
-
-    .follow {
-      gap: rem(24);
-      margin-top: 0;
-      flex-direction: row-reverse;
     }
   }
 }

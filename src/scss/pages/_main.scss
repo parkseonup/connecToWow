@@ -5,10 +5,17 @@
   margin-bottom: rem(92);
 
   .section {
-    margin-top: rem(56);
+    margin: rem(56) rem(16) 0 rem(16);
 
     &__content {
       margin-top: rem(10);
+    }
+  }
+
+  @include mq(md) {
+    .section {
+      margin-left: rem(40);
+      margin-right: rem(40);
     }
   }
 
