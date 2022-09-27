@@ -38,7 +38,7 @@
     gap: rem(8);
   }
 
-  .card {
+  .card__item {
     width: calc((100% - (rem(8) * 2)) / 3);
     flex-shrink: 0;
 
@@ -54,7 +54,7 @@
       gap: rem(16);
     }
 
-    .card {
+    .card__item {
       width: calc((100% - (rem(16) * 4)) / 5);
     }
 
@@ -83,7 +83,7 @@
       }
     }
 
-    .card {
+    .card__item {
       width: calc((100% - (rem(16) * 5)) / 6);
     }
 

@@ -12,7 +12,7 @@
     gap: rem(32) rem(8);
   }
 
-  .card {
+  .card__item {
     flex-shrink: 0;
     width: 100%;
 
@@ -31,7 +31,7 @@
       gap: rem(32) rem(16);
     }
 
-    .card {
+    .card__item {
       width: calc((100% - (rem(16) * 1)) / 2);
     }
 
@@ -47,7 +47,7 @@
       margin-top: rem(32);
     }
 
-    .card {
+    .card__item {
       width: calc((100% - (rem(16) * 3)) / 4);
     }
   }
