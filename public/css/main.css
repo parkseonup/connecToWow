@@ -329,25 +329,6 @@ table {
   white-space: nowrap;
 }
 
-.scroll {
-  overflow-x: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-.scroll::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
-}
-@media (min-width: 1280px) {
-  .scroll {
-    overflow-x: auto;
-    -ms-overflow-style: inherit; /* IE and Edge */
-    scrollbar-width: inherit; /* Firefox */
-  }
-  .scroll::-webkit-scrollbar {
-    display: inherit; /* Chrome, Safari, Opera*/
-  }
-}
-
 html,
 body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -395,6 +376,12 @@ a {
 
 abbr {
   text-decoration: none !important;
+}
+
+.container {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .uppercase {
@@ -481,6 +468,7 @@ abbr {
   line-height: 1.5;
   white-space: nowrap;
   gap: 1rem;
+  overflow-x: auto;
 }
 @media (min-width: 1280px) {
   .snb__list {
@@ -503,6 +491,9 @@ abbr {
   transition: all 0.2s ease-in-out;
   flex-shrink: 0;
 }
+.button * {
+  pointer-events: none;
+}
 .button--fat {
   color: #000000;
 }
@@ -512,15 +503,13 @@ abbr {
 .button--ghost {
   background-color: transparent;
 }
-.button--ghost:hover, .button--ghost:active,
-.button--ghost .is--active {
+.button--ghost:hover, .button--ghost:active, .button--ghost.is--active {
   color: #f4361d;
 }
 .button--opacity {
   background-color: rgba(255, 255, 255, 0.08);
 }
-.button--opacity:hover, .button--opacity:active,
-.button--opacity .is--active {
+.button--opacity:hover, .button--opacity:active, .button--opacity.is--active {
   color: #f4361d;
   border-color: #f4361d;
 }
@@ -531,10 +520,12 @@ abbr {
   height: 2.25rem;
   background-color: #ffffff;
 }
-.button--fat:hover, .button--fat:active,
-.button--fat .is--active {
+.button--fat:hover, .button--fat:active, .button--fat.is--active {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.08);
+}
+.button--fat:active .icon--arrow, .button--fat.is--active .icon--arrow {
+  transform: rotate(90deg);
 }
 .button--wide {
   padding: 0 3rem;
@@ -805,7 +796,7 @@ abbr {
   align-items: center;
   justify-content: flex-start;
   gap: 1.125rem;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .category__item {
   font-size: 1rem;
@@ -1214,7 +1205,7 @@ abbr {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 0.5rem;
-  overflow-x: scroll;
+  overflow-x: auto;
   position: relative;
 }
 .onAir .card {
@@ -1272,7 +1263,7 @@ abbr {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  overflow-x: scroll;
+  overflow-x: auto;
   gap: 0.5rem;
 }
 .highlight .card {
@@ -1458,8 +1449,14 @@ abbr {
   background-color: transparent;
   transition: all 0.2s ease-in-out;
 }
-.lineup .day__item button:hover, .lineup .day__item button:active, .lineup .day__item button.is--active {
+.lineup .day__item button:hover, .lineup .day__item button.is--active {
   background-color: #f4361d;
+}
+.lineup .is--hidden {
+  display: none;
+}
+.lineup .is--show {
+  display: block;
 }
 .lineup .section__content {
   display: flex;
@@ -1546,7 +1543,7 @@ abbr {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 0.5rem;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .history .card {
   flex-shrink: 0;
@@ -2133,6 +2130,9 @@ abbr {
   margin: 1.5rem auto 6rem;
   gap: 1rem;
 }
+.mypage .card__item {
+  width: 100%;
+}
 .mypage .card {
   display: flex;
   flex-direction: row;
@@ -2152,6 +2152,7 @@ abbr {
   width: 7.75rem;
   border-radius: 8px;
   height: 4.359375rem;
+  flex-shrink: 0;
 }
 .mypage .card__img img {
   width: 100%;
@@ -2204,6 +2205,9 @@ abbr {
   .mypage .section__header {
     padding: 0 2.5rem;
   }
+  .mypage .card__item {
+    width: 100%;
+  }
   .mypage .card {
     gap: 0.75rem;
   }
@@ -2211,6 +2215,7 @@ abbr {
     width: 17.5rem;
     border-radius: 8px;
     height: 9.84375rem;
+    flex-shrink: 0;
   }
   .mypage .card .icon {
     font-size: 2.5rem;
