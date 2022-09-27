@@ -37,7 +37,7 @@
         </a>
         <button
           type="button"
-          class="myMenu__button button--open"
+          class="myMenu__button"
           aria-label="마이 메뉴 열기"
         >
           <span aria-hidden="true"></span>
@@ -139,7 +139,6 @@
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
-                crossorigin="anonymous"
               ></iframe>
             </div>
             <div class="item">
@@ -195,514 +194,579 @@
         <header class="section__header">
           <h2 class="section__title">지금 방송 중</h2>
         </header>
-        <div class="section__content" role="list">
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/onairs/1.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">일곱 빛깔 엔믹스 숏폼 챌린지🌈</h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img src="./assets/images/onairs/profiles/1.png" alt="" />
-                    </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>#NEXTREND</dd>
-                      </div>
-                    </dl>
+        <ul class="section__content card__list">
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/1.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/onairs/2.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">대세기운 가득! 주현영 등장💦</h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img src="./assets/images/onairs/profiles/2.png" alt="" />
-                    </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>걍나와</dd>
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">일곱 빛깔 엔믹스 숏폼 챌린지🌈</h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/1.png"
+                          alt=""
+                        />
                       </div>
-                    </dl>
-                  </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/onairs/3.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">뮤지션들의 뮤지션 선우정아</h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img src="./assets/images/onairs/profiles/3.png" alt="" />
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>#NEXTREND</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>이승윤의 후아유</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/2.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/onairs/4.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">다시 만난 레전드 민혁이랑 김재중</h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img src="./assets/images/onairs/profiles/4.png" alt="" />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">대세기운 가득! 주현영 등장💦</h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/2.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>걍나와</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>보그싶쇼 시즌2</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/3.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/onairs/5.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">대가리꽃밭🌼랄랄 미친텐션🔥</h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img src="./assets/images/onairs/profiles/5.png" alt="" />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">뮤지션들의 뮤지션 선우정아</h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/3.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>이승윤의 후아유</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>비트주세요</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/4.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/onairs/6.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">우주소녀 아이브 사랑법특강💘</h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img src="./assets/images/onairs/profiles/6.png" alt="" />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">다시 만난 레전드 민혁이랑 김재중</h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/4.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>보그싶쇼 시즌2</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>4MEET NOW</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/5.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <small class="badge badge--live">Live</small>
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/onairs/7.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">가을이 떠오르는 킬링보이스🎧</h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img src="./assets/images/onairs/profiles/7.png" alt="" />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">대가리꽃밭🌼랄랄 미친텐션🔥</h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/5.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>비트주세요</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>Killig Voice</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/6.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/onairs/8.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">52-56회 몰아보기</h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img src="./assets/images/onairs/profiles/8.png" alt="" />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">우주소녀 아이브 사랑법특강💘</h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/6.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>4MEET NOW</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>곽법, 이창호의 99가지 그림자</dd>
-                      </div>
-                    </dl>
-                  </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <small class="badge badge--live">Live</small>
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/onairs/9.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">추억을 만나요 ~ 그때in가요</h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img src="./assets/images/onairs/profiles/9.png" alt="" />
-                    </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>그때in가요</dd>
-                      </div>
-                    </dl>
-                  </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <small class="badge badge--day" aria-label="방송 1일 전"
-                >D-1</small
-              >
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/onairs/10.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    <time datetime="2022-09-26">9/26</time> 8PM 찐친바이브!
-                    빙터뷰
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/onairs/profiles/10.png"
-                        alt=""
-                      />
-                    </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>MOVIENOW.&lt;인생은 아름다워&gt;</dd>
-                      </div>
-                    </dl>
-                  </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <small class="badge badge--day" aria-label="방송 2일 전"
-                >D-2</small
-              >
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/onairs/11.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    <time datetime="2022-09-27">9/27</time> 7PM🎤 라포엠 라이브
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/onairs/profiles/11.png"
-                        alt=""
-                      />
-                    </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>LA POEM</dd>
-                      </div>
-                    </dl>
-                  </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <small class="badge badge--day" aria-label="방송 5일 전"
-                    >D-5</small
-                  >
-                  <img src="./assets/images/onairs/13.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    <time datetime="2022-09-27">9/30</time> 8PM 연애 상담소 오픈
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/onairs/profiles/12.png"
-                        alt=""
-                      />
-                    </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>디즈니+ &lt;핑크라이&gt;</dd>
-                      </div>
-                    </dl>
-                  </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
                 <small class="badge badge--live">Live</small>
-                <div class="card__img">
-                  <img src="./assets/images/onairs/12.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    BBC <span class="uppercase">News</span> 라디오
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/onairs/profiles/13.png"
-                        alt=""
-                      />
-                    </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>BBC News Radio</dd>
-                      </div>
-                    </dl>
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/7.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/onairs/14.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    매주 수요일 9시 <span class="uppercase">Aomix Live</span>
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/onairs/profiles/14.png"
-                        alt=""
-                      />
-                    </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>
-                          Above Ordinary <span class="uppercase">Mix</span>
-                        </dd>
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">가을이 떠오르는 킬링보이스🎧</h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/7.png"
+                          alt=""
+                        />
                       </div>
-                    </dl>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>Killig Voice</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/8.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-        </div>
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">52-56회 몰아보기</h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/8.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>곽법, 이창호의 99가지 그림자</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <small class="badge badge--live">Live</small>
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/9.png" alt="" />
+                  </div>
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">추억을 만나요 ~ 그때in가요</h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/9.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>그때in가요</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <small class="badge badge--day" aria-label="방송 1일 전"
+                  >D-1</small
+                >
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/10.png" alt="" />
+                  </div>
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      <time datetime="2022-09-26">9/26</time> 8PM 찐친바이브!
+                      빙터뷰
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/10.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>MOVIENOW.&lt;인생은 아름다워&gt;</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <small class="badge badge--day" aria-label="방송 2일 전"
+                  >D-2</small
+                >
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/11.png" alt="" />
+                  </div>
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      <time datetime="2022-09-27">9/27</time> 7PM🎤 라포엠
+                      라이브
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/11.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>LA POEM</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <small class="badge badge--day" aria-label="방송 5일 전"
+                      >D-5</small
+                    >
+                    <img src="./assets/images/onairs/13.png" alt="" />
+                  </div>
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      <time datetime="2022-09-27">9/30</time> 8PM 연애 상담소
+                      오픈
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/12.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>디즈니+ &lt;핑크라이&gt;</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <small class="badge badge--live">Live</small>
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/12.png" alt="" />
+                  </div>
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      BBC <span class="uppercase">News</span> 라디오
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/13.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>BBC News Radio</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/onairs/14.png" alt="" />
+                  </div>
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      매주 수요일 9시 <span class="uppercase">Aomix Live</span>
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/onairs/profiles/14.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>
+                            Above Ordinary <span class="uppercase">Mix</span>
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+        </ul>
       </section>
 
       <section class="section history">
         <header class="section__header">
           <h2 class="section__title">최근 본 영상</h2>
         </header>
-        <div class="section__content" role="list">
-          <article class="card" role="listitem">
-            <figure class="card__figure">
-              <div class="rwdWrapper">
-                <div class="card__img">
-                  <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/g5bJFua-3S8"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+        <ul class="section__content card__list">
+          <li class="card__item">
+            <article class="card">
+              <figure class="card__figure">
+                <div class="rwdWrapper">
+                  <div class="card__img">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/g5bJFua-3S8"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
                 </div>
-              </div>
-              <figcaption class="caption">
-                <h3 class="title">
-                  &#91;반전엔딩&#93; 연극의 결말을 뒤엎은 김고은, 엄지원 향해
-                  겨눈 총구
-                </h3>
-                <div class="description">
-                  <div class="description__profile" aria-hidden="true"></div>
-                  <dl class="description__list">
-                    <div class="description__item">
-                      <dt class="a11yHidden">채널 명</dt>
-                      <dd>작은아씨들</dd>
-                    </div>
-                    <div class="description__item">
-                      <dt class="a11yHidden">방송 일자</dt>
-                      <dd>11시간 전</dd>
-                    </div>
-                  </dl>
+                <figcaption class="caption">
+                  <h3 class="title">
+                    &#91;반전엔딩&#93; 연극의 결말을 뒤엎은 김고은, 엄지원 향해
+                    겨눈 총구
+                  </h3>
+                  <div class="description">
+                    <div class="description__profile" aria-hidden="true"></div>
+                    <dl class="description__list">
+                      <div class="description__item">
+                        <dt class="a11yHidden">채널 명</dt>
+                        <dd>작은아씨들</dd>
+                      </div>
+                      <div class="description__item">
+                        <dt class="a11yHidden">방송 일자</dt>
+                        <dd>11시간 전</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <figure class="card__figure">
+                <div class="rwdWrapper">
+                  <div class="card__img">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/dt79vWrOCT8"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
                 </div>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="card" role="listitem">
-            <figure class="card__figure">
-              <div class="rwdWrapper">
-                <div class="card__img">
-                  <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/dt79vWrOCT8"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+                <figcaption class="caption">
+                  <h3 class="title">현식이랑 대화좀 해</h3>
+                  <div class="description">
+                    <div class="description__profile" aria-hidden="true"></div>
+                    <dl class="description__list">
+                      <div class="description__item">
+                        <dt class="a11yHidden">채널 명</dt>
+                        <dd>비투비 현식의 야간작업실</dd>
+                      </div>
+                      <div class="description__item">
+                        <dt class="a11yHidden">방송 일자</dt>
+                        <dd>2일 전</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <figure class="card__figure">
+                <div class="rwdWrapper">
+                  <div class="card__img">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/07cMnUNLkgI"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
                 </div>
-              </div>
-              <figcaption class="caption">
-                <h3 class="title">현식이랑 대화좀 해</h3>
-                <div class="description">
-                  <div class="description__profile" aria-hidden="true"></div>
-                  <dl class="description__list">
-                    <div class="description__item">
-                      <dt class="a11yHidden">채널 명</dt>
-                      <dd>비투비 현식의 야간작업실</dd>
-                    </div>
-                    <div class="description__item">
-                      <dt class="a11yHidden">방송 일자</dt>
-                      <dd>2일 전</dd>
-                    </div>
-                  </dl>
+                <figcaption class="caption">
+                  <h3 class="title">
+                    선우정아에게 반발심을 일으킨 ‘도망가자’ &#91;이승윤의
+                    후아유&#93;
+                  </h3>
+                  <div class="description">
+                    <div class="description__profile" aria-hidden="true"></div>
+                    <dl class="description__list">
+                      <div class="description__item">
+                        <dt class="a11yHidden">채널 명</dt>
+                        <dd>이승윤의 후아유</dd>
+                      </div>
+                      <div class="description__item">
+                        <dt class="a11yHidden">방송 일자</dt>
+                        <dd>2일 전</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <figure class="card__figure">
+                <div class="rwdWrapper">
+                  <div class="card__img">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/D9ILrw0mqiM"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
                 </div>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="card" role="listitem">
-            <figure class="card__figure">
-              <div class="rwdWrapper">
-                <div class="card__img">
-                  <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/07cMnUNLkgI"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-              <figcaption class="caption">
-                <h3 class="title">
-                  선우정아에게 반발심을 일으킨 ‘도망가자’ &#91;이승윤의
-                  후아유&#93;
-                </h3>
-                <div class="description">
-                  <div class="description__profile" aria-hidden="true"></div>
-                  <dl class="description__list">
-                    <div class="description__item">
-                      <dt class="a11yHidden">채널 명</dt>
-                      <dd>이승윤의 후아유</dd>
-                    </div>
-                    <div class="description__item">
-                      <dt class="a11yHidden">방송 일자</dt>
-                      <dd>2일 전</dd>
-                    </div>
-                  </dl>
-                </div>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="card" role="listitem">
-            <figure class="card__figure">
-              <div class="rwdWrapper">
-                <div class="card__img">
-                  <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/D9ILrw0mqiM"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-              <figcaption class="caption">
-                <h3 class="title">
-                  &#91;스맨파&#93; 메가 크루 미션 평가 - 뱅크투브라더스
-                </h3>
-                <div class="description">
-                  <div class="description__profile" aria-hidden="true"></div>
-                  <dl class="description__list">
-                    <div class="description__item">
-                      <dt class="a11yHidden">채널 명</dt>
-                      <dd>스트릿 맨 파이터</dd>
-                    </div>
-                    <div class="description__item">
-                      <dt class="a11yHidden">방송 일자</dt>
-                      <dd>6일 전</dd>
-                    </div>
-                  </dl>
-                </div>
-              </figcaption>
-            </figure>
-          </article>
-        </div>
+                <figcaption class="caption">
+                  <h3 class="title">
+                    &#91;스맨파&#93; 메가 크루 미션 평가 - 뱅크투브라더스
+                  </h3>
+                  <div class="description">
+                    <div class="description__profile" aria-hidden="true"></div>
+                    <dl class="description__list">
+                      <div class="description__item">
+                        <dt class="a11yHidden">채널 명</dt>
+                        <dd>스트릿 맨 파이터</dd>
+                      </div>
+                      <div class="description__item">
+                        <dt class="a11yHidden">방송 일자</dt>
+                        <dd>6일 전</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+        </ul>
         <footer class="section__footer">
           <a class="button button--ghost">더보기</a>
         </footer>
@@ -712,333 +776,353 @@
         <header class="section__header">
           <h2 class="section__title">오리지널 하이라이트</h2>
         </header>
-        <div class="section__content" role="list">
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/highlights/1.jpeg" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    올타임 레전드 선우정아의 신곡 ‘black coffee’
-                    LIve(커피아이콘) &#91;이승윤의 후아유&#93;
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/highlights/profiles/1.png"
-                        alt=""
-                      />
-                    </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>이승윤의 후아유</dd>
-                      </div>
-                      <div class="description__item">
-                        <dt class="a11yHidden">방송 일자</dt>
-                        <dd>13시간 전</dd>
-                      </div>
-                    </dl>
+        <ul class="section__content card__list">
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/highlights/1.jpeg" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/highlights/2.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    애국 소비하는 애플x테슬라 주주 황현희😂 &#91;올더머니&#93;
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/highlights/profiles/2.png"
-                        alt=""
-                      />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      올타임 레전드 선우정아의 신곡 ‘black coffee’
+                      LIve(커피아이콘) &#91;이승윤의 후아유&#93;
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/highlights/profiles/1.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>이승윤의 후아유</dd>
+                        </div>
+                        <div class="description__item">
+                          <dt class="a11yHidden">방송 일자</dt>
+                          <dd>13시간 전</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>올더머니</dd>
-                      </div>
-                      <div class="description__item">
-                        <dt class="a11yHidden">방송 일자</dt>
-                        <dd>1일전</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/highlights/2.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/highlights/3.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    DKZ 재찬, 삼성 라이온즈 김상수 선수와의 특별한 추억⚾️
-                    &#91;꿈이야&#93;
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/highlights/profiles/3.png"
-                        alt=""
-                      />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      애국 소비하는 애플x테슬라 주주 황현희😂 &#91;올더머니&#93;
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/highlights/profiles/2.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>올더머니</dd>
+                        </div>
+                        <div class="description__item">
+                          <dt class="a11yHidden">방송 일자</dt>
+                          <dd>1일전</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>꿈이야</dd>
-                      </div>
-                      <div class="description__item">
-                        <dt class="a11yHidden">방송 일자</dt>
-                        <dd>1일전</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/highlights/3.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/highlights/4.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    MBTI에 과몰입한 INFP 최유정 X INTP DKZ 재찬
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/highlights/profiles/3.png"
-                        alt=""
-                      />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      DKZ 재찬, 삼성 라이온즈 김상수 선수와의 특별한 추억⚾️
+                      &#91;꿈이야&#93;
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/highlights/profiles/3.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>꿈이야</dd>
+                        </div>
+                        <div class="description__item">
+                          <dt class="a11yHidden">방송 일자</dt>
+                          <dd>1일전</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>꿈이야</dd>
-                      </div>
-                      <div class="description__item">
-                        <dt class="a11yHidden">방송 일자</dt>
-                        <dd>1일전</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/highlights/4.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/highlights/5.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    최준X은혁 ‘새삥’ 댄스 챌린지 😎 &#91;대니쇼&#93;
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/highlights/profiles/5.png"
-                        alt=""
-                      />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      MBTI에 과몰입한 INFP 최유정 X INTP DKZ 재찬
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/highlights/profiles/3.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>꿈이야</dd>
+                        </div>
+                        <div class="description__item">
+                          <dt class="a11yHidden">방송 일자</dt>
+                          <dd>1일전</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>댸니쇼</dd>
-                      </div>
-                      <div class="description__item">
-                        <dt class="a11yHidden">방송 일자</dt>
-                        <dd>1일전</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/highlights/5.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/highlights/6.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    은혁x동해의 킹받는 연애 밸런스 게임💘 &#91;댸니쇼&#93;
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/highlights/profiles/5.png"
-                        alt=""
-                      />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      최준X은혁 ‘새삥’ 댄스 챌린지 😎 &#91;대니쇼&#93;
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/highlights/profiles/5.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>댸니쇼</dd>
+                        </div>
+                        <div class="description__item">
+                          <dt class="a11yHidden">방송 일자</dt>
+                          <dd>1일전</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>댸니쇼</dd>
-                      </div>
-                      <div class="description__item">
-                        <dt class="a11yHidden">방송 일자</dt>
-                        <dd>1일전</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/highlights/6.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/highlights/7.jpeg" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    랄랄: 비와이 제일 싫어합니다 &#91;비트주세요&#93;
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/highlights/profiles/7.png"
-                        alt=""
-                      />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      은혁x동해의 킹받는 연애 밸런스 게임💘 &#91;댸니쇼&#93;
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/highlights/profiles/5.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>댸니쇼</dd>
+                        </div>
+                        <div class="description__item">
+                          <dt class="a11yHidden">방송 일자</dt>
+                          <dd>1일전</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>비트주세요</dd>
-                      </div>
-                      <div class="description__item">
-                        <dt class="a11yHidden">방송 일자</dt>
-                        <dd>1일전</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/highlights/7.jpeg" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/highlights/8.jpeg" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    디스 랩으로 랄랄 먹이는 이용진 | #비트주세요 #shorts #랄랄
-                    #이용진 #한해
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/highlights/profiles/7.png"
-                        alt=""
-                      />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      랄랄: 비와이 제일 싫어합니다 &#91;비트주세요&#93;
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/highlights/profiles/7.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>비트주세요</dd>
+                        </div>
+                        <div class="description__item">
+                          <dt class="a11yHidden">방송 일자</dt>
+                          <dd>1일전</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>비트주세요</dd>
-                      </div>
-                      <div class="description__item">
-                        <dt class="a11yHidden">방송 일자</dt>
-                        <dd>1일전</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/highlights/8.jpeg" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/highlights/9.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    대량 짤생성 프로미스나인 백스테이지 모먼트😍 &#91;가을밤의
-                    프로미스나인&#93;
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/highlights/profiles/9.png"
-                        alt=""
-                      />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      디스 랩으로 랄랄 먹이는 이용진 | #비트주세요 #shorts #랄랄
+                      #이용진 #한해
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/highlights/profiles/7.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>비트주세요</dd>
+                        </div>
+                        <div class="description__item">
+                          <dt class="a11yHidden">방송 일자</dt>
+                          <dd>1일전</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>가을밤의 프로미스나인</dd>
-                      </div>
-                      <div class="description__item">
-                        <dt class="a11yHidden">방송 일자</dt>
-                        <dd>1일전</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/highlights/9.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/highlights/10.png" alt="" />
-                </div>
-                <figcaption class="caption caption--online">
-                  <h3 class="title">
-                    땡깡 기획 진절미 촬영📸 NMIXX의 ‘DICE’ 원테이크 퍼포먼스
-                    &#91;#NEXTREND&#93;
-                  </h3>
-                  <div class="description">
-                    <div class="profile" aria-hidden="true">
-                      <img
-                        src="./assets/images/highlights/profiles/10.png"
-                        alt=""
-                      />
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      대량 짤생성 프로미스나인 백스테이지 모먼트😍 &#91;가을밤의
+                      프로미스나인&#93;
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/highlights/profiles/9.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>가을밤의 프로미스나인</dd>
+                        </div>
+                        <div class="description__item">
+                          <dt class="a11yHidden">방송 일자</dt>
+                          <dd>1일전</dd>
+                        </div>
+                      </dl>
                     </div>
-                    <dl class="description__list">
-                      <div class="description__item">
-                        <dt class="a11yHidden">채널 명</dt>
-                        <dd>#NEXTREND</dd>
-                      </div>
-                      <div class="description__item">
-                        <dt class="a11yHidden">방송 일자</dt>
-                        <dd>2일전</dd>
-                      </div>
-                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/highlights/10.png" alt="" />
                   </div>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-        </div>
+                  <figcaption class="caption caption--online">
+                    <h3 class="title">
+                      땡깡 기획 진절미 촬영📸 NMIXX의 ‘DICE’ 원테이크 퍼포먼스
+                      &#91;#NEXTREND&#93;
+                    </h3>
+                    <div class="description">
+                      <div class="profile" aria-hidden="true">
+                        <img
+                          src="./assets/images/highlights/profiles/10.png"
+                          alt=""
+                        />
+                      </div>
+                      <dl class="description__list">
+                        <div class="description__item">
+                          <dt class="a11yHidden">채널 명</dt>
+                          <dd>#NEXTREND</dd>
+                        </div>
+                        <div class="description__item">
+                          <dt class="a11yHidden">방송 일자</dt>
+                          <dd>2일전</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+        </ul>
         <footer class="section__footer">
           <a class="button button--ghost">더보기</a>
         </footer>
@@ -1048,170 +1132,182 @@
         <header class="section__header">
           <h2 class="section__title">Upcoming Now</h2>
         </header>
-        <div class="section__content" role="list">
-          <article class="card" role="listitem">
-            <figure class="card__figure">
-              <div class="card__img">
-                <img src="./assets/images/upcomings/1.png" alt="" />
-              </div>
-              <figcaption class="caption">
-                <time class="time" datetime="2022-10-15 18:00">
-                  10월 15일 토요일 오후 18시
-                </time>
-                <h3 class="title">BTS &gt;Yet To Come&gt; in BUSAN</h3>
-                <dl class="description__list">
-                  <dt>출연</dt>
-                  <dd>BTS</dd>
-                </dl>
-                <button
-                  type="button"
-                  class="button button--opacity button--wide"
-                >
-                  <span
-                    class="icon icon--bell--empty"
-                    aria-hidden="true"
-                  ></span>
-                  알림받기
-                </button>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="card" role="listitem">
-            <figure class="card__figure">
-              <div class="card__img">
-                <img src="./assets/images/upcomings/2.png" alt="" />
-              </div>
-              <figcaption class="caption">
-                <time class="time" datetime="2022-09-26 22:00">
-                  9월 26일 월요일 밤 22시
-                </time>
-                <h3 class="title">하영이의 생일파티</h3>
-                <dl class="description__list">
-                  <dt>출연</dt>
-                  <dd>프로미스나인</dd>
-                </dl>
-                <button
-                  type="button"
-                  class="button button--opacity button--wide"
-                >
-                  <span
-                    class="icon icon--bell--empty"
-                    aria-hidden="true"
-                  ></span>
-                  알림받기
-                </button>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="card" role="listitem">
-            <figure class="card__figure">
-              <div class="card__img">
-                <img src="./assets/images/upcomings/3.png" alt="" />
-              </div>
-              <figcaption class="caption">
-                <time class="time" datetime="2022-09-28 20:00">
-                  9월 28일 수요일 밤 20시
-                </time>
-                <h3 class="title">Brand New✨</h3>
-                <dl class="description__list">
-                  <dt>출연</dt>
-                  <dd>최강창민,시우민</dd>
-                </dl>
-                <button
-                  type="button"
-                  class="button button--opacity button--wide"
-                >
-                  <span
-                    class="icon icon--bell--empty"
-                    aria-hidden="true"
-                  ></span>
-                  알림받기
-                </button>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="card" role="listitem">
-            <figure class="card__figure">
-              <div class="card__img">
-                <img src="./assets/images/upcomings/4.png" alt="" />
-              </div>
-              <figcaption class="caption">
-                <time class="time" datetime="2022-09-26 11:00">
-                  9월 26일 월요일 오전 11시
-                </time>
-                <h3 class="title">환상의 목소리✨</h3>
-                <dl class="description__list">
-                  <dt>출연</dt>
-                  <dd>윤상,쏠</dd>
-                </dl>
-                <button
-                  type="button"
-                  class="button button--opacity button--wide"
-                >
-                  <span
-                    class="icon icon--bell--empty"
-                    aria-hidden="true"
-                  ></span>
-                  알림받기
-                </button>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="card" role="listitem">
-            <figure class="card__figure">
-              <div class="card__img">
-                <img src="./assets/images/upcomings/5.png" alt="" />
-              </div>
-              <figcaption class="caption">
-                <time class="time" datetime="2022-09-26 21:00">
-                  9월 26일 월요일 밤 21시
-                </time>
-                <h3 class="title">제이비 재찬💚BeYourSelf</h3>
-                <dl class="description__list">
-                  <dt>출연</dt>
-                  <dd>재찬,제이비</dd>
-                </dl>
-                <button
-                  type="button"
-                  class="button button--opacity button--wide"
-                >
-                  <span
-                    class="icon icon--bell--empty"
-                    aria-hidden="true"
-                  ></span>
-                  알림받기
-                </button>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="card" role="listitem">
-            <figure class="card__figure">
-              <div class="card__img">
-                <img src="./assets/images/upcomings/6.png" alt="" />
-              </div>
-              <figcaption class="caption">
-                <time class="time" datetime="2022-09-27 19:00">
-                  9월 27일 화요일 오후 19시
-                </time>
-                <h3 class="title">LA POEM : Sunrise After The War</h3>
-                <dl class="description__list">
-                  <dt>출연</dt>
-                  <dd>라포엠</dd>
-                </dl>
-                <button
-                  type="button"
-                  class="button button--opacity button--wide"
-                >
-                  <span
-                    class="icon icon--bell--empty"
-                    aria-hidden="true"
-                  ></span>
-                  알림받기
-                </button>
-              </figcaption>
-            </figure>
-          </article>
-        </div>
+        <ul class="section__content card__list">
+          <li class="card__item">
+            <article class="card">
+              <figure class="card__figure">
+                <div class="card__img">
+                  <img src="./assets/images/upcomings/1.png" alt="" />
+                </div>
+                <figcaption class="caption">
+                  <time class="time" datetime="2022-10-15 18:00">
+                    10월 15일 토요일 오후 18시
+                  </time>
+                  <h3 class="title">BTS &gt;Yet To Come&gt; in BUSAN</h3>
+                  <dl class="description__list">
+                    <dt>출연</dt>
+                    <dd>BTS</dd>
+                  </dl>
+                  <button
+                    type="button"
+                    class="button button--opacity button--wide"
+                  >
+                    <span
+                      class="icon icon--bell--empty"
+                      aria-hidden="true"
+                    ></span>
+                    알림받기
+                  </button>
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <figure class="card__figure">
+                <div class="card__img">
+                  <img src="./assets/images/upcomings/2.png" alt="" />
+                </div>
+                <figcaption class="caption">
+                  <time class="time" datetime="2022-09-26 22:00">
+                    9월 26일 월요일 밤 22시
+                  </time>
+                  <h3 class="title">하영이의 생일파티</h3>
+                  <dl class="description__list">
+                    <dt>출연</dt>
+                    <dd>프로미스나인</dd>
+                  </dl>
+                  <button
+                    type="button"
+                    class="button button--opacity button--wide"
+                  >
+                    <span
+                      class="icon icon--bell--empty"
+                      aria-hidden="true"
+                    ></span>
+                    알림받기
+                  </button>
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <figure class="card__figure">
+                <div class="card__img">
+                  <img src="./assets/images/upcomings/3.png" alt="" />
+                </div>
+                <figcaption class="caption">
+                  <time class="time" datetime="2022-09-28 20:00">
+                    9월 28일 수요일 밤 20시
+                  </time>
+                  <h3 class="title">Brand New✨</h3>
+                  <dl class="description__list">
+                    <dt>출연</dt>
+                    <dd>최강창민,시우민</dd>
+                  </dl>
+                  <button
+                    type="button"
+                    class="button button--opacity button--wide"
+                  >
+                    <span
+                      class="icon icon--bell--empty"
+                      aria-hidden="true"
+                    ></span>
+                    알림받기
+                  </button>
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <figure class="card__figure">
+                <div class="card__img">
+                  <img src="./assets/images/upcomings/4.png" alt="" />
+                </div>
+                <figcaption class="caption">
+                  <time class="time" datetime="2022-09-26 11:00">
+                    9월 26일 월요일 오전 11시
+                  </time>
+                  <h3 class="title">환상의 목소리✨</h3>
+                  <dl class="description__list">
+                    <dt>출연</dt>
+                    <dd>윤상,쏠</dd>
+                  </dl>
+                  <button
+                    type="button"
+                    class="button button--opacity button--wide"
+                  >
+                    <span
+                      class="icon icon--bell--empty"
+                      aria-hidden="true"
+                    ></span>
+                    알림받기
+                  </button>
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <figure class="card__figure">
+                <div class="card__img">
+                  <img src="./assets/images/upcomings/5.png" alt="" />
+                </div>
+                <figcaption class="caption">
+                  <time class="time" datetime="2022-09-26 21:00">
+                    9월 26일 월요일 밤 21시
+                  </time>
+                  <h3 class="title">제이비 재찬💚BeYourSelf</h3>
+                  <dl class="description__list">
+                    <dt>출연</dt>
+                    <dd>재찬,제이비</dd>
+                  </dl>
+                  <button
+                    type="button"
+                    class="button button--opacity button--wide"
+                  >
+                    <span
+                      class="icon icon--bell--empty"
+                      aria-hidden="true"
+                    ></span>
+                    알림받기
+                  </button>
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <figure class="card__figure">
+                <div class="card__img">
+                  <img src="./assets/images/upcomings/6.png" alt="" />
+                </div>
+                <figcaption class="caption">
+                  <time class="time" datetime="2022-09-27 19:00">
+                    9월 27일 화요일 오후 19시
+                  </time>
+                  <h3 class="title">LA POEM : Sunrise After The War</h3>
+                  <dl class="description__list">
+                    <dt>출연</dt>
+                    <dd>라포엠</dd>
+                  </dl>
+                  <button
+                    type="button"
+                    class="button button--opacity button--wide"
+                  >
+                    <span
+                      class="icon icon--bell--empty"
+                      aria-hidden="true"
+                    ></span>
+                    알림받기
+                  </button>
+                </figcaption>
+              </figure>
+            </article>
+          </li>
+        </ul>
       </section>
 
       <section class="lineup section">
@@ -1261,108 +1357,121 @@
             </li>
           </ul>
         </div>
-        <div class="section__content" role="list">
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="rwdWrapper">
-                  <div class="card__img">
-                    <img src="./assets/images/lineups/3pro.png" alt="" />
+        <ul class="section__content card__list">
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <img src="./assets/images/lineups/3pro.png" alt="" />
+                    </div>
                   </div>
-                </div>
-                <figcaption class="caption caption--timeline">
-                  <time class="time" datetime="06:30">오전 6시 30분</time>
-                  <h3 class="title">
-                    <abbr title="Number One">No.1</abbr> 경제방송 삼프로TV
-                  </h3>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="rwdWrapper">
-                  <div class="card__img">
-                    <img src="./assets/images/lineups/baseAll.png" alt="" />
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="06:30">오전 6시 30분</time>
+                    <h3 class="title">
+                      <abbr title="Number One">No.1</abbr> 경제방송 삼프로TV
+                    </h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <img src="./assets/images/lineups/baseAll.png" alt="" />
+                    </div>
                   </div>
-                </div>
-                <figcaption class="caption caption--timeline">
-                  <time class="time" datetime="07:00">오전 7시</time>
-                  <h3 class="title">
-                    KBO 하이라이트를 최고의 해설진들과 만난다
-                  </h3>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="rwdWrapper">
-                  <div class="card__img">
-                    <img src="./assets/images/lineups/jojo.png" alt="" />
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="07:00">오전 7시</time>
+                    <h3 class="title">
+                      KBO 하이라이트를 최고의 해설진들과 만난다
+                    </h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <img src="./assets/images/lineups/jojo.png" alt="" />
+                    </div>
                   </div>
-                </div>
-                <figcaption class="caption caption--timeline">
-                  <time class="time" datetime="09:00">오전 8시</time>
-                  <h3 class="title">
-                    김해나가 책임지는 아침! 조조클럽, 시작합니다.
-                  </h3>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="rwdWrapper">
-                  <div class="card__img">
-                    <img src="./assets/images/lineups/theMoney.png" alt="" />
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="09:00">오전 8시</time>
+                    <h3 class="title">
+                      김해나가 책임지는 아침! 조조클럽, 시작합니다.
+                    </h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <img src="./assets/images/lineups/theMoney.png" alt="" />
+                    </div>
                   </div>
-                </div>
-                <figcaption class="caption caption--timeline">
-                  <time class="time" datetime="09:00">오전 9시</time>
-                  <h3 class="title">
-                    돈 벌어 본 자들이 말하는, 돈에 대한 모든 것. 주언규의 머니쇼
-                  </h3>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="rwdWrapper">
-                  <div class="card__img">
-                    <img src="./assets/images/lineups/street.png" alt="" />
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="09:00">오전 9시</time>
+                    <h3 class="title">
+                      돈 벌어 본 자들이 말하는, 돈에 대한 모든 것. 주언규의
+                      머니쇼
+                    </h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <img src="./assets/images/lineups/street.png" alt="" />
+                    </div>
                   </div>
-                </div>
-                <figcaption class="caption caption--timeline">
-                  <time class="time" datetime="09:00">오전 9시</time>
-                  <h3 class="title">매일 9시 종합 경제 정보 토크쇼</h3>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="rwdWrapper">
-                  <div class="card__img">
-                    <img src="./assets/images/lineups/youMusic.png" alt="" />
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="09:00">오전 9시</time>
+                    <h3 class="title">매일 9시 종합 경제 정보 토크쇼</h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="rwdWrapper">
+                    <div class="card__img">
+                      <img src="./assets/images/lineups/youMusic.png" alt="" />
+                    </div>
                   </div>
-                </div>
-                <figcaption class="caption caption--timeline">
-                  <time class="time" datetime="11:00">오전 11시</time>
-                  <h3 class="title">
-                    뮤지션들의 뮤지션, 윤상이 전하는 음악과 일상
-                  </h3>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-        </div>
+                  <figcaption class="caption caption--timeline">
+                    <time class="time" datetime="11:00">오전 11시</time>
+                    <h3 class="title">
+                      뮤지션들의 뮤지션, 윤상이 전하는 음악과 일상
+                    </h3>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+        </ul>
         <footer class="section__footer">
           <a class="button button--ghost">더보기</a>
         </footer>
