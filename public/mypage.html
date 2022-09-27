@@ -126,72 +126,131 @@
       class="icon icon--arrow before__button"
     ></button>
 
-    <!-- section 태그 시작 -->
-    <section class="section mypage">
-      <!-- heading을 뭘로 줘야할까? -->
-      <figure>
-        <div>
+    <main class="mypage">
+      <h2 class="a11yHidden">마이 페이지</h2>
+      <figure class="mypage__figure">
+        <div class="mypage__img">
           <img src="./assets/images/onairs/profiles/1.png" alt="" />
         </div>
-        <figcaption class="caption userInfo">
-          <h2 class="a11yHidden">사용자 정보</h2>
+        <figcaption class="mypage__caption">
           <dl class="userInfo__list">
-            <div class="userInfo__item">
+            <div class="userInfo__item name">
               <dt class="a11yHidden">사용자 이름</dt>
               <dd>박선우</dd>
             </div>
-            <div class="userInfo__item">
+            <div class="userInfo__item email">
               <dt class="a11yHidden">사용자 이메일</dt>
-              <dd>asdfqw@mail.com</dd>
+              <dd>
+                <a href="mailto:asdfqw@mail.com">asdfqw@mail.com</a>
+              </dd>
             </div>
           </dl>
         </figcaption>
       </figure>
 
-      <!-- 카테고리태그시작 -->
-      <nav class="category">
-        <h3 class="a11yHidden">마이 페이지 카테고리</h3>
-        <ul class="category__list">
-          <li class="category__item">
-            <button type="button" class="category__btn is--active">최근</button>
-          </li>
-          <li class="category__item">
-            <button type="button" class="category__btn">좋아요</button>
-          </li>
-          <li class="category__item">
-            <button type="button" class="category__btn">나중에 볼 영상</button>
-          </li>
-        </ul>
-      </nav>
-      <!-- 카테고리 끝 -->
+      <section class="section mypage__section">
+        <nav class="category">
+          <h3 class="a11yHidden">마이 페이지 카테고리</h3>
+          <ul class="category__list">
+            <li class="category__item">
+              <button type="button" class="category__btn is--active">
+                최근
+              </button>
+            </li>
+            <li class="category__item">
+              <button type="button" class="category__btn">좋아요</button>
+            </li>
+            <li class="category__item">
+              <button type="button" class="category__btn">
+                나중에 볼 영상
+              </button>
+            </li>
+          </ul>
+        </nav>
 
-      <!-- 지금 방송중 영상리스트 시작 -->
-      <section class="section live">
         <header class="section__header">
-          <!-- 영상이 많을 떄 다 보여주고 전체 삭제를 할지 알려주는 것보다 영상 갯수를 알려주고 삭제할건지 먼저 물어보는게 낫다고 생각해서 최근본 영상과 전체삭제를 같은 곳에 묶어두었습니다.  -->
-          <h2 class="section__title">최근 본 영상</h2>
-          <small class="section__small">300</small>
+          <h4 class="section__title">최근 본 영상</h4>
+          <small class="section__amount" aria-label="300개">300</small>
           <button type="button" class="button button--ghost">전체 삭제</button>
         </header>
-        <div class="section__content">
-          <article class="card">
-            <figure class="card__figure">
-              <div class="card__img">
-                <img src="" alt="" />
-              </div>
-              <figcaption class="caption">
-                <h3 class="title">김바울 황건하 이건 사랑이야</h3>
-                <dl class="description__list">
-                  <div class="description__item">
-                    <dt class="a11yHidden">채널명</dt>
-                    <dd>점심어택</dd>
-                  </div>
-                </dl>
-              </figcaption>
-            </figure>
+        <div class="section__content" role="list">
+          <article class="card" role="listitem">
+            <a href="./channel.html">
+              <figure class="card__figure">
+                <div class="card__img">
+                  <img src="./assets/images/cultures/1.jpeg" alt="" />
+                </div>
+                <figcaption class="caption">
+                  <h3 class="title">
+                    엑스칼리버 더 뮤지컬 다큐멘터리 : 도겸의 찬란한 여정
+                  </h3>
+                  <dl class="description__list">
+                    <div class="description__item">
+                      <dt class="a11yHidden">채널 명</dt>
+                      <dd>엑스칼리버</dd>
+                    </div>
+                  </dl>
+                </figcaption>
+              </figure>
+              <button
+                type="button"
+                class="icon icon--more"
+                aria-label="이 영상을 최근 본 영상에서 삭제하기"
+              ></button>
+            </a>
+          </article>
+          <article class="card" role="listitem">
+            <a href="./channel.html">
+              <figure class="card__figure">
+                <div class="card__img">
+                  <img src="./assets/images/cultures/2.jpeg" alt="" />
+                </div>
+                <figcaption class="caption">
+                  <h3 class="title">
+                    뮤지컬 &lt;여신님이 보고 계셔&gt; 9월 26일 중계
+                  </h3>
+                  <dl class="description__list">
+                    <div class="description__item">
+                      <dt class="a11yHidden">채널 명</dt>
+                      <dd>여신님</dd>
+                    </div>
+                  </dl>
+                </figcaption>
+              </figure>
+              <button
+                type="button"
+                class="icon icon--more"
+                aria-label="이 영상을 최근 본 영상에서 삭제하기"
+              ></button>
+            </a>
+          </article>
+          <article class="card" role="listitem">
+            <a href="./channel.html">
+              <figure class="card__figure">
+                <div class="card__img">
+                  <img src="./assets/images/cultures/3.png" alt="" />
+                </div>
+                <figcaption class="caption">
+                  <h3 class="title">
+                    9월 천원의 행복 &lg;바로크 음악으로 가을을 물들이다&gt;
+                  </h3>
+                  <dl class="description__list">
+                    <div class="description__item">
+                      <dt class="a11yHidden">채널 명</dt>
+                      <dd>바로크 음악</dd>
+                    </div>
+                  </dl>
+                </figcaption>
+              </figure>
+              <button
+                type="button"
+                class="icon icon--more"
+                aria-label="이 영상을 최근 본 영상에서 삭제하기"
+              ></button>
+            </a>
           </article>
         </div>
       </section>
-    </section>
+    </main>
   </body>
 </html>
