@@ -62,6 +62,7 @@
     top: 50%;
     width: 100%;
     text-align: center;
+    z-index: $before__button-index;
   }
 
   .next_button,
