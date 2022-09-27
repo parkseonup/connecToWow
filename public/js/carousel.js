@@ -1,4 +1,4 @@
-let CAROUSEL__WIDTH = 1200;
+let CAROUSEL__WIDTH = 1980;
 
 const carousel = get(".carousel");
 const cellCount = 6;
@@ -27,12 +27,17 @@ nextButton.addEventListener("click", () => {
 window.addEventListener("DOMContentLoaded", () => {
   const size = window.innerWidth;
   resize = CAROUSEL__WIDTH - size;
+  if (resize <= 0) resize = 1;
+  if (resize > 800) resize = 1700;
   carousel.style.transform = `translateZ(-${resize}px) rotateY(${angle}deg)`;
 });
-
 window.addEventListener("resize", () => {
   const size = window.innerWidth;
-  resize = CAROUSEL__WIDTH - size;
+  console.log(size);
+  resize = CAROUSEL__WIDTH - size - 700;
+  console.log(resize);
+  if (resize <= 0) resize = 1;
+  if (resize > 800) resize = 1700;
   carousel.style.transform = `translateZ(-${resize}px) rotateY(${angle}deg)`;
 });
 
