@@ -183,7 +183,7 @@
   }
 
   @include mq(lg) {
-    padding-top: rem(184);
+    padding-top: rem(224);
 
     &__caption {
       @include flex(between, start);

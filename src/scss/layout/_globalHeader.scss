@@ -4,19 +4,21 @@
 @use "../abstracts/variables/zIndexes" as *;
 
 .globalHeader {
-  @include flex($ai: start);
   @include getGradientBg(top, (transparent, $black));
-  flex-wrap: wrap;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: $globalHeader-index;
+  width: 100%;
+  flex-wrap: wrap;
   padding: rem(16) rem(16) 0 rem(16);
+
+  &__wrapper {
+    @include flex(start);
+  }
 
   &__title {
     @include inlineFlex;
-    margin-bottom: rem(8);
 
     .icon {
       height: rem(24);
@@ -45,11 +47,7 @@
   }
 
   .snb {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: rem(28);
+    margin-top: rem(8);
 
     &__list {
       height: 100%;
@@ -64,6 +62,18 @@
     .snb {
       position: fixed;
       background-color: $black;
+    }
+  }
+
+  &.different--desktop {
+    &.globalHeader {
+      background: none;
+    }
+
+    .globalHeader__title,
+    .myPage__link,
+    .snb {
+      display: none;
     }
   }
 
@@ -84,8 +94,11 @@
   }
 
   @include mq(lg) {
-    display: flex !important;
     padding: rem(32) rem(40) 0 rem(40);
+
+    &__wrapper {
+      display: flex !important;
+    }
 
     .myMenu__btn {
       @include flex($dr: column);
@@ -100,6 +113,24 @@
         width: rem(24);
         height: rem(2);
         background-color: $white;
+      }
+    }
+
+    &.different--desktop {
+      &.globalHeader {
+        @include getGradientBg(top, (transparent, $black));
+      }
+
+      .globalHeader__title {
+        display: inline-flex;
+      }
+
+      .myPage__link {
+        display: inline-block;
+      }
+
+      .snb {
+        display: block;
       }
     }
   }

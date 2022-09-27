@@ -91,10 +91,11 @@
 
 .before__button {
   position: absolute;
-  transform: rotate(180deg);
-  font-size: rem(24);
   top: rem(24);
   left: rem(9);
+  z-index: $before__button-index;
+  font-size: rem(24);
+  transform: rotate(180deg);
 
   @include mq(md) {
     font-size: rem(40);
