@@ -24,7 +24,11 @@
           <span class="icon icon--logo" aria-label="Wow."></span>
         </a>
       </h1>
-      <a href="/" class="myPage__link" aria-label="마이페이지로 이동">
+      <a
+        href="./mypage.html"
+        class="myPage__link"
+        aria-label="마이페이지로 이동"
+      >
         <img
           src="./assets/images/lineups/profiles/jojo.png"
           alt="나의 프로필"
@@ -39,85 +43,86 @@
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </button>
-      <nav class="snb scroll">
-        <h2 class="a11yHidden">영상 카테고리</h2>
-        <ul class="snb__list">
-          <li class="snb__item"><a href="/">홈</a></li>
-          <li class="snb__item"><a href="/">생중계</a></li>
-          <li class="snb__item"><a href="/">급상승</a></li>
-          <li class="snb__item"><a href="/">드라마</a></li>
-          <li class="snb__item"><a href="/">예능</a></li>
-          <li class="snb__item"><a href="/">뮤직</a></li>
-          <li class="snb__item"><a href="/">스포츠</a></li>
-          <li class="snb__item"><a href="/">게임</a></li>
-          <li class="snb__item"><a href="/">이건 어때요</a></li>
+
+      <nav class="myMenu">
+        <h2 class="a11yHidden">마이 메뉴 목록</h2>
+        <ul class="myMenu__list">
+          <li class="myMenu__item">
+            <a href="/">
+              <span class="icon icon--search" aria-hidden="true"></span>
+              검색
+            </a>
+          </li>
+          <li class="myMenu__item">
+            <a href="./following.html">
+              <span class="icon icon--youtube" aria-hidden="true"></span>
+              팔로잉
+            </a>
+          </li>
+          <li class="myMenu__item">
+            <a href="/">서비스 소개</a>
+          </li>
+          <li class="myMenu__item">
+            <a href="/">공지사항</a>
+          </li>
+          <li class="myMenu__item">
+            <a href="/">로그아웃</a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="myMenu__button button--close"
+          aria-label="마이 메뉴 닫기"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </nav>
+
+      <nav class="gnb">
+        <h2 class="a11yHidden">마이 메뉴 목록</h2>
+        <ul class="gnb__list">
+          <li class="gnb__item">
+            <a href="/" class="gnb__link is--opened">
+              <span class="icon icon--home" aria-hidden="true"></span>
+              홈
+            </a>
+          </li>
+          <li class="gnb__item">
+            <a href="/" class="gnb__link">
+              <span class="icon icon--original" aria-hidden="true"></span>
+              오리지널
+            </a>
+          </li>
+          <li class="gnb__item">
+            <a href="./following.html" class="gnb__link">
+              <span class="icon icon--youtube" aria-hidden="true"></span>
+              팔로잉
+            </a>
+          </li>
+          <li class="gnb__item">
+            <a href="/" class="gnb__link">
+              <span class="icon icon--search" aria-hidden="true"></span>
+              검색
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <nav class="myMenu">
-      <h2 class="a11yHidden">마이 메뉴 목록</h2>
-      <ul class="myMenu__list">
-        <li class="myMenu__item">
-          <a href="/">
-            <span class="icon icon--search" aria-hidden="true"></span>
-            검색
-          </a>
-        </li>
-        <li class="myMenu__item">
-          <a href="./following.html">
-            <span class="icon icon--youtube" aria-hidden="true"></span>
-            팔로잉
-          </a>
-        </li>
-        <li class="myMenu__item">
-          <a href="/">서비스 소개</a>
-        </li>
-        <li class="myMenu__item">
-          <a href="/">공지사항</a>
-        </li>
-        <li class="myMenu__item">
-          <a href="/">로그아웃</a>
-        </li>
-      </ul>
-      <button
-        type="button"
-        class="myMenu__button button--close"
-        aria-label="마이 메뉴 닫기"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
-    </nav>
-
-    <nav class="gnb">
-      <h2 class="a11yHidden">마이 메뉴 목록</h2>
-      <ul class="gnb__list">
-        <li class="gnb__item">
-          <a href="/" class="gnb__link is--opened">
-            <span class="icon icon--home" aria-hidden="true"></span>
-            홈
-          </a>
-        </li>
-        <li class="gnb__item">
-          <a href="/" class="gnb__link">
-            <span class="icon icon--original" aria-hidden="true"></span>
-            오리지널
-          </a>
-        </li>
-        <li class="gnb__item">
-          <a href="./following.html" class="gnb__link">
-            <span class="icon icon--youtube" aria-hidden="true"></span>
-            팔로잉
-          </a>
-        </li>
-        <li class="gnb__item">
-          <a href="/" class="gnb__link">
-            <span class="icon icon--search" aria-hidden="true"></span>
-            검색
-          </a>
-        </li>
+    <nav class="snb scroll">
+      <h2 class="a11yHidden">영상 카테고리</h2>
+      <ul class="snb__list">
+        <li class="snb__item"><a href="/">홈</a></li>
+        <li class="snb__item"><a href="/">생중계</a></li>
+        <li class="snb__item"><a href="/">급상승</a></li>
+        <li class="snb__item"><a href="/">드라마</a></li>
+        <li class="snb__item"><a href="/">예능</a></li>
+        <li class="snb__item"><a href="/">뮤직</a></li>
+        <li class="snb__item"><a href="/">스포츠</a></li>
+        <li class="snb__item"><a href="/">게임</a></li>
+        <li class="snb__item"><a href="/">이건 어때요</a></li>
       </ul>
     </nav>
 
