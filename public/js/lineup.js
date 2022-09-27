@@ -1,24 +1,23 @@
-const dayList = document.querySelector(".day__list");
-const dayItem = document.querySelectorAll(".day__item");
-const selectDay = document.querySelectorAll(".daySelect");
+const dayList = get(".day__list");
+const dayItem = getAll(".day__item");
+const selectDay = getAll(".daySelect");
 
 function handelList(event) {
   const target = event.target;
-  const remove = document.querySelector(".is--active");
+  const remove = get(".is--active");
   if (target.nodeName === "BUTTON") {
     const targetDay = target.dataset.filter;
-    const dayArray = document.querySelectorAll(`[data-${targetDay}="true"`);
+    const dayArray = getAll(`[data-${targetDay}="true"`);
     selectDay.forEach((item) => {
-      item.classList.remove("is--show");
-      item.classList.add("is--hidden");
+      item.classList.remove(IS_SHOW);
+      item.classList.add(IS_HIDDEN);
     });
     dayArray.forEach((item) => {
-      if (item.classList.contains("is--hidden"))
-        item.classList.remove("is--hidden");
-      item.classList.add("is--show");
+      if (item.classList.contains(IS_HIDDEN)) item.classList.remove(IS_HIDDEN);
+      item.classList.add(IS_SHOW);
     });
-    remove.classList.remove("is--active");
-    target.classList.add("is--active");
+    remove.classList.remove(IS_ACTIVE);
+    target.classList.add(IS_ACTIVE);
   }
 }
 dayList.addEventListener("click", handelList);
