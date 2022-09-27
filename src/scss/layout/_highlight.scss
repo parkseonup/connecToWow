@@ -8,7 +8,7 @@
     @include flex(start);
     position: relative;
 
-    overflow-x: scroll;
+    overflow-x: auto;
     gap: rem(8);
   }
 
