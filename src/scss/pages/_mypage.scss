@@ -1,0 +1,192 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.mypage {
+  @include getGradientBg(right, ($purple, $lightblue));
+  @include afterGradient($location: before);
+  padding-top: rem(64);
+
+  &__figure {
+    position: relative;
+    max-width: rem(1024);
+    padding: 0 rem(16);
+    margin: auto;
+  }
+
+  &__img {
+    @include profileCircle(60);
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 30%;
+    }
+  }
+
+  &__caption {
+    margin-top: rem(16);
+
+    .time {
+      @include descriptionMobile;
+    }
+
+    .title {
+      @include smallMobile;
+      margin-top: rem(4);
+      color: $gray-300;
+    }
+  }
+
+  .userInfo__list {
+    .name {
+      @include upcomingMobile;
+    }
+
+    .email {
+      @include smallMobile;
+      color: $gray-300;
+    }
+  }
+
+  &__section {
+    margin-top: rem(16);
+  }
+
+  .section__header {
+    max-width: rem(1024);
+    margin: rem(32) auto 0;
+    padding: 0 rem(16);
+  }
+
+  .caption {
+    @include descriptionMobile;
+    margin-top: rem(16);
+
+    span {
+      color: $lightblue;
+    }
+
+    .title {
+      margin: rem(2) 0;
+    }
+
+    .date {
+      @include smallMobile;
+      color: $gray-300;
+    }
+  }
+
+  .section__content {
+    @include flex(between, start, column);
+    max-width: rem(1024);
+    padding: 0 rem(16);
+    margin: rem(24) auto rem(96);
+    gap: rem(16);
+  }
+
+  .card {
+    @include flex(between, start);
+    gap: rem(12);
+    width: 100%;
+
+    &__figure {
+      @include flex(start, start);
+      gap: rem(16);
+    }
+
+    &__img {
+      @include cardRatio(124, h);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: rem(8);
+      }
+    }
+
+    .icon {
+      font-size: rem(24);
+      color: $gray-500;
+    }
+  }
+
+  @include mq(md) {
+    padding-top: rem(144);
+
+    &__figure {
+      padding: 0 rem(40);
+    }
+
+    &__img {
+      @include profileCircle(88);
+    }
+
+    &__caption {
+      margin-top: rem(24);
+    }
+
+    .userInfo__list {
+      .name {
+        @include upcomingDesktop;
+      }
+
+      .email {
+        @include smallDesktop;
+        margin-top: rem(8);
+        color: $gray-300;
+      }
+    }
+
+    &__section {
+      margin-top: rem(40);
+    }
+
+    .section__header {
+      padding: 0 rem(40);
+    }
+
+    .card {
+      gap: rem(12);
+
+      &__img {
+        @include cardRatio(280, h);
+      }
+
+      .icon {
+        font-size: rem(40);
+      }
+    }
+
+    .caption {
+      span {
+        @include descriptionDesktop;
+      }
+
+      .title {
+        @include descriptionDesktop;
+        margin: rem(4) 0;
+      }
+
+      .date {
+        @include smallDesktop;
+      }
+    }
+
+    .section__content {
+      margin: rem(32) auto rem(128);
+      padding: 0 rem(40);
+    }
+  }
+
+  @include mq(lg) {
+    padding-top: rem(184);
+
+    &__caption {
+      @include flex(between, start);
+    }
+  }
+}
