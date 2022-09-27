@@ -12,8 +12,11 @@
     @include flex($dr: column);
     flex-shrink: 0;
     gap: rem(6);
+    position: relative;
+    z-index: $myMenu__button-index;
     width: rem(40);
     height: rem(40);
+    margin-left: rem(16);
     overflow: hidden;
 
     span {
@@ -21,19 +24,26 @@
       width: rem(24);
       height: rem(2);
       background-color: $white;
-      // transition: transform 0.2s ease-in-out;
-    }
-
-    &.button--open {
-      margin-left: rem(16);
-    }
-
-    &.button--close {
-      position: fixed;
-      top: rem(32);
-      right: rem(40);
-      z-index: -1;
       pointer-events: none;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &.is--active {
+      span {
+        &:nth-child(1) {
+          transform-origin: top right;
+          transform: rotate(-45deg);
+        }
+
+        &:nth-child(2) {
+          visibility: hidden;
+        }
+
+        &:nth-child(3) {
+          transform-origin: bottom right;
+          transform: rotate(45deg);
+        }
+      }
     }
   }
 
@@ -42,7 +52,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 9999;
+    z-index: $myMenu-index;
     width: rem(560);
     height: 100vh;
     padding: 0 rem(80);
@@ -69,30 +79,6 @@
 
     &.is--opened {
       transform: translateX(0);
-
-      .myMenu__button.button--close {
-        z-index: $myMenu--close-index;
-        transition: 0.2s ease-in-out;
-        pointer-events: all;
-
-        span {
-          visibility: visible;
-
-          &:nth-child(1) {
-            transform-origin: top right;
-            transform: rotate(-45deg);
-          }
-
-          &:nth-child(2) {
-            visibility: hidden;
-          }
-
-          &:nth-child(3) {
-            transform-origin: bottom right;
-            transform: rotate(45deg);
-          }
-        }
-      }
     }
   }
 }
