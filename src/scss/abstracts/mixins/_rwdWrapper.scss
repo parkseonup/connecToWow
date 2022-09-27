@@ -1,0 +1,32 @@
+@use "../functions/units" as *;
+
+@mixin rwdWrapper($height: 56.25%) {
+  .rwdWrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: $height;
+    border-radius: rem(8);
+    overflow: hidden;
+
+    iframe,
+    .card__img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card__img {
+      img {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
