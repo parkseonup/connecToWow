@@ -7,7 +7,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     row-gap: rem(48);
-    column-gap: rem(28);
   }
   &__item {
     text-align: center;
@@ -25,18 +24,25 @@
       object-fit: fill;
     }
   }
+
   @include mq(md) {
     &__list {
-      display: flex;
-      flex-flow: row wrap;
-      gap: rem(36);
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: rem(36);
     }
+
     &__link {
       width: rem(104);
       height: rem(52);
     }
   }
+
   @include mq(lg) {
+    &__list {
+      grid-template-columns: repeat(7, 1fr);
+    }
+
     &__link {
       width: rem(172);
       height: rem(86);
