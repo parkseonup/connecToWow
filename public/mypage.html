@@ -8,10 +8,10 @@
     name="description"
     content="네이버 TV의 새로운 이름 WOW의 마이 페이지입니다."
   />
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-  <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+  <link rel="icon" type="image/png" href="./assets/favicon/favicon.png" />
   <link
-    rel="stylesheet"
+    rel="stylesheet preload"
     as="style"
     crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css"
@@ -31,10 +31,13 @@
           class="myPage__link"
           aria-label="마이페이지로 이동"
         >
-          <img
-            src="./assets/images/lineups/profiles/jojo.png"
-            alt="나의 프로필"
-          />
+          <picture>
+            <source srcset="./assets/images/highlights/profiles/3.webp" />
+            <img
+              src="./assets/images/highlights/profiles/3.png"
+              alt="나의 프로필"
+            />
+          </picture>
         </a>
         <button
           type="button"
@@ -135,12 +138,12 @@
           <dl class="userInfo__list">
             <div class="userInfo__item name">
               <dt class="a11yHidden">사용자 이름</dt>
-              <dd>박선우</dd>
+              <dd>홍길동</dd>
             </div>
             <div class="userInfo__item email">
               <dt class="a11yHidden">사용자 이메일</dt>
               <dd>
-                <a href="mailto:asdfqw@mail.com">asdfqw@mail.com</a>
+                <a href="mailto:asdfqw@mail.com">hongildong@mail.com</a>
               </dd>
             </div>
           </dl>
@@ -178,7 +181,10 @@
               <a href="./channel.html">
                 <figure class="card__figure">
                   <div class="card__img">
-                    <img src="./assets/images/cultures/1.jpeg" alt="" />
+                    <picture>
+                      <source srcset="./assets/images/cultures/1.webp" />
+                      <img src="./assets/images/cultures/1.jpeg" alt="" />
+                    </picture>
                   </div>
                   <figcaption class="caption">
                     <h3 class="title">
@@ -205,7 +211,10 @@
               <a href="./channel.html">
                 <figure class="card__figure">
                   <div class="card__img">
-                    <img src="./assets/images/cultures/2.jpeg" alt="" />
+                    <picture>
+                      <source srcset="./assets/images/cultures/2.webp" />
+                      <img src="./assets/images/cultures/2.jpeg" alt="" />
+                    </picture>
                   </div>
                   <figcaption class="caption">
                     <h3 class="title">
@@ -232,7 +241,10 @@
               <a href="./channel.html">
                 <figure class="card__figure">
                   <div class="card__img">
-                    <img src="./assets/images/cultures/3.png" alt="" />
+                    <picture>
+                      <source srcset="./assets/images/cultures/3.webp" />
+                      <img src="./assets/images/cultures/3.jpeg" alt="" />
+                    </picture>
                   </div>
                   <figcaption class="caption">
                     <h3 class="title">
