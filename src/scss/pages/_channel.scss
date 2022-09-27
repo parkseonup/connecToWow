@@ -24,7 +24,8 @@
   }
 
   &__caption {
-    margin: rem(268) 0 rem(16);
+    max-width: rem(1024);
+    margin: rem(268) auto rem(16);
     padding: 0 rem(16);
 
     .time {
@@ -74,13 +75,15 @@
 
   .section__content {
     @include flex(between, start, column);
-    margin-top: rem(24);
-    padding: 0 rem(16);
     gap: rem(16);
-    margin-bottom: rem(96);
+    margin: rem(24) auto rem(96);
+    max-width: rem(1024);
+    padding: 0 rem(16);
   }
 
   .card {
+    width: 100%;
+
     &__figure {
       @include flex(start, start);
       gap: rem(16);
@@ -104,7 +107,7 @@
     }
 
     &__caption {
-      margin: rem(744) 0 rem(40);
+      margin: rem(744) auto rem(40);
       padding: 0 rem(40);
     }
 
@@ -128,9 +131,8 @@
     }
 
     .section__content {
-      margin-top: rem(32);
+      margin: rem(32) auto rem(128);
       padding: 0 rem(40);
-      margin-bottom: rem(128);
     }
   }
 

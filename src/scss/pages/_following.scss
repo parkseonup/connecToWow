@@ -3,6 +3,7 @@
 
 .following {
   margin-top: rem(116);
+  margin: rem(116) rem(16) 0 rem(16);
 
   .section__content {
     @include flex(start, start);
@@ -23,7 +24,7 @@
   }
 
   @include mq(md) {
-    margin-top: rem(140);
+    margin: rem(140) rem(40) 0 rem(40);
 
     .section__content {
       margin-top: rem(18);
