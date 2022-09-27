@@ -48,6 +48,7 @@
   }
 
   .myMenu {
+    @include flex(start);
     position: fixed;
     top: 0;
     right: 0;
@@ -76,8 +77,7 @@
       color: $gray-500;
     }
 
-    &.is--show {
-      @include flex(start);
+    &.is--opened {
       transform: translateX(0);
     }
   }
