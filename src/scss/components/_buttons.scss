@@ -27,8 +27,6 @@
   &--ghost {
     background-color: transparent;
 
-    &:hover,
-    &:active,
     &.is--active {
       color: $red;
     }
@@ -37,8 +35,6 @@
   &--opacity {
     background-color: $gray-700;
 
-    &:hover,
-    &:active,
     &.is--active {
       color: $red;
       border-color: $red;
@@ -53,14 +49,11 @@
     height: rem(36);
     background-color: $white;
 
-    &:hover,
-    &:active,
     &.is--active {
       color: $white;
       background-color: $gray-700;
     }
 
-    &:active,
     &.is--active {
       .icon--arrow {
         transform: rotate(90deg);
@@ -82,14 +75,38 @@
     @include descriptionDesktop;
     height: rem(36);
 
-    &--wide {
-      height: rem(46);
-      padding: 0 rem(72);
+    &--ghost {
+      &:hover,
+      &:active,
+      &.is--active {
+        color: $red;
+      }
+    }
+
+    &--opacity {
+      &:hover,
+      &:active,
+      &.is--active {
+        color: $red;
+        border-color: $red;
+      }
     }
 
     &--fat {
       height: rem(48);
       padding: 0 rem(36);
+
+      &:hover,
+      &:active,
+      &.is--active {
+        color: $white;
+        background-color: $gray-700;
+      }
+    }
+
+    &--wide {
+      height: rem(46);
+      padding: 0 rem(48);
     }
 
     .icon {
