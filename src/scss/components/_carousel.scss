@@ -1,0 +1,78 @@
+@use "../abstracts/variables" as *;
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: $zarousel-index;
+  .container {
+    margin-top: 20%;
+    width: 420px;
+    height: 320px;
+
+    perspective: 1000px;
+  }
+
+  .carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 200ms;
+  }
+
+  .item {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    transition: transform 200ms;
+
+    .video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .item:nth-child(1) {
+    transform: rotateY(0deg) translateZ(346px);
+  }
+  .item:nth-child(2) {
+    transform: rotateY(60deg) translateZ(346px);
+  }
+  .item:nth-child(3) {
+    transform: rotateY(120deg) translateZ(346px);
+  }
+  .item:nth-child(4) {
+    transform: rotateY(180deg) translateZ(346px);
+  }
+  .item:nth-child(5) {
+    transform: rotateY(240deg) translateZ(346px);
+  }
+  .item:nth-child(6) {
+    transform: rotateY(300deg) translateZ(346px);
+  }
+
+  .carousel__button {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .next_button,
+  .prev_button {
+    color: $white;
+    cursor: pointer;
+    border-radius: 5px;
+    .icon {
+      font-size: 48px;
+    }
+  }
+  .prev_button {
+    transform: rotate(180deg);
+  }
+}
