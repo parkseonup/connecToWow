@@ -1,7 +1,3 @@
-const get = (target) => {
-  return document.querySelector(target);
-};
-
 let CAROUSEL__WIDTH = 1200;
 
 const carousel = get(".carousel");
