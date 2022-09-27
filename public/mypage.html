@@ -38,7 +38,7 @@
         </a>
         <button
           type="button"
-          class="myMenu__button button--open"
+          class="myMenu__button"
           aria-label="마이 메뉴 열기"
         >
           <span aria-hidden="true"></span>
@@ -172,83 +172,89 @@
           <small class="section__amount" aria-label="300개">300</small>
           <button type="button" class="button button--ghost">전체 삭제</button>
         </header>
-        <div class="section__content" role="list">
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/cultures/1.jpeg" alt="" />
-                </div>
-                <figcaption class="caption">
-                  <h3 class="title">
-                    엑스칼리버 더 뮤지컬 다큐멘터리 : 도겸의 찬란한 여정
-                  </h3>
-                  <dl class="description__list">
-                    <div class="description__item">
-                      <dt class="a11yHidden">채널 명</dt>
-                      <dd>엑스칼리버</dd>
-                    </div>
-                  </dl>
-                </figcaption>
-              </figure>
-            </a>
-            <button
-              type="button"
-              class="icon icon--more"
-              aria-label="이 영상을 최근 본 영상에서 삭제하기"
-            ></button>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/cultures/2.jpeg" alt="" />
-                </div>
-                <figcaption class="caption">
-                  <h3 class="title">
-                    뮤지컬 &lt;여신님이 보고 계셔&gt; 9월 26일 중계
-                  </h3>
-                  <dl class="description__list">
-                    <div class="description__item">
-                      <dt class="a11yHidden">채널 명</dt>
-                      <dd>여신님</dd>
-                    </div>
-                  </dl>
-                </figcaption>
-              </figure>
-            </a>
-            <button
-              type="button"
-              class="icon icon--more"
-              aria-label="이 영상을 최근 본 영상에서 삭제하기"
-            ></button>
-          </article>
-          <article class="card" role="listitem">
-            <a href="./channel.html">
-              <figure class="card__figure">
-                <div class="card__img">
-                  <img src="./assets/images/cultures/3.png" alt="" />
-                </div>
-                <figcaption class="caption">
-                  <h3 class="title">
-                    9월 천원의 행복 &lg;바로크 음악으로 가을을 물들이다&gt;
-                  </h3>
-                  <dl class="description__list">
-                    <div class="description__item">
-                      <dt class="a11yHidden">채널 명</dt>
-                      <dd>바로크 음악</dd>
-                    </div>
-                  </dl>
-                </figcaption>
-              </figure>
-            </a>
-            <button
-              type="button"
-              class="icon icon--more"
-              aria-label="이 영상을 최근 본 영상에서 삭제하기"
-            ></button>
-          </article>
-        </div>
+        <ul class="section__content card__list">
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/cultures/1.jpeg" alt="" />
+                  </div>
+                  <figcaption class="caption">
+                    <h3 class="title">
+                      엑스칼리버 더 뮤지컬 다큐멘터리 : 도겸의 찬란한 여정
+                    </h3>
+                    <dl class="description__list">
+                      <div class="description__item">
+                        <dt class="a11yHidden">채널 명</dt>
+                        <dd>엑스칼리버</dd>
+                      </div>
+                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+              <button
+                type="button"
+                class="icon icon--more"
+                aria-label="이 영상을 최근 본 영상에서 삭제하기"
+              ></button>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/cultures/2.jpeg" alt="" />
+                  </div>
+                  <figcaption class="caption">
+                    <h3 class="title">
+                      뮤지컬 &lt;여신님이 보고 계셔&gt; 9월 26일 중계
+                    </h3>
+                    <dl class="description__list">
+                      <div class="description__item">
+                        <dt class="a11yHidden">채널 명</dt>
+                        <dd>여신님</dd>
+                      </div>
+                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+              <button
+                type="button"
+                class="icon icon--more"
+                aria-label="이 영상을 최근 본 영상에서 삭제하기"
+              ></button>
+            </article>
+          </li>
+          <li class="card__item">
+            <article class="card">
+              <a href="./channel.html">
+                <figure class="card__figure">
+                  <div class="card__img">
+                    <img src="./assets/images/cultures/3.png" alt="" />
+                  </div>
+                  <figcaption class="caption">
+                    <h3 class="title">
+                      9월 천원의 행복 &lg;바로크 음악으로 가을을 물들이다&gt;
+                    </h3>
+                    <dl class="description__list">
+                      <div class="description__item">
+                        <dt class="a11yHidden">채널 명</dt>
+                        <dd>바로크 음악</dd>
+                      </div>
+                    </dl>
+                  </figcaption>
+                </figure>
+              </a>
+              <button
+                type="button"
+                class="icon icon--more"
+                aria-label="이 영상을 최근 본 영상에서 삭제하기"
+              ></button>
+            </article>
+          </li>
+        </ul>
       </section>
     </main>
   </body>
