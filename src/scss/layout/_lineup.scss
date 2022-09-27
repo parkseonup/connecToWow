@@ -24,14 +24,18 @@
         transition: all 0.2s ease-in-out;
 
         &:hover,
-        &:active,
         &.is--active {
           background-color: $red;
         }
       }
     }
   }
-
+  .is--hidden {
+    display: none;
+  }
+  .is--show {
+    display: block;
+  }
   .section__content {
     @include flex(start, start);
     flex-wrap: wrap;
