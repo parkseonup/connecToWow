@@ -12,7 +12,7 @@
     <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
     <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" />
     <link
-      rel="stylesheet"
+      rel="stylesheet preload"
       as="style"
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css"
@@ -33,10 +33,13 @@
           class="myPage__link"
           aria-label="마이페이지로 이동"
         >
-          <img
-            src="./assets/images/lineups/profiles/jojo.png"
-            alt="나의 프로필"
-          />
+          <picture>
+            <source srcset="./assets/images/highlights/profiles/3.webp" />
+            <img
+              src="./assets/images/highlights/profiles/3.png"
+              alt="나의 프로필"
+            />
+          </picture>
         </a>
         <button
           type="button"
