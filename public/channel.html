@@ -23,6 +23,8 @@
     <script src="./js/commonVariables.js" defer></script>
     <script src="./js/lineup.js" defer></script>
     <script src="./js/myMenu.js" defer></script>
+    <script src="./js/button.js" defer></script>
+    <script src="./js/starRating.js" defer></script>
   </head>
   <body class="dark">
     <noscript
@@ -170,35 +172,94 @@
               <h2 class="title">점심시간을 습격합니다. "god"의 점심어택!"</h2>
             </div>
             <div class="follow">
-              <button aria-label="팔로우 추가 버튼" class="button button--fat">
+              <button
+                type="button"
+                aria-label="팔로우 추가 버튼"
+                class="button button--fat"
+              >
                 <span class="icon icon--plus"></span>
                 <span>팔로우</span>
               </button>
-              <dl class="star">
-                <dt class="a11yHidden">별점</dt>
-                <dd aria-label="5점 만점에 4점">
-                  <span
-                    aria-hidden="true"
-                    class="icon icon--star--fill star__item"
-                  ></span>
-                  <span
-                    aria-hidden="true"
-                    class="icon icon--star--fill star__item"
-                  ></span>
-                  <span
-                    aria-hidden="true"
-                    class="icon icon--star--fill star__item"
-                  ></span>
-                  <span
-                    aria-hidden="true"
-                    class="icon icon--star--fill star__item"
-                  ></span>
-                  <span
-                    aria-hidden="true"
-                    class="icon icon--star--empty star__item"
-                  ></span>
-                </dd>
-              </dl>
+              <form
+                class="starForm"
+                oninput="result.value"
+                action="./channel.html"
+                method="get"
+              >
+                <fieldset>
+                  <legend class="a11yHidden">별점 평가</legend>
+                  <div class="starWrapper">
+                    <input
+                      aria-checked="false"
+                      class="starInput"
+                      name="star"
+                      type="checkbox"
+                      value="1"
+                      id="star1"
+                    />
+                    <label for="star1" class="icon icon--star--empty">
+                      <span class="a11yHidden">별점 1점 추가</span></label
+                    >
+                  </div>
+                  <div class="starWrapper">
+                    <input
+                      aria-checked="false"
+                      class="starInput"
+                      name="star"
+                      type="checkbox"
+                      value="1"
+                      id="star2"
+                    />
+                    <label for="star2" class="icon icon--star--empty">
+                      <span class="a11yHidden">별점1점 추가</span></label
+                    >
+                  </div>
+                  <div class="starWrapper">
+                    <input
+                      aria-checked="false"
+                      class="starInput"
+                      name="star"
+                      type="checkbox"
+                      value="1"
+                      id="star3"
+                    />
+                    <label for="star3" class="icon icon--star--empty">
+                      <span class="a11yHidden">별점1점 추가</span></label
+                    >
+                  </div>
+                  <div class="starWrapper">
+                    <input
+                      aria-checked="false"
+                      class="starInput"
+                      name="star"
+                      type="checkbox"
+                      value="1"
+                      id="star4"
+                    />
+                    <label for="star4" class="icon icon--star--empty">
+                      <span class="a11yHidden">별점1점 추가</span></label
+                    >
+                  </div>
+                  <div class="starWrapper">
+                    <input
+                      aria-controls="starResult"
+                      aria-checked="false"
+                      class="starInput"
+                      name="star"
+                      type="checkbox"
+                      value="1"
+                      id="star5"
+                    />
+                    <label for="star5" class="icon icon--star--empty">
+                      <span class="a11yHidden">별점1점 추가</span></label
+                    >
+                  </div>
+
+                  <span class="a11yHidden">
+                    <output id="starResult" name="result">별점0 점</output>
+                  </span>
+                </fieldset>
+              </form>
             </div>
           </figcaption>
         </figure>

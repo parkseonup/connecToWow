@@ -1,0 +1,43 @@
+@use "../abstracts/functions/units" as *;
+
+.starForm {
+  fieldset {
+    display: flex;
+  }
+
+  .starWrapper {
+    position: relative;
+
+    input[type="checkbox"] + label {
+      display: block;
+      position: relative;
+      padding: 0 rem(1);
+      cursor: pointer;
+
+      &::before {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+        width: rem(30);
+        height: rem(30);
+      }
+    }
+
+    label {
+      font-size: 30px;
+    }
+
+    input[type="checkbox"]:focus + label::before {
+      outline: #5d9dd5 solid 1px;
+      outline-offset: rem(3);
+    }
+
+    input[type="checkbox"] {
+      position: absolute !important;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+  }
+}
