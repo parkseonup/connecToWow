@@ -266,24 +266,71 @@
       </header>
       <nav class="category">
         <h3 class="a11yHidden">영상 카테고리</h3>
-        <ul class="category__list">
+        <ul class="category__list" role="tablist">
           <li class="category__item">
-            <button type="button" class="category__btn is--active">
+            <button
+              type="button"
+              class="category__btn is--active"
+              role="tab"
+              aria-control="channelEpisode"
+              aria-live="polite"
+              aria-label="영상 에피소드 보기"
+              id="channelEpisodeButton"
+              aria-selected="true"
+            >
               에피소드
             </button>
           </li>
           <li class="category__item">
-            <button type="button" class="category__btn">하이라이트</button>
+            <button
+              type="button"
+              class="category__btn"
+              role="tab"
+              aria-control="channelHighlight"
+              aria-live="polite"
+              aria-label="영상 하이라이트 보기"
+              id="channelHighlightButton"
+              aria-selected="false"
+            >
+              하이라이트
+            </button>
           </li>
           <li class="category__item">
-            <button type="button" class="category__btn">타임피드</button>
+            <button
+              type="button"
+              class="category__btn"
+              role="tab"
+              aria-control="channelTimeFeed"
+              aria-live="polite"
+              aria-label="타임피드 보기"
+              id="channelTimeFeedButton"
+              aria-selected="false"
+            >
+              타임피드
+            </button>
           </li>
           <li class="category__item">
-            <button type="button" class="category__btn">커뮤니티</button>
+            <button
+              type="button"
+              class="category__btn"
+              role="tab"
+              aria-control="channelCommunity"
+              aria-live="polite"
+              aria-label="커뮤니티 보기"
+              id="channelCommunityButton"
+              aria-selected="false"
+            >
+              커뮤니티
+            </button>
           </li>
         </ul>
       </nav>
-      <ul class="section__content card__list">
+      <ul
+        class="section__content card__list"
+        role="tabpanel"
+        id="channelEpisode"
+        aria-live="polite"
+      >
         <li class="card__item">
           <article class="card">
             <a href="./channel.html">

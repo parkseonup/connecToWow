@@ -7,29 +7,28 @@
 
   .starWrapper {
     position: relative;
+    margin-right: rem(6);
 
     input[type="checkbox"] + label {
       display: block;
       position: relative;
-      padding: 0 rem(1);
       cursor: pointer;
 
       &::before {
         position: relative;
         display: inline-block;
-        margin-right: 10px;
         width: rem(30);
         height: rem(30);
       }
     }
 
     label {
-      font-size: 30px;
+      font-size: rem(30);
     }
 
     input[type="checkbox"]:focus + label::before {
       outline: #5d9dd5 solid 1px;
-      outline-offset: rem(3);
+      outline-offset: rem(2);
     }
 
     input[type="checkbox"] {
