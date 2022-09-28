@@ -18,11 +18,22 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
-    <script src="./js/commonVariables.js" defer></script>
     <script src="./js/selector.js" defer></script>
+    <script src="./js/skipContent.js" defer></script>
+    <script src="./js/commonVariables.js" defer></script>
+    <script src="./js/lineup.js" defer></script>
     <script src="./js/myMenu.js" defer></script>
   </head>
   <body class="dark">
+    <noscript
+      >이 페이지는 자바스크립트에 일부 의존하고 있습니다. 스크립트가 동작하지
+      않을 시 일부 콘텐츠를 이용하실 수 없습니다.
+    </noscript>
+
+    <div id="skipNav">
+      <a class="skipContent" href="#channel">본문 바로가기</a>
+    </div>
+
     <div class="globalHeader different--desktop">
       <header class="globalHeader__wrapper">
         <h1 class="globalHeader__title">
@@ -141,7 +152,7 @@
       class="icon icon--arrow before__button"
     ></button>
 
-    <section class="channel container">
+    <section id="channel" class="channel container">
       <header class="channel__header">
         <figure class="channel__figure">
           <div class="channel__img">
