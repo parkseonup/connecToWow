@@ -2,8 +2,8 @@ const opacityButtons = [...getAll(".button--opacity")];
 
 opacityButtons.forEach(($button, i) => {
   const clickHandler = (e) => {
-    opacityButtons[i].classList.toggle("is--active");
-    if (opacityButtons[i].classList.contains("is--active")) {
+    opacityButtons[i].classList.toggle(IS_ACTIVE);
+    if (opacityButtons[i].classList.contains(IS_ACTIVE)) {
       e.target.innerHTML = `<span
       class="icon icon--bell--empty"
       aria-hidden="true"
@@ -26,8 +26,8 @@ const fatButtons = [...getAll(".button--fat")];
 fatButtons.forEach(($button, i) => {
   const clickHandler = (e) => {
     console.log(e.target.innerHTML);
-    fatButtons[i].classList.toggle("is--active");
-    if (fatButtons[i].classList.contains("is--active")) {
+    fatButtons[i].classList.toggle(IS_ACTIVE);
+    if (fatButtons[i].classList.contains(IS_ACTIVE)) {
       e.target.innerHTML = `<span
       class="icon icon--arrow"
       aria-hidden="true"
