@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/selector.js" defer></script>
     <script src="./js/skipContent.js" defer></script>
+    <script src="./js/commonVariables.js" defer></script>
+    <script src="./js/lineup.js" defer></script>
+    <script src="./js/myMenu.js" defer></script>
   </head>
   <body class="dark">
     <noscript
@@ -55,6 +58,9 @@
         <button
           type="button"
           class="myMenu__button"
+          id="myMenuButton"
+          aria-haspopup="true"
+          aria-controls="myMenu"
           aria-label="마이 메뉴 열기"
         >
           <span aria-hidden="true"></span>
@@ -62,7 +68,12 @@
           <span aria-hidden="true"></span>
         </button>
 
-        <nav class="myMenu">
+        <nav
+          class="myMenu"
+          id="myMenu"
+          role="menu"
+          aria-labelledby="myMenuButton"
+        >
           <h2 class="a11yHidden">마이 메뉴 목록</h2>
           <ul class="myMenu__list">
             <li class="myMenu__item">
