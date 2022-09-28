@@ -7,13 +7,15 @@
   .section__content {
     @include flex(start);
     position: relative;
-
     overflow-x: auto;
-    gap: rem(8);
   }
 
   .card {
     position: relative;
+
+    &__item {
+      padding: rem(4);
+    }
 
     &__img {
       @include cardRatio(136);
@@ -40,6 +42,10 @@
   }
 
   @include mq(md) {
+    .section__content {
+      gap: rem(8);
+    }
+
     .card__img {
       @include cardRatio(200);
     }
@@ -48,10 +54,6 @@
   @include mq(lg) {
     .card__img {
       @include cardRatio(272);
-    }
-
-    .section__content {
-      gap: rem(16);
     }
 
     .caption {

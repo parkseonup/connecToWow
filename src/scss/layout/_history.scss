@@ -6,15 +6,17 @@
 
   .section__content {
     @include flex(start, start);
-    gap: rem(8);
     overflow-x: auto;
   }
 
   .card {
+    @include rwdWrapper;
     flex-shrink: 0;
     width: rem(192);
 
-    @include rwdWrapper;
+    &__item {
+      padding: rem(4);
+    }
   }
 
   .caption {
@@ -23,7 +25,7 @@
 
   @include mq(md) {
     .section__content {
-      gap: rem(16);
+      gap: rem(8);
     }
 
     .card {
