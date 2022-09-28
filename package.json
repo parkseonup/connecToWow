@@ -8,7 +8,8 @@
     "serve": "live-server public --host=localhost --port=8090 --no-browser",
     "compile": "sass src/scss:public/css --update --watch",
     "build": "npm run compile -- --style compressed --no-source-map",
-    "clear": "rimraf -rf public/assets/css"
+    "postcss": "postcss public/css/main.css -o public/css/index.css",
+    "clear": "rimraf -rf public/css"
   },
   "devDependencies": {
     "cssnano": "^5.1.13",
