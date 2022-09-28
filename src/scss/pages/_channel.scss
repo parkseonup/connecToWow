@@ -12,7 +12,7 @@
     @include afterGradient;
     position: absolute;
     z-index: -1;
-    width: 100vw;
+    width: 100%;
     height: rem(422);
 
     img {
@@ -83,6 +83,10 @@
 
   .card {
     width: 100%;
+
+    &__item {
+      width: 100%;
+    }
 
     &__figure {
       @include flex(start, start);
