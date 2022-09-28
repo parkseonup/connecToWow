@@ -16,11 +16,22 @@
     />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/selector.js" defer></script>
-    <script src="./js/carousel.js" defer></script>
+    <script src="./js/skipContent.js" defer></script>
+    <!-- <script src="./js/carousel.js" defer></script> -->
     <script src="./js/button.js" defer></script>
     <script src="./js/lineup.js" defer></script>
   </head>
   <body class="dark">
+    <!-- 스킵네비게이션 -->
+    <ul id="skipNav">
+      <a class="skipContent" href="#onAir">지금 방송 중 바로가기</a>
+      <a class="skipContent" href="#history">최근 본 영상 바로가기</a>
+      <a class="skipContent" href="#highlight">오리지널 하이라이트 바로가기</a>
+      <a class="skipContent" href="#upcoming">upcoming 바로가기</a>
+      <a class="skipContent" href="#lineup">요일 라인업 바로가기</a>
+      <a class="skipContent" href="#broadcast">전체 방송관 바로가기</a>
+    </ul>
+
     <div class="globalHeader">
       <header class="globalHeader__wrapper">
         <h1 class="globalHeader__title">
@@ -161,7 +172,7 @@
         </div>
       </section>
 
-      <section class="section onAir">
+      <section class="section onAir" id="onAir">
         <header class="section__header">
           <h2 class="section__title">지금 방송 중</h2>
         </header>
@@ -700,7 +711,7 @@
         </ul>
       </section>
 
-      <section class="section history">
+      <section class="section history" id="history">
         <header class="section__header">
           <h2 class="section__title">최근 본 영상</h2>
         </header>
@@ -851,11 +862,11 @@
           </li>
         </ul>
         <footer class="section__footer">
-          <a class="button button--ghost">더보기</a>
+          <a class="button button--ghost" href="/">더보기</a>
         </footer>
       </section>
 
-      <section class="section highlight">
+      <section class="section highlight" id="highlight">
         <header class="section__header">
           <h2 class="section__title">오리지널 하이라이트</h2>
         </header>
@@ -1272,11 +1283,11 @@
           </li>
         </ul>
         <footer class="section__footer">
-          <a class="button button--ghost">더보기</a>
+          <a class="button button--ghost" href="/">더보기</a>
         </footer>
       </section>
 
-      <section class="section upcoming">
+      <section class="section upcoming" id="upcoming">
         <header class="section__header">
           <h2 class="section__title">Upcoming Now</h2>
         </header>
@@ -1476,7 +1487,7 @@
         </ul>
       </section>
 
-      <section class="lineup section">
+      <section class="section lineup" id="lineup">
         <header class="section__header">
           <h2 class="section__title">요일별 쇼라인업</h2>
         </header>
@@ -1943,11 +1954,11 @@
           </li>
         </ul>
         <footer class="section__footer">
-          <a class="button button--ghost">더보기</a>
+          <a class="button button--ghost" href="/">더보기</a>
         </footer>
       </section>
 
-      <section class="broadcast section">
+      <section class="section broadcast" id="broadcast">
         <header class="section__header">
           <h2 class="section__title">전체 방송관</h2>
         </header>
