@@ -7,7 +7,6 @@
 
   .section__content {
     @include flex(start);
-    gap: rem(8);
     overflow-x: auto;
   }
 
@@ -16,6 +15,10 @@
     flex-shrink: 0;
     border-radius: rem(8);
     overflow: hidden;
+
+    &__item {
+      padding: rem(4);
+    }
 
     &__img {
       @include cardRatio(256);
@@ -55,7 +58,7 @@
 
   @include mq(md) {
     .section__content {
-      gap: rem(16);
+      gap: rem(8);
     }
 
     .card {

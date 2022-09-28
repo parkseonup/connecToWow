@@ -4,7 +4,6 @@
 .onAir {
   .section__content {
     @include flex(start, start);
-    gap: rem(8);
     overflow-x: auto;
     position: relative;
   }
@@ -12,6 +11,10 @@
   .card {
     width: rem(88);
     position: relative;
+
+    &__item {
+      padding: rem(4);
+    }
 
     &__img {
       @include cardRatio(88);
@@ -32,7 +35,7 @@
 
   @include mq(md) {
     .section__content {
-      gap: rem(16);
+      gap: rem(8);
     }
 
     .card {
