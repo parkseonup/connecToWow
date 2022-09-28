@@ -1506,13 +1506,16 @@
           <h2 class="section__title">요일별 쇼라인업</h2>
         </header>
         <div class="section__nav">
-          <ul class="day__list">
+          <ul class="day__list" role="tablist">
             <li class="day__item">
               <button
                 type="button"
+                role="tab"
+                aria-controls="lineupTabpanel"
                 aria-label="월요일 쇼라인업 보기"
                 class="is--active"
-                data-filter="monday"
+                id="monday"
+                aria-selected="true"
               >
                 월
               </button>
@@ -1520,8 +1523,11 @@
             <li class="day__item">
               <button
                 type="button"
+                role="tab"
+                aria-controls="lineupTabpanel"
                 aria-label="화요일 쇼라인업 보기"
-                data-filter="tusday"
+                id="tusday"
+                aria-selected="false"
               >
                 화
               </button>
@@ -1529,8 +1535,11 @@
             <li class="day__item">
               <button
                 type="button"
+                role="tab"
+                aria-controls="lineupTabpanel"
                 aria-label="수요일 쇼라인업 보기"
-                data-filter="wednesday"
+                id="wednesday"
+                aria-selected="false"
               >
                 수
               </button>
@@ -1538,8 +1547,11 @@
             <li class="day__item">
               <button
                 type="button"
+                role="tab"
+                aria-controls="lineupTabpanel"
                 aria-label="목요일 쇼라인업 보기"
-                data-filter="thursday"
+                id="thursday"
+                aria-selected="false"
               >
                 목
               </button>
@@ -1547,8 +1559,11 @@
             <li class="day__item">
               <button
                 type="button"
+                role="tab"
+                aria-controls="lineupTabpanel"
                 aria-label="금요일 쇼라인업 보기"
-                data-filter="friday"
+                id="friday"
+                aria-selected="false"
               >
                 금
               </button>
@@ -1556,8 +1571,11 @@
             <li class="day__item">
               <button
                 type="button"
+                role="tab"
+                aria-controls="lineupTabpanel"
                 aria-label="토요일 쇼라인업 보기"
-                data-filter="saturday"
+                id="saturday"
+                aria-selected="false"
               >
                 토
               </button>
@@ -1565,17 +1583,24 @@
             <li class="day__item">
               <button
                 type="button"
+                role="tab"
+                aria-controls="lineupTabpanel"
                 aria-label="일요일 쇼라인업 보기"
-                data-filter="sunday"
+                id="sunday"
+                aria-selected="false"
               >
                 일
               </button>
             </li>
           </ul>
         </div>
-        <ul class="section__content card__list">
+        <ul
+          class="section__content card__list"
+          role="tabpanel"
+          id="lineupTabpanel"
+        >
           <li
-            class="card__item daySelect"
+            class="card__item"
             data-monday="true"
             data-tusday="true"
             data-wednesday="true"
@@ -1605,7 +1630,7 @@
             </article>
           </li>
           <li
-            class="card__item daySelect"
+            class="card__item"
             data-monday="true"
             data-wednesday="true"
             data-thursday="true"
@@ -1635,7 +1660,7 @@
             </article>
           </li>
           <li
-            class="card__item daySelect"
+            class="card__item"
             data-monday="true"
             data-tusday="true"
             data-wednesday="true"
@@ -1662,11 +1687,7 @@
               </a>
             </article>
           </li>
-          <li
-            class="card__item daySelect"
-            data-monday="true"
-            data-wednesday="true"
-          >
+          <li class="card__item" data-monday="true" data-wednesday="true">
             <article class="card">
               <a href="./channel.html">
                 <figure class="card__figure">
@@ -1695,7 +1716,7 @@
             </article>
           </li>
           <li
-            class="card__item daySelect"
+            class="card__item"
             data-monday="true"
             data-wednesday="true"
             data-thursday="true"
@@ -1720,7 +1741,7 @@
             </article>
           </li>
           <li
-            class="card__item daySelect"
+            class="card__item"
             data-monday="true"
             data-tusday="true"
             data-wednesday="true"
@@ -1752,7 +1773,7 @@
             </article>
           </li>
           <li
-            class="card__item daySelect is--hidden"
+            class="card__item is--hidden"
             data-tusday="true"
             data-thursday="true"
             data-friday="true"
@@ -1784,7 +1805,7 @@
             </article>
           </li>
           <li
-            class="card__item daySelect is--hidden"
+            class="card__item is--hidden"
             data-tusday="true"
             data-thursday="true"
           >
@@ -1809,7 +1830,7 @@
               </a>
             </article>
           </li>
-          <li class="card__item daySelect is--hidden" data-tusday="true">
+          <li class="card__item is--hidden" data-tusday="true">
             <article class="card">
               <a href="./channel.html">
                 <figure class="card__figure">
@@ -1837,7 +1858,7 @@
             </article>
           </li>
           <li
-            class="card__item daySelect is--hidden"
+            class="card__item is--hidden"
             data-saturday="true"
             data-sunday="true"
           >
@@ -1867,7 +1888,7 @@
               </a>
             </article>
           </li>
-          <li class="card__item daySelect is--hidden" data-saturday="true">
+          <li class="card__item is--hidden" data-saturday="true">
             <article class="card">
               <a href="./channel.html">
                 <figure class="card__figure">
@@ -1891,7 +1912,7 @@
             </article>
           </li>
           <li
-            class="card__item daySelect is--hidden"
+            class="card__item is--hidden"
             data-saturday="true"
             data-sunday="true"
           >
@@ -1917,7 +1938,7 @@
             </article>
           </li>
           <li
-            class="card__item daySelect is--hidden"
+            class="card__item is--hidden"
             data-saturday="true"
             data-sunday="true"
           >
@@ -1941,7 +1962,7 @@
             </article>
           </li>
           <li
-            class="card__item daySelect is--hidden"
+            class="card__item is--hidden"
             data-saturday="true"
             data-sunday="true"
           >
@@ -1972,7 +1993,7 @@
         </footer>
       </section>
 
-      <section class="section broadcast" id="broadcast">
+      <section class="broadcast section">
         <header class="section__header">
           <h2 class="section__title">전체 방송관</h2>
         </header>
