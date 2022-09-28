@@ -1,187 +1,189 @@
+const container = document.querySelector(".container");
+const videoList = document.querySelectorAll(".carousel__video");
+const wrap = document.querySelector(".wrap");
 let CAROUSEL__WIDTH = 1980;
+
+let ariaArray = [
+  "firstVideo",
+  "secondVideo",
+  "thirdVideo",
+  "fourthVideo",
+  "fifthVideo",
+  "sixthVideo",
+];
 
 const carousel = get(".carousel");
 const cellCount = 6;
+
+let ariaCount = 0;
 let selectedIndex = 0;
 let resize;
 let angle = 0;
+let nowVideo;
+
+window.addEventListener("load", () => {
+  nowVideo = document.getElementById("first");
+});
+
 const rotateCarousel = () => {
   angle = (selectedIndex / cellCount) * -360;
   carousel.style.transform = `translateZ(-${resize}px) rotateY(${angle}deg)`;
 };
 
+function tabMove() {
+  let place = ariaArray[ariaCount].slice(0, -5);
+  const nextVideo = document.getElementById(place);
+  nextVideo.tabIndex = 0;
+  nowVideo.tabIndex = -1;
+  nextVideo.setAttribute("controls", "true");
+  nowVideo.removeAttribute("controls");
+  nowVideo = nextVideo;
+}
+
 const prevButton = get(".prev_button");
+const nextButton = get(".next_button");
 prevButton.addEventListener("click", () => {
-  stopVideo();
   selectedIndex--;
+  ariaCount--;
+  if (ariaCount < 0) ariaCount = 5;
+  tabMove();
+  stopVideo();
   rotateCarousel();
 });
 
-const nextButton = get(".next_button");
 nextButton.addEventListener("click", () => {
-  stopVideo();
   selectedIndex++;
+  ariaCount++;
+  if (ariaCount > 5) ariaCount = 0;
+  tabMove();
+  stopVideo();
   rotateCarousel();
 });
 
 window.addEventListener("DOMContentLoaded", () => {
   const size = window.innerWidth;
-  resize = CAROUSEL__WIDTH - size;
+  resize = CAROUSEL__WIDTH - size - 700;
   if (resize <= 0) resize = 1;
   if (resize > 800) resize = 1700;
   carousel.style.transform = `translateZ(-${resize}px) rotateY(${angle}deg)`;
 });
+
 window.addEventListener("resize", () => {
   const size = window.innerWidth;
-  console.log(size);
   resize = CAROUSEL__WIDTH - size - 700;
-  console.log(resize);
   if (resize <= 0) resize = 1;
   if (resize > 800) resize = 1700;
   carousel.style.transform = `translateZ(-${resize}px) rotateY(${angle}deg)`;
 });
 
-//youtube API
-var tag = document.createElement("script");
-
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-let first;
-let second;
-let third;
-let fourth;
-let fifth;
-let sixth;
-
-function onYouTubeIframeAPIReady() {
-  first = new YT.Player("first", {
-    height: "100%",
-    width: "100%",
-    videoId: "rEIrNsvkx5Q",
-    events: {
-      onStateChange: onPlayerStateChange,
-    },
-  });
-  second = new YT.Player("second", {
-    height: "100%",
-    width: "100%",
-    videoId: "m4z688oUpcQ",
-    events: {
-      onStateChange: onPlayerStateChange,
-    },
-  });
-  third = new YT.Player("third", {
-    height: "100%",
-    width: "100%",
-    videoId: "m4z688oUpcQ",
-    events: {
-      onStateChange: onPlayerStateChange,
-    },
-  });
-  fourth = new YT.Player("fourth", {
-    height: "100%",
-    width: "100%",
-    videoId: "m4z688oUpcQ",
-    events: {
-      onStateChange: onPlayerStateChange,
-    },
-  });
-  fifth = new YT.Player("fifth", {
-    height: "100%",
-    width: "100%",
-    videoId: "m4z688oUpcQ",
-    events: {
-      onStateChange: onPlayerStateChange,
-    },
-  });
-  sixth = new YT.Player("sixth", {
-    height: "100%",
-    width: "100%",
-    videoId: "m4z688oUpcQ",
-    events: {
-      onStateChange: onPlayerStateChange,
-    },
-  });
-}
-
-function onPlayerReady(event) {
-  event.target.playVideo();
-}
-
-var done = false;
-
-function carouselLage(target) {
-  const num = target.dataset.carousel;
-  switch (num) {
-    case "1":
-      target.style.transform = "rotateY(0deg) translateZ(346px) scale(1.7)";
-      console.log("성공");
-      break;
-    case "2":
-      target.style.transform = "rotateY(60deg) translateZ(346px) scale(1.7)";
-      break;
-    case "3":
-      target.style.transform = "rotateY(120deg) translateZ(346px) scale(1.7)";
-      break;
-    case "4":
-      target.style.transform = "rotateY(180deg) translateZ(346px) scale(1.7)";
-      break;
-    case "5":
-      target.style.transform = "rotateY(240deg) translateZ(346px) scale(1.7)";
-      break;
-    case "6":
-      target.style.transform = "rotateY(300deg) translateZ(346px) scale(1.7)";
-      break;
-    default:
-      break;
+function handelVideo(event) {
+  const target = event.target;
+  if (target.nodeName !== "VIDEO" || target !== nowVideo) {
+    return;
   }
+  bigWidth(target);
 }
 
-function carouselSmall(target) {
-  const num = target.dataset.carousel;
-  switch (num) {
-    case "1":
-      target.style.transform = "rotateY(0deg) translateZ(346px) scale(1)";
-      break;
-    case "2":
-      target.style.transform = "rotateY(60deg) translateZ(346px) scale(1)";
-      break;
-    case "3":
-      target.style.transform = "rotateY(120deg) translateZ(346px) scale(1)";
-      break;
-    case "4":
-      target.style.transform = "rotateY(180deg) translateZ(346px) scale(1)";
-      break;
-    case "5":
-      target.style.transform = "rotateY(240deg) translateZ(346px) scale(1)";
-      break;
-    case "6":
-      target.style.transform = "rotateY(300deg) translateZ(346px) scale(1)";
-      break;
-    default:
-      break;
+function handelVideoKey(event) {
+  if (event.key !== "Enter") {
+    return;
   }
+  bigWidth(event.target);
 }
 
-function onPlayerStateChange(event) {
-  let a = event.target.getIframe();
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    carouselLage(a.parentNode);
-
-    done = true;
-  }
-  if (event.data === 5) {
-    carouselSmall(a.parentNode);
-    done = false;
-  }
+function bigWidth(video) {
+  video.style.transform = "scale(1.7)";
 }
+function smallWidth(video) {
+  video.style.transform = "scale(1)";
+}
+
 function stopVideo() {
-  first.stopVideo();
-  second.stopVideo();
-  third.stopVideo();
-  fourth.stopVideo();
-  fifth.stopVideo();
-  sixth.stopVideo();
+  videoList.forEach((item) => {
+    item.pause();
+    item.currentTime = 0;
+    smallWidth(item);
+  });
 }
+
+container.addEventListener("click", handelVideo);
+container.addEventListener("keydown", handelVideoKey);
+
+//Mobile
+const slide = document.querySelector(".slide__set");
+let imgs = slide.querySelectorAll(".slide__video");
+const videos = slide.querySelectorAll("video");
+let imgWidth = imgs[0].getBoundingClientRect().width;
+const filed = document.querySelector(".slide");
+const place = document.querySelector(".location");
+window.addEventListener("resize", () => {
+  imgWidth = imgs[0].getBoundingClientRect().width;
+  move();
+});
+let standard = 0;
+filed.addEventListener("click", (e) => {
+  if (e.target.nodeName !== "BUTTON") return;
+  placeBtnColor("#6072f6");
+  if (e.target.parentNode.className === "direction") {
+    direction(e.target);
+  } else {
+    placeBtn(e.target);
+  }
+});
+
+function direction(target) {
+  slide.style.transition = "all 300ms ease-in-out";
+  videoStop();
+  if (target.classList.contains("direction--left")) {
+    standard--;
+    move();
+  } else {
+    standard++;
+    move();
+  }
+}
+
+function videoStop() {
+  videos.forEach((item) => {
+    item.pause();
+    item.currentTime = 0;
+  });
+}
+
+function move() {
+  if (standard > imgs.length - 1) {
+    standard = 0;
+    slide.style.transition = "none";
+  }
+  if (standard < 0) {
+    standard = imgs.length - 1;
+    slide.style.transition = "none";
+  }
+  placeBtnColor("white");
+  slide.style.transform = `translate(${-imgWidth * standard}px)`;
+}
+
+function placeBtnColor(color) {
+  let s = document.querySelector(`.location button[data-btn="${standard}"]`);
+  s.style.backgroundColor = color;
+}
+
+function placeBtn(target) {
+  let select = target.dataset.btn;
+  standard = select;
+  move();
+}
+
+let count = 0;
+
+function init() {
+  for (let i = 0; i < imgs.length; i++) {
+    const li = document.createElement("li");
+    const btn = document.createElement("button");
+    btn.setAttribute("data-btn", `${count++}`);
+    li.appendChild(btn);
+    place.appendChild(li);
+  }
+}
+
+init();
