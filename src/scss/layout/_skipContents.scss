@@ -1,0 +1,18 @@
+@use "../abstracts/variables/zIndexes" as *;
+
+#skipNav {
+  a {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    padding: 10px;
+    background: red;
+    z-index: -1;
+
+    &.is--focus {
+      top: 0px;
+      background-color: blue;
+      z-index: $skipContent-index;
+    }
+  }
+}
