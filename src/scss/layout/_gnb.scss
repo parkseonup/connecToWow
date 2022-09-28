@@ -10,7 +10,7 @@
   left: 0;
   z-index: $gnb-index;
   width: 100%;
-  padding: rem(24) 0;
+  padding: rem(16) 0;
   color: $gray-500;
   background-color: $gray-800;
 
@@ -20,6 +20,7 @@
 
   &__link {
     @include flex($dr: column);
+    padding: rem(8) rem(16);
 
     &.is--opened {
       color: $white;
@@ -36,6 +37,7 @@
     &__link {
       flex-direction: row;
       gap: rem(4);
+      padding: rem(8) rem(24);
     }
   }
 

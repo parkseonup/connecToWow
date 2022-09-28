@@ -87,14 +87,18 @@
     gap: rem(16);
   }
 
-  .card__item {
-    width: 100%;
-  }
-
   .card {
     @include flex(between, start);
     gap: rem(12);
     width: 100%;
+
+    &__item {
+      width: 100%;
+    }
+
+    &__focus {
+      flex-grow: 1;
+    }
 
     &__figure {
       @include flex(start, start);

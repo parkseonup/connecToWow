@@ -2,14 +2,24 @@
 
 .snb {
   &__list {
-    @include inlineFlex(start, center);
+    @include flex(start, center);
     @include titleMobile;
     white-space: nowrap;
-    gap: rem(16px);
+    gap: rem(4);
     overflow-x: auto;
+  }
 
-    @include mq(lg) {
-      gap: rem(20px);
+  &__item {
+    padding: rem(4);
+  }
+  a {
+    display: block;
+    padding: rem(8);
+  }
+
+  @include mq(lg) {
+    &__list {
+      gap: rem(16);
     }
   }
 }
