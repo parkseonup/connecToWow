@@ -22,7 +22,6 @@
     <script src="./js/selector.js" defer></script>
     <script src="./js/skipContent.js" defer></script>
     <script src="./js/myMenu.js" defer></script>
-
   </head>
   <body class="dark">
     <noscript
@@ -177,17 +176,46 @@
       <section class="section mypage__section">
         <nav class="category">
           <h3 class="a11yHidden">마이 페이지 카테고리</h3>
-          <ul class="category__list">
+          <ul class="category__list" role="tablist">
             <li class="category__item">
-              <button type="button" class="category__btn is--active">
+              <button
+                type="button"
+                class="category__btn is--active"
+                role="tab"
+                aria-control="myPageHistory"
+                aria-live="polite"
+                aria-label="최근 본 영상 목록 보기"
+                id="recent"
+                aria-selected="true"
+              >
                 최근
               </button>
             </li>
             <li class="category__item">
-              <button type="button" class="category__btn">좋아요</button>
+              <button
+                type="button"
+                class="category__btn"
+                role="tab"
+                aria-control="myPageLikes"
+                aria-live="polite"
+                aria-label="좋아요 누른 영상 목록 보기"
+                id="likes"
+                aria-selected="false"
+              >
+                좋아요
+              </button>
             </li>
             <li class="category__item">
-              <button type="button" class="category__btn">
+              <button
+                type="button"
+                class="category__btn"
+                role="tab"
+                aria-control="myPageLater"
+                aria-live="polite"
+                aria-label="나중에 볼 영상 목록 보기"
+                id="later"
+                aria-selected="false"
+              >
                 나중에 볼 영상
               </button>
             </li>
@@ -199,10 +227,15 @@
           <small class="section__amount" aria-label="300개">300</small>
           <button type="button" class="button button--ghost">전체 삭제</button>
         </header>
-        <ul class="section__content card__list">
+        <ul
+          class="section__content card__list"
+          role="tabpanel"
+          id="myPageHistory"
+          aria-live="polite"
+        >
           <li class="card__item">
             <article class="card">
-              <a href="./channel.html">
+              <a href="./channel.html" class="card__focus">
                 <figure class="card__figure">
                   <div class="card__img">
                     <picture>
@@ -232,7 +265,7 @@
           </li>
           <li class="card__item">
             <article class="card">
-              <a href="./channel.html">
+              <a href="./channel.html" class="card__focus">
                 <figure class="card__figure">
                   <div class="card__img">
                     <picture>
@@ -262,7 +295,7 @@
           </li>
           <li class="card__item">
             <article class="card">
-              <a href="./channel.html">
+              <a href="./channel.html" class="card__focus">
                 <figure class="card__figure">
                   <div class="card__img">
                     <picture>
