@@ -4,6 +4,7 @@
 
 .search {
   margin: rem(24) rem(16) 0;
+  overflow: hidden;
 
   &__form {
     width: 100%;
@@ -53,7 +54,9 @@
       }
     }
   }
-
+  .search__result {
+    width: 100%;
+  }
   .recommend {
     margin-top: rem(24);
     @include descriptionMobile;
@@ -103,10 +106,12 @@
   }
 
   @include mq(lg) {
-    width: 1024px;
-    height: 100vh;
+    width: rem(1024);
+    height: 100%;
     margin: 0 auto;
-
+    .search__form {
+      margin-top: rem(180);
+    }
     .input {
       &__wrapper {
         height: rem(54);
