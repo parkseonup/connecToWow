@@ -15,14 +15,14 @@ const moveFocusCardItem = (e) => {
     while (prev !== null && prev.classList.contains(IS_HIDDEN)) {
       prev = prev.previousElementSibling;
     }
-    if (prev !== null) prev.querySelector("a").focus();
+    if (prev !== null) prev.querySelector(".card__focus").focus();
   }
 
   if (next !== null && e.key === RIGHT) {
     while (next !== null && next.classList.contains(IS_HIDDEN)) {
       next = next.nextElementSibling;
     }
-    if (next !== null) next.querySelector("a").focus();
+    if (next !== null) next.querySelector(".card__focus").focus();
   }
 };
 
