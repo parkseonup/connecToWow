@@ -15,7 +15,7 @@
   }
 
   &__img {
-    @include profileCircle(60);
+    @include profileCircle(48);
     border-radius: 50%;
 
     img {
@@ -63,7 +63,6 @@
 
   .caption {
     @include descriptionMobile;
-    margin-top: rem(16);
 
     span {
       color: $lightblue;
@@ -131,7 +130,7 @@
     }
 
     &__img {
-      @include profileCircle(88);
+      @include profileCircle(60);
     }
 
     &__caption {
