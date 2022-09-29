@@ -101,13 +101,13 @@
   @include mq(md) {
     @include flex($dr: column);
     width: 80%;
-    height: calc(100vh - 72px);
+    height: calc(calc(var(--vh, 1vh) * 100) - 72px);
     margin: 0 auto;
   }
 
   @include mq(lg) {
+    height: calc(var(--vh, 1vh) * 100);
     width: rem(1024);
-    height: 100%;
     margin: 0 auto;
     .search__form {
       margin-top: rem(180);

@@ -1,7 +1,13 @@
+@use "sass:meta";
 @use "../variables" as *;
 
-@mixin getGradientBg($direction: right, $colors...) { // $colors: ( , ) 괄호 리스트 사용
+// $colors: ( , ) 괄호 리스트 사용
+@mixin getGradientBg($direction: right, $colors...) {
   @each $color in $colors {
-    background-image: linear-gradient(to #{$direction}, $color);
+    @if (meta.type-of($direction) == number) {
+      background-image: linear-gradient(#{$direction}deg, $color);
+    } @else {
+      background-image: linear-gradient(to #{$direction}, $color);
+    }
   }
 }
