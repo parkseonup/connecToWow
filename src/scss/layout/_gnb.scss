@@ -4,7 +4,7 @@
 @use "../abstracts/variables/zIndexes" as *;
 
 .gnb {
-  @include gnbMobile;
+  @include smallMobile;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -32,7 +32,7 @@
   }
 
   @include mq(md) {
-    @include gnbTablet;
+    @include smallDesktop;
 
     &__link {
       flex-direction: row;
