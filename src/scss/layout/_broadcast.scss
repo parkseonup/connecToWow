@@ -8,8 +8,8 @@
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr);
       row-gap: rem(48);
-      column-gap: rem(28);
     }
+
     &__item {
       text-align: center;
     }
