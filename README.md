@@ -51,7 +51,7 @@ https://jazzy-sneezeweed-14f.notion.site/convention-077c20ecc19f46f6a823ff5cbb0d
 ---
 
 ### 2. 🖥 WAI-aria
-- aria-label 속성에 값을 사용하여 버튼, 비디오와 같은 요소에 부가적인 정보를 제공하였습니다. 
+- aria-label 속성에 값을 사용하여 버튼, 비디오와 같은 요소에 부가적인 정보를 제공하였습니다.
 ```
  <button
     type="button"
