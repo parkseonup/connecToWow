@@ -32,7 +32,7 @@ const openLineupTabPenel = (e) => {
   const closest = target.closest(".section");
   const tabPanel = closest.querySelector(`[role="tabpanel"]`);
   const tabPanelItems = closest.querySelectorAll(".card__item");
-  const tabs = closest.querySelectorAll(".section__nav button");
+  const tabs = closest.querySelectorAll(`[role="tab"]`);
 
   const tabPanelData = closest.querySelectorAll(`[data-${targetId}="true"`);
 
@@ -44,12 +44,12 @@ const openLineupTabPenel = (e) => {
   });
 
   tabs.forEach((tab) => {
-    if (tab !== target) {
+    if (tab !== target.parentNode) {
       tab.setAttribute("aria-selected", false);
-      tab.classList.remove(IS_ACTIVE);
+      tab.children[0].classList.remove(IS_ACTIVE);
     } else {
       tab.setAttribute("aria-selected", true);
-      tab.classList.add(IS_ACTIVE);
+      tab.children[0].classList.add(IS_ACTIVE);
     }
   });
 
@@ -58,6 +58,6 @@ const openLineupTabPenel = (e) => {
     item.classList.add(IS_SHOW);
   });
 
-  target.classList.add(IS_ACTIVE);
-  target.setAttribute("aria-selected", true);
+  // target.classList.add(IS_ACTIVE);
+  // target.setAttribute("aria-selected", true);
 };
