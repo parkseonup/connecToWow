@@ -2012,6 +2012,9 @@ abbr {
 .search input:active + .input__reset, .search input:focus + .input__reset {
   display: block;
 }
+.search .search__result {
+  width: 100%;
+}
 .search .recommend {
   margin-top: 1.5rem;
   font-size: 0.8125rem;
@@ -2068,9 +2071,12 @@ abbr {
 }
 @media (min-width: 1280px) {
   .search {
-    width: 1024px;
     height: calc(var(--vh, 1vh) * 100);
+    width: 64rem;
     margin: 0 auto;
+  }
+  .search .search__form {
+    margin-top: 11.25rem;
   }
   .search .input__wrapper {
     height: 3.375rem;
