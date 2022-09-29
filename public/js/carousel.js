@@ -115,7 +115,6 @@ let imgs = slide.querySelectorAll(".slide__video");
 const videos = slide.querySelectorAll("video");
 let imgWidth = imgs[0].getBoundingClientRect().width;
 const filed = document.querySelector(".slide");
-const place = document.querySelector(".location");
 window.addEventListener("resize", () => {
   imgWidth = imgs[0].getBoundingClientRect().width;
   move();
@@ -123,12 +122,7 @@ window.addEventListener("resize", () => {
 let standard = 0;
 filed.addEventListener("click", (e) => {
   if (e.target.nodeName !== "BUTTON") return;
-  placeBtnColor("#6072f6");
-  if (e.target.parentNode.className === "direction") {
-    direction(e.target);
-  } else {
-    placeBtn(e.target);
-  }
+  direction(e.target);
 });
 
 function direction(target) {
@@ -159,31 +153,7 @@ function move() {
     standard = imgs.length - 1;
     slide.style.transition = "none";
   }
-  placeBtnColor("white");
   slide.style.transform = `translate(${-imgWidth * standard}px)`;
 }
 
-function placeBtnColor(color) {
-  let s = document.querySelector(`.location button[data-btn="${standard}"]`);
-  s.style.backgroundColor = color;
-}
-
-function placeBtn(target) {
-  let select = target.dataset.btn;
-  standard = select;
-  move();
-}
-
 let count = 0;
-
-function init() {
-  for (let i = 0; i < imgs.length; i++) {
-    const li = document.createElement("li");
-    const btn = document.createElement("button");
-    btn.setAttribute("data-btn", `${count++}`);
-    li.appendChild(btn);
-    place.appendChild(li);
-  }
-}
-
-init();
