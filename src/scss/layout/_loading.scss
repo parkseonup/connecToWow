@@ -31,10 +31,10 @@
 
   @keyframes scaleLogo {
     0% {
-      transform: scale(40);
+      transform: scale(1);
     }
     100% {
-      transform: scale(1);
+      transform: scale(40);
     }
   }
 }

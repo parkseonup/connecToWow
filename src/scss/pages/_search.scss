@@ -53,9 +53,12 @@
       }
     }
   }
+
   .search__result {
     width: 100%;
+    margin-bottom: rem(80);
   }
+
   .recommend {
     margin-top: rem(24);
     @include descriptionMobile;
@@ -98,9 +101,9 @@
   }
 
   @include mq(md) {
-    @include flex($dr: column);
     width: 80%;
     height: calc(calc(var(--vh, 1vh) * 100) - 72px);
+    padding-top: rem(64);
     margin: 0 auto;
   }
 
@@ -108,9 +111,12 @@
     height: calc(var(--vh, 1vh) * 100);
     width: rem(1024);
     margin: 0 auto;
+    padding-top: rem(72);
+
     .search__form {
       margin-top: rem(180);
     }
+
     .input {
       &__wrapper {
         height: rem(54);
