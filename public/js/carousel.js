@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 const videoList = document.querySelectorAll(".carousel__video");
 const wrap = document.querySelector(".wrap");
+const snbList = document.querySelectorAll(".snb__list a");
 let CAROUSEL__WIDTH = 1980;
 
 let ariaArray = [
@@ -35,7 +36,6 @@ function tabMove() {
   const nextVideo = document.getElementById(place);
   nextVideo.tabIndex = 0;
   nowVideo.tabIndex = -1;
-  nextVideo.setAttribute("controls", "true");
   nowVideo.removeAttribute("controls");
   nowVideo = nextVideo;
 }
@@ -50,6 +50,21 @@ prevButton.addEventListener("click", () => {
   stopVideo();
   rotateCarousel();
 });
+
+let tab = false;
+
+prevButton.addEventListener("keydown", handleTab);
+nextButton.addEventListener("keydown", handleTab);
+
+function handleTab(e) {
+  if (e.key === "Enter") {
+    tab = true;
+  }
+  if (e.key === "Tab" && tab) {
+    snbList[8].focus();
+    tab = false;
+  }
+}
 
 nextButton.addEventListener("click", () => {
   selectedIndex++;
@@ -81,6 +96,8 @@ function handelVideo(event) {
   if (target.nodeName !== "VIDEO" || target !== nowVideo) {
     return;
   }
+  nowVideo.setAttribute("controls", "true");
+
   bigWidth(target);
 }
 
@@ -88,6 +105,7 @@ function handelVideoKey(event) {
   if (event.key !== "Enter") {
     return;
   }
+  nowVideo.setAttribute("controls", "true");
   bigWidth(event.target);
 }
 
