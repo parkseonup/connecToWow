@@ -17,7 +17,7 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css"
     />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/commonVariables.js" defer></script>
     <script src="./js/selector.js" defer></script>
     <script src="./js/skipContent.js" defer></script>
@@ -151,7 +151,7 @@
       class="icon icon--arrow before__button"
     ></button>
 
-    <main id="mypage" class="mypage container">
+    <main id="mypage" class="mypage">
       <h2 class="a11yHidden">마이 페이지</h2>
       <figure class="mypage__figure">
         <div class="mypage__img">
@@ -173,48 +173,54 @@
         </figcaption>
       </figure>
 
-      <section class="section mypage__section">
+      <section class="section mypage__section container">
         <nav class="category">
           <h3 class="a11yHidden">마이 페이지 카테고리</h3>
           <ul class="category__list" role="tablist">
-            <li class="category__item">
+            <li
+              class="category__item"
+              role="tab"
+              aria-control="myPageHistory"
+              aria-selected="true"
+            >
               <button
                 type="button"
                 class="category__btn is--active"
-                role="tab"
-                aria-control="myPageHistory"
                 aria-live="polite"
                 aria-label="최근 본 영상 목록 보기"
                 id="recent"
-                aria-selected="true"
               >
                 최근
               </button>
             </li>
-            <li class="category__item">
+            <li
+              class="category__item"
+              role="tab"
+              aria-control="myPageLikes"
+              aria-selected="false"
+            >
               <button
                 type="button"
                 class="category__btn"
-                role="tab"
-                aria-control="myPageLikes"
                 aria-live="polite"
                 aria-label="좋아요 누른 영상 목록 보기"
                 id="likes"
-                aria-selected="false"
               >
                 좋아요
               </button>
             </li>
-            <li class="category__item">
+            <li
+              class="category__item"
+              role="tab"
+              aria-control="myPageLikes"
+              aria-selected="false"
+            >
               <button
                 type="button"
                 class="category__btn"
-                role="tab"
-                aria-control="myPageLater"
                 aria-live="polite"
                 aria-label="나중에 볼 영상 목록 보기"
                 id="later"
-                aria-selected="false"
               >
                 나중에 볼 영상
               </button>
