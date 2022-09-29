@@ -15,8 +15,9 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
-    <script src="./js/commonVariables.js" defer></script>
     <script src="./js/selector.js" defer></script>
+    <script src="./js/commonVariables.js" defer></script>
+    <script src="./js/loading.js" defer></script>
     <script src="./js/skipContent.js" defer></script>
     <script src="./js/myMenu.js" defer></script>
     <script src="./js/carousel.js" defer></script>
@@ -30,6 +31,13 @@
       >이 페이지는 자바스크립트에 일부 의존하고 있습니다. 스크립트가 동작하지
       않을 시 일부 콘텐츠를 이용하실 수 없습니다.
     </noscript>
+
+    <div class="loading">
+      <p class="a11yHidden">
+        네이버 TV의 새로운 이름 WOW, 페이지를 로딩 중입니다.
+      </p>
+      <span class="icon icon--logo" aria-hidden="true"></span>
+    </div>
 
     <div id="skipNav">
       <a class="skipContent" href="#onAir">지금 방송 중 바로가기</a>
