@@ -5,7 +5,7 @@
 .mypage {
   @include getGradientBg(right, ($purple, $lightblue));
   @include afterGradient($location: before);
-  padding-top: rem(64);
+  padding-top: rem(72);
 
   &__figure {
     position: relative;
