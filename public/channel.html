@@ -21,7 +21,6 @@
     <script src="./js/selector.js" defer></script>
     <script src="./js/skipContent.js" defer></script>
     <script src="./js/commonVariables.js" defer></script>
-    <script src="./js/lineup.js" defer></script>
     <script src="./js/myMenu.js" defer></script>
     <script src="./js/button.js" defer></script>
     <script src="./js/starRating.js" defer></script>
@@ -267,20 +266,28 @@
       <nav class="category">
         <h3 class="a11yHidden">영상 카테고리</h3>
         <ul class="category__list" role="tablist">
-          <li class="category__item" role="tab">
+          <li
+            class="category__item"
+            role="tab"
+            aria-control="channelEpisode"
+            aria-selected="true"
+          >
             <button
               type="button"
               class="category__btn is--active"
-              aria-control="channelEpisode"
               aria-live="polite"
               aria-label="영상 에피소드 보기"
               id="channelEpisodeButton"
-              aria-selected="true"
             >
               에피소드
             </button>
           </li>
-          <li class="category__item" role="tab">
+          <li
+            class="category__item"
+            role="tab"
+            aria-control="channelEpisode"
+            aria-selected="false"
+          >
             <button
               type="button"
               class="category__btn"
@@ -293,28 +300,34 @@
               하이라이트
             </button>
           </li>
-          <li class="category__item" role="tab">
+          <li
+            class="category__item"
+            role="tab"
+            aria-control="channelEpisode"
+            aria-selected="false"
+          >
             <button
               type="button"
               class="category__btn"
-              aria-control="channelTimeFeed"
               aria-live="polite"
               aria-label="타임피드 보기"
               id="channelTimeFeedButton"
-              aria-selected="false"
             >
               타임피드
             </button>
           </li>
-          <li class="category__item" role="tab">
+          <li
+            class="category__item"
+            role="tab"
+            aria-control="channelEpisode"
+            aria-selected="false"
+          >
             <button
               type="button"
               class="category__btn"
-              aria-control="channelCommunity"
               aria-live="polite"
               aria-label="커뮤니티 보기"
               id="channelCommunityButton"
-              aria-selected="false"
             >
               커뮤니티
             </button>

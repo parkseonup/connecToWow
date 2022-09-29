@@ -177,41 +177,50 @@
         <nav class="category">
           <h3 class="a11yHidden">마이 페이지 카테고리</h3>
           <ul class="category__list" role="tablist">
-            <li class="category__item" role="tab">
+            <li
+              class="category__item"
+              role="tab"
+              aria-control="myPageHistory"
+              aria-selected="true"
+            >
               <button
                 type="button"
                 class="category__btn is--active"
-                aria-control="myPageHistory"
                 aria-live="polite"
                 aria-label="최근 본 영상 목록 보기"
                 id="recent"
-                aria-selected="true"
               >
                 최근
               </button>
             </li>
-            <li class="category__item" role="tab">
+            <li
+              class="category__item"
+              role="tab"
+              aria-control="myPageLikes"
+              aria-selected="false"
+            >
               <button
                 type="button"
                 class="category__btn"
-                aria-control="myPageLikes"
                 aria-live="polite"
                 aria-label="좋아요 누른 영상 목록 보기"
                 id="likes"
-                aria-selected="false"
               >
                 좋아요
               </button>
             </li>
-            <li class="category__item" role="tab">
+            <li
+              class="category__item"
+              role="tab"
+              aria-control="myPageLikes"
+              aria-selected="false"
+            >
               <button
                 type="button"
                 class="category__btn"
-                aria-control="myPageLater"
                 aria-live="polite"
                 aria-label="나중에 볼 영상 목록 보기"
                 id="later"
-                aria-selected="false"
               >
                 나중에 볼 영상
               </button>
