@@ -8,10 +8,10 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: 20%;
   z-index: $zarousel-index;
 
   .container {
-    margin-top: 20%;
     width: rem(420);
     height: rem(320);
     perspective: 1000px;
@@ -62,9 +62,10 @@
     display: flex;
     justify-content: space-between;
     top: 50%;
-    width: 100%;
+    width: 94%;
     text-align: center;
     z-index: $before__button-index;
+    transform: translateY(-100%);
   }
 
   .next_button,
@@ -89,14 +90,14 @@
 //mobile
 
 .slide {
-  position: relative;
   @include flex;
+  position: relative;
   margin: 0 auto;
   margin-top: rem(100);
-  width: 70%;
+  width: 100%;
   height: auto;
   overflow: hidden;
-  padding-bottom: rem(30);
+  padding: 15% 0 15% rem(30);
 
   &__set {
     width: 100%;
