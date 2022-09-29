@@ -17,11 +17,12 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css"
     />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/test.css" />
     <script src="./js/commonVariables.js" defer></script>
     <script src="./js/selector.js" defer></script>
     <script src="./js/myMenu.js" defer></script>
     <script src="./js/skipContent.js" defer></script>
+    <script src="./js/search.js" defer></script>
   </head>
   <body class="dark">
     <noscript
@@ -151,14 +152,14 @@
         <fieldset>
           <legend class="a11yHidden">검색 폼</legend>
           <div class="input__wrapper">
-            <label for="search">
+            <label for="searchbar">
               <span class="a11yHidden">검색</span>
               <span class="icon icon--search" aria-hidden="true"></span>
             </label>
             <input
               type="text"
               name="search"
-              id="search"
+              id="searchbar"
               placeholder="동영상, 채널, 라이브 검색"
               required
             />
@@ -218,6 +219,10 @@
           </li>
         </ul>
       </aside>
+
+      <section class="search__result onAir container">
+        <ul class="section__content card__list"></ul>
+      </section>
     </main>
   </body>
 </html>
