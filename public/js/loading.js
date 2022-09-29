@@ -4,4 +4,4 @@ const viewLoading = () => {
   loading.classList.add(IS_HIDDEN);
 };
 
-window.addEventListener("DOMContentLoaded", viewLoading);
+window.addEventListener("load", viewLoading);
